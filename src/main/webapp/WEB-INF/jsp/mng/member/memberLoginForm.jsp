@@ -75,7 +75,7 @@ function fnChangePw(){
 	             <div class="login-wrap">
 	                 <div class="input-wrap">
 	                     <input type="text" title="아이디" placeholder="아이디를 입력해 주세요." maxlength="50" name="id" id="id" value="" class="lg"/>
-	  	 				 <input type="password" title="비밀번호" name="passWd" id="passWd" autocomplete="off" placeholder="비밀번호를 입력해 주세요." class="lg" maxlength="14" onkeyup="capsLock(event, 'tt_passWd');" onblur="hideCapsLock(event, 'tt_passWd');"/>
+	  	 				 <input type="password" title="비밀번호" name="pw" id="passWd" autocomplete="off" placeholder="비밀번호를 입력해 주세요." class="lg" maxlength="14" onkeyup="capsLock(event, 'tt_passWd');" onblur="hideCapsLock(event, 'tt_passWd');"/>
 	                 	 <input type="hidden" name="changePassword" id="changePassword" value="" />
 	                 </div>
 	                 <a href="javascript:;" onclick="login();" class="btn-red-lg">로그인</a>

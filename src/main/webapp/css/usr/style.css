@@ -8979,15 +8979,23 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     content: "";
     display: inline-block;
     width: 23rem;
-    height: 8.7rem;
-    background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
+    height: 23rem;
+    background: url("/img/mng/common/pumpkin_s.jpg") no-repeat 0 0;
+    background-size: 100%;
+}
+.log .inner .logo a:focus::after {
+    content: "";
+    display: inline-block;
+    width: 23rem;
+    height: 23rem;
+    background: url("/img/mng/common/pumpkin_e.jpg") no-repeat 0 0;
     background-size: 100%;
 }
 @media (max-width: 1024px) {
     .log .inner .logo a::after {
         width: 16.5rem;
-        height: 6.25rem;
-        background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
+        height: 16.5rem;
+        background: url("/img/mng/common/pumpkin_s.jpg") no-repeat 0 0;
     }
 }
 .log .inner .box-gray {
@@ -10226,8 +10234,16 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     content: "";
     display: inline-block;
     width: 16.2rem;
-    height: 6rem;
-    background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
+    height: 16.2rem;
+    background: url("/img/mng/common/pumpkin_s.jpg") no-repeat 0 0;
+    background-size: 100%;
+}
+#header > .inner .header-logo a:focus::after {
+    content: "";
+    display: inline-block;
+    width: 16.2rem;
+    height: 16.2rem;
+    background: url("/img/mng/common/pumpkin_e.jpg") no-repeat 0 0;
     background-size: 100%;
 }
 @media (max-width: 1024px) {

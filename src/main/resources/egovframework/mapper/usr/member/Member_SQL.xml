@@ -42,8 +42,9 @@
                reg_date   AS regDate,
                sessionkey AS sessionkey,
                enableyn   AS enableyn
-        FROM PMKN_MEMBER and status = 'OK'
+        FROM PMKN_MEMBER
         WHERE id = #{id}
+          and status = 'OK'
         ]]>
     </select>
 

@@ -80,17 +80,17 @@ function fnChangePw(){
 <%--            <p class="b-item">- 로그인 하시면 내용을 볼 수 있음과 동시에 정보 유출 시 현재 아이디 사용자가 모든 책임을 갖게 되는 것을 의미합니다.</p>--%>
         </div>
         <div class="agree">
-        	<label class="checkbox">
+        	<label class="checkbox" for="agree">
         		<input type="checkbox" name="agree" class="form_chk" title="선택"  id="agree" >
         		<i></i>
-       		</label>
             <span>동의하시면 체크박스를 선택하신 후 로그인 하시기 바랍니다.</span>
+            </label>
         </div>
         <form name="loginForm" id="loginForm" action="/usr/member/memberLogin" method="post">
 	        <div class="login-wrap">
 	            <div class="input-wrap">
 	            	<input type="text" title="아이디" placeholder="아이디를 입력해 주세요." maxlength="50" name="id" id="id" value=""  class="lg" />
-	            	<input type="password" title="비밀번호" name="passWd" id="passWd" autocomplete="off" class="lg"  placeholder="비밀번호를 입력해 주세요." maxlength="14" onkeyup="capsLock(event, 'tt_passWd');" onblur="hideCapsLock(event, 'tt_passWd');"/>
+	            	<input type="password" title="비밀번호" name="pw" id="passWd" autocomplete="off" class="lg"  placeholder="비밀번호를 입력해 주세요." maxlength="14" onkeyup="capsLock(event, 'tt_passWd');" onblur="hideCapsLock(event, 'tt_passWd');"/>
 	            	<input type="hidden" name="changePassword" id="changePassword" value="" />
 	            </div>
 	            <a href="javascript:;" class="btn-red-lg" onclick="login();">로그인</a>

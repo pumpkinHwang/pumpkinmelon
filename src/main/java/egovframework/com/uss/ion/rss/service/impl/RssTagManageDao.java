@@ -112,16 +112,16 @@ public class RssTagManageDao extends EgovComAbstractDAO {
 			// KISA 보안약점 조치 (2018-12-05, 황장운)
 			// WhiteList 기능 보완 (2019-05-10, 황장운)
 			if ( tableWhiteList.contains(sTableName.toLowerCase()) == true ) {
-			
+
 				if ( sDbType.equals("mysql") || sDbType.equals("maria") || sDbType.equals("postgres") ) {
 					sSQL = "SELECT * FROM (sTableName) LIMIT 1 ";
 					sSQL = sSQL.replace("(sTableName)",sTableName);
-					
+
 				} else {
 					sSQL = "SELECT * FROM (sTableName) WHERE ROWNUM <= 1 ";
 					sSQL = sSQL.replace("(sTableName)",sTableName);
 				}
-	
+
 				if (!sDbType.equals("altibase")) {//2011.10.18
 					st = conn.prepareStatement(sSQL, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 				} else {
@@ -129,15 +129,15 @@ public class RssTagManageDao extends EgovComAbstractDAO {
 				}
 
 				rs = st.executeQuery();
-	
+
 				ResultSetMetaData rsMetaData = rs.getMetaData();
 				int numberOfColumns = rsMetaData == null ? 0 : rsMetaData.getColumnCount();
-	
+
 				for (int i = 1; i < numberOfColumns + 1; i++) {
 					Map<String, String> hmResult = new HashMap<String, String>();
 					hmResult.put("code", (String) (rsMetaData == null ? "" : EgovStringUtil.isNullToString(rsMetaData.getTableName(i))) );
 					hmResult.put("codeNm", (String) (rsMetaData == null ? "" : EgovStringUtil.isNullToString(rsMetaData.getColumnName(i))) );
-	
+
 					arrListResult.add(hmResult);
 				}
 			}
