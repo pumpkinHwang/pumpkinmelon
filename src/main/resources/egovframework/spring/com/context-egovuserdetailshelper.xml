@@ -7,9 +7,9 @@
 <!--
 	수정일          수성자                          수정내용
    ===========     ========      =================================================
-   2011.10.11		이기하			context-common.xml 파일에서 별도분리
-   2016.06.21		장동한 			spring profile 방식으로 변경 / 세션(Session), 시큐리티(Security) 인증
-   2017.09.04		장동한 			spring profile 이용한 더미(Dummy), 세션(Session), 시큐리티(Security)
+   2011.10.11		황장운			context-common.xml 파일에서 별도분리
+   2016.06.21		황장운 			spring profile 방식으로 변경 / 세션(Session), 시큐리티(Security) 인증
+   2017.09.04		황장운 			spring profile 이용한 더미(Dummy), 세션(Session), 시큐리티(Security)
 
  ************************************************************************************************
 	1.Spring Profile을 이용한 더미(Dummy) 사용자 인증

@@ -2,7 +2,7 @@ package egovframework.com.sts.sst.service;
 
 /**
  * 웹로그집계정보에 대한 모델 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.15
  * @version 1.0
  * @see
@@ -12,8 +12,8 @@ package egovframework.com.sts.sst.service;
  *
  *   수정일      수정자          수정내용
  *  -------     --------    ---------------------------
- *  2009.04.15   박지욱          최초 생성
- *  2011.07.01   이기하          패키지 분리(sts -> sts.sst)
+ *  2009.04.15   황장운          최초 생성
+ *  2011.07.01   황장운          패키지 분리(sts -> sts.sst)
  *
  *  </pre>
  */

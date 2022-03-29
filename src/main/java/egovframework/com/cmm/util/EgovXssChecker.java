@@ -12,7 +12,7 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
 /**
  * EgovXssChecker 클래스
  *
- * @author 장동한
+ * @author 황장운
  * @since 2016.10.27
  * @version 1.0
  * @see
@@ -22,8 +22,8 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
  *
  *   수정일        수정자           수정내용
  *  -------      -------------  ----------------------
- *   2016.10.17  장동한           최초 생성
- *   2017.03.03     조성원 	  시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
+ *   2016.10.17  황장운           최초 생성
+ *   2017.03.03     황장운 	  시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
  * </pre>
  */
 
@@ -57,7 +57,7 @@ public class EgovXssChecker {
 			//체크 값에 대한 무결성 체크
 			if(sUniqId == null || (loginVO == null ? "" : EgovStringUtil.isNullToString(loginVO.getUniqId())) == null){
 				throw new EgovXssException("XSS00001", "errors.xss.checkerUser");
-			} else if (loginVO.getUniqId().equals("")) { // KISA 보안약점 조치 (2018-12-11, 신용호)
+			} else if (loginVO.getUniqId().equals("")) { // KISA 보안약점 조치 (2018-12-11, 황장운)
 				throw new EgovXssException("XSS00001", "errors.xss.checkerUser");
 			}
 			
@@ -65,7 +65,7 @@ public class EgovXssChecker {
 			if(!sUniqId.equals(loginVO.getUniqId())){
 				throw new EgovXssException("XSS00002", "errors.xss.checkerUser");
 			}
-		//2017.03.03 	조성원 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]	
+		//2017.03.03 	황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]	
 		} catch(IllegalArgumentException e) {
 			LOGGER.error("[IllegalArgumentException] Try/Catch...usingParameters Runing : "+ e.getMessage());
 		} catch(Exception e) {

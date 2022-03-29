@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @created 28-6-2010 오전 11:33:43
  * 
- * 2017.03.03 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+ * 2017.03.03 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
  */
 
 @Service("egovFileSysMntrngScheduling")
@@ -60,7 +60,7 @@ public class EgovFileSystemMntrngScheduling extends EgovAbstractServiceImpl {
 	public void monitorFileSys() throws Exception {
 		// 모니터링 대상 정보 읽어들이기
 		Map<String, Object> map = null;
-		//2017.03.03 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+		//2017.03.03 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 		List<FileSysMntrng> targetList = new ArrayList<FileSysMntrng>();
 		FileSysMntrngVO searchVO = new FileSysMntrngVO();
 		// 모니터링 대상 검색 조건 초기화
@@ -68,7 +68,7 @@ public class EgovFileSystemMntrngScheduling extends EgovAbstractServiceImpl {
 		searchVO.setFirstIndex(0);
 		searchVO.setRecordCountPerPage(RECORD_COUNT_PER_PAGE);
 		map = ntwrkSvcMntrngService.selectFileSysMntrngList(searchVO);
-		//2017.03.03 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+		//2017.03.03 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 		if(map != null){
 			targetList = (List<FileSysMntrng>)map.get("resultList");
 		}

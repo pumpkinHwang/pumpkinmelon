@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * 위키북마크를 처리하는 Dao Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.10.20
  * @version 1.0
  * @see <pre>
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.10.20  장동한          최초 생성
+ *   2010.10.20  황장운          최초 생성
  *
  * </pre>
  */

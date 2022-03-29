@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * 전자관인에서 사용해야 하는 서비스를 정의하기위한 데이터 접근 클래스
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.02.01
  * @version 1.0
  * @see
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.02.01  이중호          최초 생성
+ *   2009.02.01  황장운          최초 생성
  *
  * </pre>
  */

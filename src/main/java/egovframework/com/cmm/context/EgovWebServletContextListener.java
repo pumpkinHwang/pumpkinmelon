@@ -16,7 +16,7 @@ import egovframework.com.cmm.service.EgovProperties;
  * <Disclaimer>
  *		N/A
  *
- * @author 장동한
+ * @author 황장운
  * @since 2016.06.23
  * @version 1.0
  * @see
@@ -26,8 +26,8 @@ import egovframework.com.cmm.service.EgovProperties;
  *
  *   수정일        수정자           수정내용
  *  -------      -------------  ----------------------
- *   2016.06.23  장동한           최초 생성
- *   2017.03.03     조성원 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
+ *   2016.06.23  황장운           최초 생성
+ *   2017.03.03     황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
  * </pre>
  */
 
@@ -58,7 +58,7 @@ public class EgovWebServletContextListener implements ServletContextListener {
             System.setProperty("spring.profiles.active", EgovProperties.getProperty("Globals.DbType")+","+EgovProperties.getProperty("Globals.Auth"));
             LOGGER.debug("Setting spring.profiles.active>"+System.getProperty("spring.profiles.active"));
             LOGGER.debug("===========================END   EgovServletContextLoad END ===========");
-        //2017.03.03 	조성원 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
+        //2017.03.03 	황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
         } catch(IllegalArgumentException e) {
     		LOGGER.error("[IllegalArgumentException] Try/Catch...usingParameters Runing : "+ e.getMessage());
         } catch (Exception e) {

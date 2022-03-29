@@ -28,11 +28,11 @@ import egovframework.com.cmm.util.EgovResourceCloseHelper;
  *
  *   수정일                수정자              수정내용
  *   ----------   --------     ---------------------------
- *   2009.08.26   한성곤               최초 생성
- *   2017.03.03     조성원 	            시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2019.12.09   신용호               KISA 보안약점 조치 (위험한 형식 파일 업로드) : uploadFiles 삭제  => EgovFileUploadUtil.uploadFilesExt(확장자 기록) 대체
+ *   2009.08.26   황장운               최초 생성
+ *   2017.03.03     황장운 	            시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2019.12.09   황장운               KISA 보안약점 조치 (위험한 형식 파일 업로드) : uploadFiles 삭제  => EgovFileUploadUtil.uploadFilesExt(확장자 기록) 대체
  *
- * @author 공통컴포넌트 개발팀 한성곤
+ * @author 공통컴포넌트 개발팀 황장운
  * @since 2009.08.26
  * @version 1.0
  * @see
@@ -90,7 +90,7 @@ public class EgovFormBasedFileUtil {
 		
 		// 디렉토리 생성
 		if (!file.getParentFile().exists()) {
-			//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			if(file.getParentFile().mkdirs()){
 				LOGGER.debug("[file.mkdirs] file : Directory Creation Success");
 			}else{				

@@ -3,7 +3,7 @@ package egovframework.com.utl.pao.service;
 /**
  * 
  * 관인 처리 Util 클래스
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.02.01
  * @version 1.0
  * @see
@@ -13,7 +13,7 @@ package egovframework.com.utl.pao.service;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.02.01  이중호          최초 생성
+ *   2009.02.01  황장운          최초 생성
  *
  * </pre>
  */

@@ -44,10 +44,10 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 *  수정일                수정자           수정내용
 *  ----------   --------   ---------------------------
 *  2009.04.01   박정규            최초 생성
-*  2011.08.26   정진오            IncludedInfo annotation 추가
-*  2016.08.03   김연호            표준프레임워크 3.6 개선
-*  2020.10.27   신용호            파일 업로드 수정 (multiRequest.getFiles)
-*  2021.07.29   정진호            경로 오류 수정
+*  2011.08.26   황장운            IncludedInfo annotation 추가
+*  2016.08.03   황장운            표준프레임워크 3.6 개선
+*  2020.10.27   황장운            파일 업로드 수정 (multiRequest.getFiles)
+*  2021.07.29   황장운            경로 오류 수정
 *
 * </pre>
 */

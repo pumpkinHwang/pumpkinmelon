@@ -50,8 +50,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
  *  2010.07.19   장철호            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2019.12.06   신용호            KISA 보안약점 조치 (위험한 형식 파일 업로드)
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2019.12.06   황장운            KISA 보안약점 조치 (위험한 형식 파일 업로드)
  *
  * </pre>
  */

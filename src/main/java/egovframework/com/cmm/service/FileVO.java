@@ -11,9 +11,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  *    수정일       수정자         수정내용
  *    -------        -------     -------------------
- *    2009. 3. 25.     이삼섭
+ *    2009. 3. 25.     황장운
  *
- * @author 공통 서비스 개발팀 이삼섭
+ * @author 공통 서비스 개발팀 황장운
  * @since 2009. 3. 25.
  * @version
  * @see

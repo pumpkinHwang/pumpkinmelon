@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * 
  * 관인이미지에 대한 서비스 구현클래스를 정의한다
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
+ *   2009.04.01  황장운          최초 생성
  *
  * </pre>
  */

@@ -31,7 +31,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  * 온라인메뉴얼를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.07.03
  * @version 1.0
  * @see <pre>
@@ -39,9 +39,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
- *   2016.8.12	김연호 			표준프레임워크 3.6 개선
+ *   2009.07.03  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
+ *   2016.8.12	황장운 			표준프레임워크 3.6 개선
  *
  * </pre>
  */

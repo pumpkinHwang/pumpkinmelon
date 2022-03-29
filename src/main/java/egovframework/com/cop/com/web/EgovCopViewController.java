@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 협업 비로그인 유저용 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.4.10  이삼섭          최초 생성
+ *   2009.4.10  황장운          최초 생성
  *
  * </pre>
  */

@@ -34,7 +34,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  * 일지관리를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -44,10 +44,10 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2009.04.10   장동한            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2019.12.09   신용호            KISA 보안약점 조치 (위험한 형식 파일 업로드)
- *  2020.10.28   신용호            파일 업로드 수정 (multiRequest.getFiles)
+ *  2009.04.10   황장운            최초 생성
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2019.12.09   황장운            KISA 보안약점 조치 (위험한 형식 파일 업로드)
+ *  2020.10.28   황장운            파일 업로드 수정 (multiRequest.getFiles)
  *
  * </pre>
  */

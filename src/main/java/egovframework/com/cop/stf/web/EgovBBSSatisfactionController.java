@@ -25,7 +25,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 만족도 서비스 컨트롤러 클래스
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.06.29
  * @version 1.0
  * @see
@@ -35,7 +35,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.06.29  한성곤          최초 생성
+ *   2009.06.29  황장운          최초 생성
  *
  * Copyright (C) 2009 by MOPAS  All right reserved.
  * </pre>

@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
 *
 * SessionTimeoutCookieFilter 
-* @author 공통컴포넌트 팀 신용호
+* @author 공통컴포넌트 팀 황장운
 * @since 2020.06.17
 * @version 1.0
 * @see
@@ -42,7 +42,7 @@ import javax.servlet.http.HttpServletResponse;
 *
 *  수정일               수정자           수정내용
 *  ----------   --------   ---------------------------
-*  2020.06.17   신용호            최초 생성
+*  2020.06.17   황장운            최초 생성
 *
 */
 

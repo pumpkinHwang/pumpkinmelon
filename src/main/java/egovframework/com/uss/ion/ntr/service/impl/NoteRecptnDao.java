@@ -9,7 +9,7 @@ import egovframework.com.uss.ion.ntr.service.NoteRecptn;
 import org.springframework.stereotype.Repository;
 /**
  * 받은쪽지함관리를 처리하는 Dao Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.06.16
  * @version 1.0
  * @see <pre>
@@ -17,8 +17,8 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
- *   2017.09.14	 장동한		   표준프레임워크 3.7 개선
+ *   2009.07.03  황장운          최초 생성
+ *   2017.09.14	 황장운		   표준프레임워크 3.7 개선
  *
  * </pre>
  */

@@ -41,7 +41,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2010.7.19	장철호          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */
@@ -78,7 +78,7 @@ public class EgovMemoTodoController {
 	public String selectMemoTodoList(@ModelAttribute("searchVO") MemoTodoVO memoTodoVO, ModelMap model) throws Exception{
     	//로그인 객체 선언
 		LoginVO loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
@@ -302,7 +302,7 @@ public class EgovMemoTodoController {
 	public String selectMemoTodoListToday(@ModelAttribute("searchVO") MemoTodoVO memoTodoVO, ModelMap model) throws Exception{
 		//로그인 객체 선언
 		LoginVO loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {

@@ -13,7 +13,7 @@ import egovframework.com.cop.sms.service.SmsVO;
 
 /**
  * 문자메시지를 위한 데이터 접근 클래스 (프레임워크 비종속 버전)
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.11.24
  * @version 1.0
  * @see
@@ -23,7 +23,7 @@ import egovframework.com.cop.sms.service.SmsVO;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.11.24  한성곤          최초 생성
+ *   2009.11.24  황장운          최초 생성
  *
  * </pre>
  */

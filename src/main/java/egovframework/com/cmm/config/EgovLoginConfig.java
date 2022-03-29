@@ -7,7 +7,7 @@ package egovframework.com.cmm.config;
  * <Disclaimer>
  *		N/A
  *
- * @author 장동한
+ * @author 황장운
  * @since 2017.07.17
  * @version 1.0
  * @see
@@ -17,7 +17,7 @@ package egovframework.com.cmm.config;
  *
  *   수정일        수정자           수정내용
  *  -------      -------------  ----------------------
- *   2016.07.17  장동한           최초 생성
+ *   2016.07.17  황장운           최초 생성
  * </pre>
  */
 

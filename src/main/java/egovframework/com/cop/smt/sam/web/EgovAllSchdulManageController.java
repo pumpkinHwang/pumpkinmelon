@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 전체일정을 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -30,8 +30,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.4.10  장동한          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2009.4.10  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

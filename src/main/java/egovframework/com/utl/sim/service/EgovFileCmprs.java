@@ -5,14 +5,14 @@
  *
  *   수정일               수정자              수정내용
  *   ----------   --------    ---------------------------
- *   2009.02.04   박지욱              최초 생성
- *   2017.03.03   조성원              시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2017.03.03   조성원              시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
- *   2018.03.19   신용호              createDirectories() 호출및 예외처리 수정
- *   2020.08.28   신용호              시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2020.10.29   신용호              KISA 보안약점 조치 (경로 조작 및 자원 삽입)
+ *   2009.02.04   황장운              최초 생성
+ *   2017.03.03   황장운              시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2017.03.03   황장운              시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+ *   2018.03.19   황장운              createDirectories() 호출및 예외처리 수정
+ *   2020.08.28   황장운              시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2020.10.29   황장운              KISA 보안약점 조치 (경로 조작 및 자원 삽입)
  *
- *  @author 공통 서비스 개발팀 박지욱
+ *  @author 공통 서비스 개발팀 황장운
  *  @since 2009. 02. 04
  *  @version 1.0
  *  @see
@@ -96,7 +96,7 @@ public class EgovFileCmprs {
 					result = true;
 					
 				} catch (IOException e) {
-					//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+					//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 					if(tarFile.delete()){
 						LOGGER.debug("[file.delete] tarFile : File Deletion Success");
 					}else{						
@@ -120,7 +120,7 @@ public class EgovFileCmprs {
 					zoutput = new ZipOutputStream((OutputStream) foutput);
 					File[] fileArr = srcFile.listFiles();
 					
-					//2017.03.03 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+					//2017.03.03 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 					if(fileArr == null){
 						fileArr = new File[0];
 					}
@@ -143,7 +143,7 @@ public class EgovFileCmprs {
 					zoutput.closeEntry();
 				} catch (IOException e) {
 					
-					//2020.08.28 	신용호 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+					//2020.08.28 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 					if(tarFile.delete()){
 						LOGGER.debug("[file.delete] tarFile : File Deletion Success");
 					}else{						

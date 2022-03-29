@@ -5,9 +5,9 @@
 <!--
     수정일          수성자                          수정내용
    ==========      ========      =================================================
-   2011.9.19        이기하         filter 정리
-   2013.5.31        이기하         미사용 filter 정리(.mdo, .action)
-   2016.6.34        장동한         WebApplicationInitializer 방식으로 변경
+   2011.9.19        황장운         filter 정리
+   2013.5.31        황장운         미사용 filter 정리(.mdo, .action)
+   2016.6.34        황장운         WebApplicationInitializer 방식으로 변경
 -->
     
     <welcome-file-list>

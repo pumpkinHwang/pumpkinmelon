@@ -28,7 +28,7 @@ public class EgovLoginSesionCeckUtil extends EgovAbstractServiceImpl {
 	 */
 	public void setLoginSession(String url) throws Exception {
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-		// KISA 보안취약점 조치 (2018-12-10, 이정은)
+		// KISA 보안취약점 조치 (2018-12-10, 황장운)
 		if ( user != null ) {
 			user.setUrl("");
 			user.setUrl(url);
@@ -42,7 +42,7 @@ public class EgovLoginSesionCeckUtil extends EgovAbstractServiceImpl {
 	 */	
 	public String checkLoginSessionView() throws Exception {
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-		// KISA 보안취약점 조치 (2018-12-10, 이정은)
+		// KISA 보안취약점 조치 (2018-12-10, 황장운)
 		if ( user == null )
 			return "";
 		else 

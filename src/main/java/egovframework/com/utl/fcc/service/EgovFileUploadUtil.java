@@ -21,13 +21,13 @@ import org.springframework.web.util.WebUtils;
  *
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2009.08.26   한성곤            최초 생성
- *  2018.08.17   신용호            uploadFilesExt(확장자 기록) 추가
- *  2019.12.06   신용호            checkFileExtension(), checkFileMaxSize() 추가
- *  2020.08.05   신용호            uploadFilesExt Parameter 수정
- *  2021.02.16   신용호            WebUtils.getNativeRequest(request,MultipartHttpServletRequest.class);
+ *  2009.08.26   황장운            최초 생성
+ *  2018.08.17   황장운            uploadFilesExt(확장자 기록) 추가
+ *  2019.12.06   황장운            checkFileExtension(), checkFileMaxSize() 추가
+ *  2020.08.05   황장운            uploadFilesExt Parameter 수정
+ *  2021.02.16   황장운            WebUtils.getNativeRequest(request,MultipartHttpServletRequest.class);
  *
- * @author 공통컴포넌트 개발팀 한성곤
+ * @author 공통컴포넌트 개발팀 황장운
  * @since 2009.08.26
  * @version 1.0
  * @see

@@ -27,7 +27,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 명함정보를 관리하기 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -37,8 +37,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.3.30  이삼섭          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2009.3.30  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */
@@ -76,7 +76,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	 // KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 // KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -125,7 +125,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	 // KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 // KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -171,7 +171,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	 // KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 // KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -206,7 +206,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+	// KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -236,7 +236,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+	// KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -281,7 +281,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	 // KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 // KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -311,7 +311,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	 // KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 // KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }
@@ -385,7 +385,7 @@ public class EgovNcrdManageController {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+	// KISA 보안취약점 조치 (2018-12-10, 황장운)
     if(!isAuthenticated) {
         return "egovframework/com/uat/uia/EgovLoginUsr";
     }

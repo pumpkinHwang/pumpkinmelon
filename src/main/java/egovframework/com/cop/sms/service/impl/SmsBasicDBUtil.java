@@ -24,7 +24,7 @@ import egovframework.com.cmm.service.Globals;
  * Apache commons의 DBCP를 활용한 예로 각 프로젝트에 맞게 수정 필요
  * (EX : DataSource 사용 등)
  *
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.11.24
  * @version 1.0
  * @see
@@ -34,9 +34,9 @@ import egovframework.com.cmm.service.Globals;
  *
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2009.11.24   한성곤            최초 생성
- *  2017-02-13   이정은            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *  2020-07-01   신용호            DBCP2 관련 변경사항 적용
+ *  2009.11.24   황장운            최초 생성
+ *  2017-02-13   황장운            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *  2020-07-01   황장운            DBCP2 관련 변경사항 적용
  *
  * </pre>
  */
@@ -143,7 +143,7 @@ public class SmsBasicDBUtil {
 		if (rs != null)
 			try {
 				rs.close();
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			} catch (SQLException ignore) {
 				LOGGER.error("[SQLExceptionException] : database access error occurs");
 			} catch (Exception ignore) {
@@ -152,7 +152,7 @@ public class SmsBasicDBUtil {
 		if (stmt != null)
 			try {
 				stmt.close();
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			} catch (SQLException ignore) {
 				LOGGER.error("[SQLExceptionException] : database access error occurs");
 			} catch (Exception ignore) {
@@ -161,7 +161,7 @@ public class SmsBasicDBUtil {
 		if (conn != null)
 			try {
 				conn.close();
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			} catch (SQLException ignore) {
 				LOGGER.error("[SQLExceptionException] : database access error occurs");
 			} catch (Exception ignore) {

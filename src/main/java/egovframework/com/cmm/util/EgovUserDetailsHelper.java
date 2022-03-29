@@ -7,7 +7,7 @@ import egovframework.com.cmm.service.EgovUserDetailsService;
 /**
  * EgovUserDetails Helper 클래스
  *
- * @author sjyoon
+ * @author 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -17,8 +17,8 @@ import egovframework.com.cmm.service.EgovUserDetailsService;
  *
  *   수정일      수정자           수정내용
  *  -------    -------------    ----------------------
- *   2009.03.10  sjyoon         최초 생성
- *   2011.07.01	 서준식          interface 생성후 상세 로직의 분리
+ *   2009.03.10  황장운         최초 생성
+ *   2011.07.01	 황장운          interface 생성후 상세 로직의 분리
  * </pre>
  */
 

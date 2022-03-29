@@ -39,8 +39,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.04.01  박정규          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
- *   2016.06.13   장동한         표준프레임워크 v3.6 개선
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
+ *   2016.06.13   황장운         표준프레임워크 v3.6 개선
  *
  * </pre>
  */
@@ -185,7 +185,7 @@ public class EgovStplatManageController {
     	// 로그인VO에서  사용자 정보 가져오기
     	LoginVO	loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
     	
-    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
+    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 황장운)
 
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
@@ -256,7 +256,7 @@ public class EgovStplatManageController {
     	// 로그인VO에서  사용자 정보 가져오기
     	LoginVO	loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 
-    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
+    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 황장운)
 
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";

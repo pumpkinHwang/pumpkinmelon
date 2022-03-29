@@ -6,7 +6,7 @@ import java.util.Map;
 import egovframework.com.cmm.ComDefaultVO;
 /**
  * 일정관리를 처리하는 Service Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -16,7 +16,7 @@ import egovframework.com.cmm.ComDefaultVO;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.10  장동한          최초 생성
+ *   2009.04.10  황장운          최초 생성
  *
  * </pre>
  */

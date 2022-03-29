@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 게시물 통계 검색 컨트롤러 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.19
  * @version 1.0
  * @see
@@ -27,10 +27,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.03.19  박지욱          최초 생성
- *  2011.06.30  이기하          패키지 분리(sts -> sts.bst)
- *  2011.8.26	정진오			IncludedInfo annotation 추가
- *  2018.05.02  신용호          게시판유형별 코드분류 변경 (COM004 => COM101)
+ *  2009.03.19  황장운          최초 생성
+ *  2011.06.30  황장운          패키지 분리(sts -> sts.bst)
+ *  2011.8.26	황장운			IncludedInfo annotation 추가
+ *  2018.05.02  황장운          게시판유형별 코드분류 변경 (COM004 => COM101)
  *                        게시판속성별(COM009) 코드분류 사용하지 않음
  *
  *  </pre>

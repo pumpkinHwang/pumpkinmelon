@@ -38,7 +38,7 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
 import org.egovframe.rte.fdl.property.EgovPropertyService;
 /**
  * 일정관리를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -48,11 +48,11 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
  *
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2009.04.10   장동한            최초 생성
- *  2011.09.02   정진오            10월 주차 테이블에 날짜가 이상하게 나와서 수정함
- *  2011.09.16   이기하            일지관리가 존재할 때 버튼이 나타나도록 수정
- *  2016.08.12   장동한            일정관리 등록 로직 수정
- *  2020.10.27   신용호            파일 업로드 수정 (multiRequest.getFiles)
+ *  2009.04.10   황장운            최초 생성
+ *  2011.09.02   황장운            10월 주차 테이블에 날짜가 이상하게 나와서 수정함
+ *  2011.09.16   황장운            일지관리가 존재할 때 버튼이 나타나도록 수정
+ *  2016.08.12   황장운            일정관리 등록 로직 수정
+ *  2020.10.27   황장운            파일 업로드 수정 (multiRequest.getFiles)
  *
  * </pre>
  */

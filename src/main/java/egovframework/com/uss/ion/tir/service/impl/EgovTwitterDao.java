@@ -7,7 +7,7 @@ import egovframework.com.cmm.service.impl.EgovComAbstractDAO;
 import org.springframework.stereotype.Repository;
 /**
  * RSS태그관리를 처리하는 Dao Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.10.04
  * @version 1.0
  * @see <pre>
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.10.04  장동한          최초 생성
+ *   2010.10.04  황장운          최초 생성
  *
  * </pre>
  */

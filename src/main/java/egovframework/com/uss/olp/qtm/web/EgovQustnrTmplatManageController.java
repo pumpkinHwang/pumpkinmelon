@@ -33,7 +33,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  * 설문템플릿 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.03.20
  * @version 1.0
  * @see
@@ -43,9 +43,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *  수정일                수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2009.03.20   장동한            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2020.10.30   신용호            파일업로드 제한을위한 파라미터 전달
+ *  2009.03.20   황장운            최초 생성
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2020.10.30   황장운            파일업로드 제한을위한 파라미터 전달
  *
  * </pre>
  */

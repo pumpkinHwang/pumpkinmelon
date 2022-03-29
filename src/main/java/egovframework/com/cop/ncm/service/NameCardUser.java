@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * 명함사용자 정보를 관리하기 위한 모델 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.3.28  이삼섭          최초 생성
+ *   2009.3.28  황장운          최초 생성
  *
  * </pre>
  */

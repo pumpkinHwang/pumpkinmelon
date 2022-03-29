@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 협업기능에서 활용하는 사용자 정보 조회용 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.4.6   이삼섭          최초 생성
- *	 2011.07.21 안민정          커뮤니티 관련 메소드 분리 (->EgovCmyUserInfController)
+ *   2009.4.6   황장운          최초 생성
+ *	 2011.07.21 황장운          커뮤니티 관련 메소드 분리 (->EgovCmyUserInfController)
  *
  * </pre>
  */

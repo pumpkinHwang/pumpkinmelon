@@ -22,7 +22,7 @@ import egovframework.com.cmm.annotation.IncludedInfo;
  *  ----------   ---------   -------------------
  *  2014.10.21   표준프레임워크    최초생성
  *  2015.04.01   전여철              Test용 Open API confmKey encode추가
- *  2020.10.29   신용호              KISA 보안약점 조치 (경로 조작 및 자원 삽입, 크로스사이트 스크립트)
+ *  2020.10.29   황장운              KISA 보안약점 조치 (경로 조작 및 자원 삽입, 크로스사이트 스크립트)
  *  
  * @author 표준프레임워크
  * @since 2014.10.21

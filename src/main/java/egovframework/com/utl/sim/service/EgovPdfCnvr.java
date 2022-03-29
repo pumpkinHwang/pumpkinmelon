@@ -6,7 +6,7 @@
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
  *   2009.02.02    이 용          최초 생성
- *   2017.03.03          조성원 	    시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2017.03.03          황장운 	    시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  *
  *  @author 공통 서비스 개발팀 이 용
  *  @since 2009. 02. 02
@@ -142,7 +142,7 @@ public class EgovPdfCnvr {
 			File cFile = new File(EgovWebUtil.filePathBlackList(stordFilePath));
 
 			if (!cFile.isDirectory())
-				//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(cFile.mkdirs()){
 					LOGGER.debug("[file.mkdirs] targetDir : Directory Creation Success");
 				}else{					

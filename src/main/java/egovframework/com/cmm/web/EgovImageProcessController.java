@@ -31,12 +31,12 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *    수정일       	      수정자                수정내용
  *    ----------   ---------     -------------------
- *    2009.04.02      이삼섭			 최초생성
+ *    2009.04.02      황장운			 최초생성
  *    2014.03.31      유지보수		 fileSn 오류수정
- *    2018.08.31      이정은		     MimeType 중복설정 제거
- *    2019.11.29      신용호	         KISA 보안약점 조치 : HTTP응답분할(HTTP_Response_Splitting,CRLF)취약점 조치
+ *    2018.08.31      황장운		     MimeType 중복설정 제거
+ *    2019.11.29      황장운	         KISA 보안약점 조치 : HTTP응답분할(HTTP_Response_Splitting,CRLF)취약점 조치
  *
- * @author 공통 서비스 개발팀 이삼섭
+ * @author 공통 서비스 개발팀 황장운
  * @since 2009. 4. 2.
  * @version
  * @see

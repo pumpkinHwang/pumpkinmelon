@@ -13,7 +13,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 
 /**
  * 
- * @author 공통서비스 개발팀 서준식
+ * @author 공통서비스 개발팀 황장운
  * @since 2011. 6. 25.
  * @version 1.0
  * @see
@@ -23,7 +23,7 @@ import org.springframework.web.context.request.RequestContextHolder;
  * 
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2011. 8. 12.    서준식        최초생성
+ *  2011. 8. 12.    황장운        최초생성
  *  
  *  </pre>
  */

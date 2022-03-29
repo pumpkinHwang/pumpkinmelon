@@ -25,7 +25,7 @@ import x3.client.smeapi.impl.SMELogger;
 
 /**
  * 문자메시지 연동 결과 수신 처리를 위한 클래스
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.08.05
  * @version 1.0
  * @see
@@ -35,9 +35,9 @@ import x3.client.smeapi.impl.SMELogger;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.08.05  한성곤          최초 생성
- *   2011.10.10	 이기하			 보안점검 후속초치(디버거코드 주석처리)
- *	 2016-02-13   이정은 	  시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2009.08.05  황장운          최초 생성
+ *   2011.10.10	 황장운			 보안점검 후속초치(디버거코드 주석처리)
+ *	 2016-02-13   황장운 	  시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  * </pre>
  */
 @Service("EgovSmsInfoReceiver")
@@ -271,7 +271,7 @@ public class EgovSmsInfoReceiver extends EgovAbstractServiceImpl implements SMEL
 
 					try {
 						smsDao.updateSmsRecptnInf(recptn);
-					//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+					//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 					} catch (IllegalArgumentException ex) {
 						LOGGER.error("[IllegalArgumentException] : Connection Close");
 					} catch (Exception ex) {

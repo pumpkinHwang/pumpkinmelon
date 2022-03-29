@@ -47,7 +47,7 @@ import java.util.Random;
 *    수정일               수정자                수정내용
 *    ----------   ---------    ---------------------------------
 *    2014.11.27   이영지                
-*    2020.11.02   신용호               KISA 보안약점 조치 (Random Seed값 추가)
+*    2020.11.02   황장운               KISA 보안약점 조치 (Random Seed값 추가)
 *
 */
 @ServerEndpoint(value = "/usersServerEndpoint"/* ,configurator=ServerAppConfig.class*/)

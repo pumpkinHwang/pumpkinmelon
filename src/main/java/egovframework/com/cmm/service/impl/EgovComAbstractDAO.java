@@ -17,7 +17,7 @@ import org.egovframe.rte.psl.dataaccess.EgovAbstractMapper;
 /**
  * EgovComAbstractDAO.java 클래스
  *
- * @author 서준식
+ * @author 황장운
  * @since 2011. 9. 23.
  * @version 1.0
  * @see
@@ -27,8 +27,8 @@ import org.egovframe.rte.psl.dataaccess.EgovAbstractMapper;
  *
  *   수정일      수정자           수정내용
  *  -------    -------------    ----------------------
- *   2011. 9. 23.   서준식        최초 생성
- *   2016. 5. 11.   장동한        myBatis 방식 적용
+ *   2011. 9. 23.   황장운        최초 생성
+ *   2016. 5. 11.   황장운        myBatis 방식 적용
  * </pre>
  */
 public abstract class EgovComAbstractDAO extends EgovAbstractMapper{

@@ -19,7 +19,7 @@ import egovframework.com.sec.rnc.service.EgovRlnmManageService;
 
 /**
  * 실명인증관련 요청을  비지니스 클래스로 전달하고 처리된결과를  해당   웹 화면으로 전달하는  Controller를 정의한다
- * @author 공통서비스 개발팀 조재영
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -29,8 +29,8 @@ import egovframework.com.sec.rnc.service.EgovRlnmManageService;
  *
  *  수정일              수정자          수정내용
  *  ----------  --------  ---------------------------
- *  2009.04.10  조재영          최초 생성
- *  2019.04.25  신용호          moveToPage() 화이트리스트 처리
+ *  2009.04.10  황장운          최초 생성
+ *  2019.04.25  황장운          moveToPage() 화이트리스트 처리
  *
  * </pre>
  */

@@ -37,7 +37,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 커뮤니티 사용자관리, 커뮤니티 게시판을 관리하기 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 김연호
+ * @author 공통서비스개발팀 황장운
  * @since 2016.08.01
  * @version 3.6
  * @see
@@ -47,8 +47,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일               수정자            수정내용
  *   ----------   --------   ---------------------------
- *   2016.06.13   김연호            최초 생성 - 표준프레임워크 v3.6 개선
- *   2019.05.17   신용호            KISA 취약점 조치 및 보완
+ *   2016.06.13   황장운            최초 생성 - 표준프레임워크 v3.6 개선
+ *   2019.05.17   황장운            KISA 취약점 조치 및 보완
  *   
  * </pre>
  */
@@ -99,7 +99,7 @@ public class EgovCommuManageController {
 
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -153,7 +153,7 @@ public class EgovCommuManageController {
 		
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-		// KISA 보안취약점 조치 (2018-12-10, 신용호)
+		// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -222,7 +222,7 @@ public class EgovCommuManageController {
     	
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-		//KISA 보안취약점 조치 (2018-12-10, 신용호)
+		//KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -275,7 +275,7 @@ public class EgovCommuManageController {
     	
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-		//KISA 보안취약점 조치 (2018-12-10, 신용호)
+		//KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -350,7 +350,7 @@ public class EgovCommuManageController {
 
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -385,7 +385,7 @@ public class EgovCommuManageController {
 
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -418,7 +418,7 @@ public class EgovCommuManageController {
     public String insertCommuUserAdmin(@ModelAttribute("searchVO") CommunityUserVO cmmntyUserVO, ModelMap model) throws Exception {
 
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
@@ -454,7 +454,7 @@ public class EgovCommuManageController {
 
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }

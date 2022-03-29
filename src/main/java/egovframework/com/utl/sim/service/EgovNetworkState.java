@@ -41,7 +41,7 @@ import egovframework.com.cmm.util.EgovResourceCloseHelper;
  *
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2020.12.07   신용호            KISA 보안약점 조치
+ *  2020.12.07   황장운            KISA 보안약점 조치
  *  
  * </pre>
  */

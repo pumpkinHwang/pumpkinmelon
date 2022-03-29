@@ -35,7 +35,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import net.sourceforge.ajaxtags.xml.AjaxXmlBuilder;
 /**
  * 최근검색어를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.07.03
  * @version 1.0
  * @see <pre>
@@ -43,8 +43,8 @@ import net.sourceforge.ajaxtags.xml.AjaxXmlBuilder;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
- *   2011.12.15  이기하          검색어 없을 시 미저장,
+ *   2009.07.03  황장운          최초 생성
+ *   2011.12.15  황장운          검색어 없을 시 미저장,
  *                               사용자 검색여부 'N'일 때 자동검색 미사용 수정
  *
  * </pre>

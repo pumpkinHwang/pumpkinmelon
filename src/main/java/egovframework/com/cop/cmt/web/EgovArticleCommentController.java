@@ -26,7 +26,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 댓글 관리를 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 신용호
+ * @author 공통서비스개발팀 황장운
  * @since 2016.07.22
  * @version 1.0
  * @see
@@ -36,8 +36,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일      수정자           수정내용
  *  -------       --------    ---------------------------
- *   2016.07.22   신용호              최초 생성
- *   2018.06.27     신용호		    댓글 등록후 처리 예외 수정
+ *   2016.07.22   황장운              최초 생성
+ *   2018.06.27     황장운		    댓글 등록후 처리 예외 수정
  * </pre>
  */
 
@@ -83,7 +83,7 @@ public class EgovArticleCommentController {
 		}
 		
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
@@ -216,7 +216,7 @@ public class EgovArticleCommentController {
     public String updateArticleCommentView(@ModelAttribute("searchVO") CommentVO commentVO, ModelMap model) throws Exception {
 
 	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-	 //KISA 보안취약점 조치 (2018-12-10, 신용호)
+	 //KISA 보안취약점 조치 (2018-12-10, 황장운)
     Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
     if(!isAuthenticated) {

@@ -47,7 +47,7 @@ import org.egovframe.rte.psl.orm.ibatis.support.AbstractLobTypeHandler;
  * 
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2017.03.03          조성원 	    시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2017.03.03          황장운 	    시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  * 
  * 
  */
@@ -100,7 +100,7 @@ public class AltibaseClobStringTypeHandler extends AbstractLobTypeHandler {
 		    if (rd != null) {
 				try {
 				    rd.close();
-				//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				} catch (IOException ignore) {
 					LOGGER.error("[IOException] : Connection Close");
 				} catch (Exception ignore) {

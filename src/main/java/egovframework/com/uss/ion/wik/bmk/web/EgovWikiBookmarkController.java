@@ -26,7 +26,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 위키북마크를 처리하는 Controller Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.10.20
  * @version 1.0
  * @see
@@ -35,8 +35,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.10.20  장동한          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2010.10.20  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

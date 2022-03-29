@@ -20,7 +20,7 @@ import egovframework.com.cmm.util.EgovBasicLogger;
  * 
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2017-03-03   조성원      시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-756]
+ *   2017-03-03   황장운      시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-756]
  */
 
 
@@ -65,7 +65,7 @@ public class NtwrkSvcMntrngChecker {
 					LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());
 					return new NtwrkSvcMntrngResult(false, e);
 
-				// 2017-03-03   조성원      시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-756]
+				// 2017-03-03   황장운      시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-756]
 				}catch(Exception e){
 					
 					LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());

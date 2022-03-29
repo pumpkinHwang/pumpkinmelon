@@ -5,12 +5,12 @@
  * 상세내용
  * - 메인화면이미지에 대한 등록, 수정, 삭제, 조회, 반영확인 기능을 제공한다.
  * - 메인화면이미지의 조회기능은 목록조회, 상세조회로 구분된다.
- * @author 이문준
+ * @author 황장운
  * @version 1.0
  * @created 03-8-2009 오후 2:08:58
  * 
  * 수정
- * 2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ * 2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  */
 
 package egovframework.com.uss.ion.msi.service.impl;
@@ -99,7 +99,7 @@ public class EgovMainImageServiceImpl extends EgovAbstractServiceImpl implements
 	public void deleteMainImageFile(MainImage mainImage) throws Exception {
 		FileVO fileVO = (FileVO)mainImageDAO.selectMainImageFile(mainImage);
 		File file = new File(fileVO.getFileStreCours()+fileVO.getStreFileNm());
-		//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+		//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 		if(file.delete()){
 			LOGGER.debug("[file.delete] file : File Deletion Success");
 		}else{

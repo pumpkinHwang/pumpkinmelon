@@ -21,7 +21,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 권한별 롤관리에 관한 controller 클래스를 정의한다.
- * @author 공통서비스 개발팀 이문준
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -31,8 +31,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.03.11  이문준          최초 생성
- *   2011.09.07  서준식          롤 등록시 이미 등록된 경우 데이터 중복 에러 발생 문제 수정
+ *   2009.03.11  황장운          최초 생성
+ *   2011.09.07  황장운          롤 등록시 이미 등록된 경우 데이터 중복 에러 발생 문제 수정
  * </pre>
  */
 @Controller

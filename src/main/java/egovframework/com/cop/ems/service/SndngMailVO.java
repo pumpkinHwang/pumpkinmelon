@@ -2,7 +2,7 @@ package egovframework.com.cop.ems.service;
 
 /**
  * 발송메일 VO 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.12
  * @version 1.0
  * @see
@@ -12,8 +12,8 @@ package egovframework.com.cop.ems.service;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.03.12  박지욱          최초 생성
- *  2011.12.06  이기하          첨부파일경로(fileStreCours), 첨부파일이름(orignlFileNm) 추가
+ *  2009.03.12  황장운          최초 생성
+ *  2011.12.06  황장운          첨부파일경로(fileStreCours), 첨부파일이름(orignlFileNm) 추가
  *
  *  </pre>
  */

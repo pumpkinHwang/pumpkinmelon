@@ -26,11 +26,11 @@ import org.slf4j.LoggerFactory;
  *
  *   수정일              수정자          수정내용
  *   ----------  --------  ---------------------------
- *   2009.01.19  박지욱          최초 생성
- *	 2011.07.20    서준식 	   Globals파일의 상대경로를 읽은 메서드 추가
- *	 2014.10.13    이기하 	   Globals.properties 값이 null일 경우 오류처리
- *   2019.04.26    신용호 	   RELATIVE_PATH_PREFIX Path 적용 방식 개선
- *  @author 공통 서비스 개발팀 박지욱
+ *   2009.01.19  황장운          최초 생성
+ *	 2011.07.20    황장운 	   Globals파일의 상대경로를 읽은 메서드 추가
+ *	 2014.10.13    황장운 	   Globals.properties 값이 null일 경우 오류처리
+ *   2019.04.26    황장운 	   RELATIVE_PATH_PREFIX Path 적용 방식 개선
+ *  @author 공통 서비스 개발팀 황장운
  *  @since 2009. 01. 19
  *  @version 1.0
  *  @see

@@ -46,7 +46,7 @@ import egovframework.com.cmm.annotation.IncludedInfo;
  *   수정일     	수정자          		      수정내용
  *  -----------    --------------------    ---------------------------
  *  2014.11.10		표준프레임워크센터		      최초 생성
- *  2018.10.02		신용호		      profile 호출 수정
+ *  2018.10.02		황장운		      profile 호출 수정
  *  </pre>
  */
 @Controller

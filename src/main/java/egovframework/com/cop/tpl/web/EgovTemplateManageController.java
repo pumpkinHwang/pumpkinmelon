@@ -29,7 +29,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 템플릿 관리를 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -39,8 +39,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------        --------    ---------------------------
- *   2009. 3.18  이삼섭          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2009. 3.18  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

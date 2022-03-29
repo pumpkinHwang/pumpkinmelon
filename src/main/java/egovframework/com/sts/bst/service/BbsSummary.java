@@ -2,7 +2,7 @@ package egovframework.com.sts.bst.service;
 
 /**
  * 게시물집계정보에 대한 모델 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.15
  * @version 1.0
  * @see
@@ -12,8 +12,8 @@ package egovframework.com.sts.bst.service;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.04.15  박지욱          최초 생성
- *  2011.06.30  이기하          패키지 분리(sts -> sts.bst)
+ *  2009.04.15  황장운          최초 생성
+ *  2011.06.30  황장운          패키지 분리(sts -> sts.bst)
  *
  *  </pre>
  */

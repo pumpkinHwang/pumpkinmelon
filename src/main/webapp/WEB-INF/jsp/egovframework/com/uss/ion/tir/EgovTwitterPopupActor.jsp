@@ -53,7 +53,7 @@ location.href = 'http://twitter.com/oauth/authorize?oauth_token=<%=requestToken.
 <%
 	}
 //인증 실페 이전 페이지로 돌아가기
-// KISA 보안취약점 조치 (2018-12-10, 신용호)
+// KISA 보안취약점 조치 (2018-12-10, 황장운)
 } catch (TwitterException e) {
 	//e.printStackTrace();
 	out.println("TwitterException Error - getOAuthRequestToken");

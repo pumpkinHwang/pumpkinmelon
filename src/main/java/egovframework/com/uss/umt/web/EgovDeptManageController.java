@@ -23,7 +23,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
 
 /**
  * 부서관련 처리를  비지니스 클래스로 전달하고 처리된결과를  해당   웹 화면으로 전달하는  Controller를 정의한다
- * @author 공통서비스 개발팀 조재영
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.00.00
  * @version 1.0
  * @see
@@ -34,8 +34,8 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.02.01  lee.m.j     최초 생성
- *   2015.06.16  조정국      서비스 화면 접근시 조회결과를 표시하도록 수정
- *   2021.05.30  정진오      로그인인증제한
+ *   2015.06.16  황장운      서비스 화면 접근시 조회결과를 표시하도록 수정
+ *   2021.05.30  황장운      로그인인증제한
  * </pre>
  */
 
@@ -64,7 +64,7 @@ public class EgovDeptManageController {
 	@RequestMapping("/uss/umt/dpt/selectDeptManageListView.do")
 	public String selectDeptManageListView() throws Exception {
 
-		// 2021.05.30, 정진오, 로그인인증제한
+		// 2021.05.30, 황장운, 로그인인증제한
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 		if (!isAuthenticated) {
 			return "index";

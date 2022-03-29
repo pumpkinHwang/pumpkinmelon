@@ -45,7 +45,7 @@ import egovframework.com.cmm.service.EgovProperties;
  *  수정일              수정자             수정내용
  *  ----------  --------    ---------------------------
  *  2014.12.04	표준프레임워크	최초 적용 (패키지 변경 및 소스 정리)
- *  2018.12.28	신용호             saveFile() 파라미터 수정
+ *  2018.12.28	황장운             saveFile() 파라미터 수정
  * </pre>
  */
 public class DefaultFileSaveManager implements FileSaveManager {

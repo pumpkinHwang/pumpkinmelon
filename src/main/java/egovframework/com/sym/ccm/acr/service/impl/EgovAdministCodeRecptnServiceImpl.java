@@ -30,7 +30,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * 법정동코드에 대한 서비스 구현클래스를 정의한다.
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -40,9 +40,9 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
- *   2011.10.07  이기하          finally문을 추가하여 에러시 자원반환할 수 있도록 추가
- *   2017-02-08	  이정은	  시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2009.04.01  황장운          최초 생성
+ *   2011.10.07  황장운          finally문을 추가하여 에러시 자원반환할 수 있도록 추가
+ *   2017-02-08	  황장운	  시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  *
  * Copyright (C) 2009 by MOPAS  All right reserved.
  * </pre>
@@ -193,7 +193,7 @@ public class EgovAdministCodeRecptnServiceImpl extends EgovAbstractServiceImpl i
 				if (listFile.isFile()) {
 					if (recvOldFile.getParentFile() != null) {//KISA 보안약점 조치 (2018-10-29, 윤창원)
 						if (recvOldFile.getParentFile().isDirectory()) {
-							//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+							//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 							if(listFile.renameTo(recvOldFile)){
 								LOGGER.debug("[file.renameTo] listFile : File Rename Successs ");
 							}else{							

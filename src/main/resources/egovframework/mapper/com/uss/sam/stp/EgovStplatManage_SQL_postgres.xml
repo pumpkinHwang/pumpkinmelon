@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
 	수정일		수정자					수정내용
   =========     =======    =================================================					 		
-  2011.09.19       서준식 		selectStplatList 등록일자 Character 타입으로 변경
-  2016.06.13       장동한         표준프레임워크 v3.6 리뉴얼
+  2011.09.19       황장운 		selectStplatList 등록일자 Character 타입으로 변경
+  2016.06.13       황장운         표준프레임워크 v3.6 리뉴얼
 -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">

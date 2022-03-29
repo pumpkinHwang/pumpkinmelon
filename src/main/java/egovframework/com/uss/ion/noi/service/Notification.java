@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * 정보알림이 서비스 데이터 처리 모델
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.06.08
  * @version 1.0
  * @see
@@ -16,8 +16,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *
  *   수정일      수정자           수정내용
  *   -------    --------    ---------------------------
- *   2009.6.8  	 한성곤          최초 생성
- *	 2011.10.07	 이기하		보안취약점 수정(private 배열 처리)
+ *   2009.6.8  	 황장운          최초 생성
+ *	 2011.10.07	 황장운		보안취약점 수정(private 배열 처리)
  *
  * </pre>
  */

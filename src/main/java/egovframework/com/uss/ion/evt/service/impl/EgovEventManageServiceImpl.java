@@ -34,7 +34,7 @@ import org.springframework.stereotype.Service;
  * << 개정이력(Modification Information) >> *   
  *   수정일       수정자           수정내용
  *  -------       --------    ---------------------------
- *  2011.8.11     정진오      Dependency 최소화를 위한 불필요 변수 선언 주석처리
+ *  2011.8.11     황장운      Dependency 최소화를 위한 불필요 변수 선언 주석처리
  *   
  * </pre>
  */

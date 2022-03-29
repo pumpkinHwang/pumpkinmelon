@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 /*
  *       수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- * 2017.02.07 	이정은 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-210]
+ * 2017.02.07 	황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-210]
  */
 
 public class EgovServerResrceMntrng implements EgovServerResrceMntrngMBean {
@@ -111,7 +111,7 @@ public class EgovServerResrceMntrng implements EgovServerResrceMntrngMBean {
 			
 			cs.start(); 
 			
-		//2017.02.08 	이정은 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-210]
+		//2017.02.08 	황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-210]
 		} catch (MalformedObjectNameException e) {
 			LOGGER.error("[MalformedObjectNameException] : server connection");
 		} catch (InstanceAlreadyExistsException e) {

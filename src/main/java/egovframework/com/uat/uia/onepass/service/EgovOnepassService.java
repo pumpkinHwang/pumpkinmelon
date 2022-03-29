@@ -2,7 +2,7 @@ package egovframework.com.uat.uia.onepass.service;
 
 /**
  * 디티털원패스 연동을 처리하는 비즈니스 인터페이스 클래스
- * @author 전자정부 표준프레임워크 정진오
+ * @author 전자정부 표준프레임워크 황장운
  * @since 2021.05.30
  * @version 1.0
  * @see
@@ -12,7 +12,7 @@ package egovframework.com.uat.uia.onepass.service;
  *
  *  수정일       수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2021.05.30   정진오           최초 생성
+ *  2021.05.30   황장운           최초 생성
  *  
  *  </pre>
  */

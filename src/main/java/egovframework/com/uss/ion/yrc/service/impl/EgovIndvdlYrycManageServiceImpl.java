@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
  * 상세내용
  * - 연차관리에 대한 등록, 수정, 삭제, 조회 기능을 제공한다.
  * - 연차관리의 조회기능은 목록조회로 구분된다.
- * @author 이기하
+ * @author 황장운
  * @version 1.0
  * @created 2014.11.14
  */

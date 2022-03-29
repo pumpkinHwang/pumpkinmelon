@@ -51,8 +51,8 @@ import org.egovframe.rte.fdl.excel.EgovExcelService;
  *  수정일                수정자               수정내용
  *  ----------   ----------   ---------------------------
  *  2010.06.15   표준프레임워크     최초 생성
- *  2018.08.29   신용호               xlsx 처리 할수 있도록 selectBndtManageBndeX추가
- *  2020.11.02   신용호               KISA 보안약점 조치 - 널(null) 값 체크
+ *  2018.08.29   황장운               xlsx 처리 할수 있도록 selectBndtManageBndeX추가
+ *  2020.11.02   황장운               KISA 보안약점 조치 - 널(null) 값 체크
  *
  *  </pre>
  */
@@ -343,7 +343,7 @@ public class EgovBndtManageServiceImpl extends EgovAbstractServiceImpl implement
                     checkBndtManageVO.setTempBndtNm(sTempNm); // 당직자ID
                     checkBndtManageVO.setTempBndtId(sTempId); // 당직자명
                     
-                	//최두영 로직변경
+                	//황장운 로직변경
                     bndtManageVO = bndtManageDAO.selectBndtManageBnde(checkBndtManageVO);
                     if (bndtManageVO == null) {
                     	bndtManageVO = new BndtManageVO();
@@ -422,7 +422,7 @@ public class EgovBndtManageServiceImpl extends EgovAbstractServiceImpl implement
                     checkBndtManageVO.setTempBndtNm(sTempNm); // 당직자ID
                     checkBndtManageVO.setTempBndtId(sTempId); // 당직자명
                     
-                	//최두영 로직변경
+                	//황장운 로직변경
                     bndtManageVO = bndtManageDAO.selectBndtManageBnde(checkBndtManageVO);
                     if (bndtManageVO == null) {
                     	bndtManageVO = new BndtManageVO();

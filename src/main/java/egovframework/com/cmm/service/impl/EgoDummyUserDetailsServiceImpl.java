@@ -10,7 +10,7 @@ import org.egovframe.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
 /**
  *
- * @author 공통서비스 개발팀 서준식
+ * @author 공통서비스 개발팀 황장운
  * @since 2011. 8. 12.
  * @version 1.0
  * @see
@@ -20,8 +20,8 @@ import org.egovframe.rte.fdl.cmmn.EgovAbstractServiceImpl;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2011. 8. 12.    서준식        최초생성
- *  2017. 9. 04.    장동한        클래스 이름 변경(EgovTestUserDetailsServiceImpl > EgovUserDetailsService)
+ *  2011. 8. 12.    황장운        최초생성
+ *  2017. 9. 04.    황장운        클래스 이름 변경(EgovTestUserDetailsServiceImpl > EgovUserDetailsService)
  * 
  *
  *  </pre>

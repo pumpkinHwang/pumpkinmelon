@@ -10,7 +10,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  
 /**
  * 사용자IP 체크 인터셉터
- * @author 유지보수팀 이기하
+ * @author 유지보수팀 황장운
  * @since 2013.03.28
  * @version 1.0
  * @see
@@ -20,7 +20,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  * 
  *   수정일     수정자          수정내용
  *  ----------  --------    ---------------------------
- *  2013.03.28	이기하          최초 생성 
+ *  2013.03.28	황장운          최초 생성 
  *  </pre>
  */
 

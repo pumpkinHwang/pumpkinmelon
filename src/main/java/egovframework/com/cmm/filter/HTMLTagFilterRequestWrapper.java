@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 /**
 *
 * HTMLTagFilterRequestWrapper 
-* @author 공통컴포넌트 팀 신용호
+* @author 공통컴포넌트 팀 황장운
 * @since 2018.03.21
 * @version 1.0
 * @see
@@ -33,8 +33,8 @@ import javax.servlet.http.HttpServletRequestWrapper;
 *
 *   수정일              수정자              수정내용
 *  -------      --------    ---------------------------
-*   2018.03.21  신용호              getParameterMap()구현 추가
-*   2019.01.31  신용호              whiteList 태그 추가
+*   2018.03.21  황장운              getParameterMap()구현 추가
+*   2019.01.31  황장운              whiteList 태그 추가
 *
 */
 

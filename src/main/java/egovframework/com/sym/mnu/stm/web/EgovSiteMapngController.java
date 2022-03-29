@@ -31,8 +31,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.03.20  이  용          최초 생성
- *   2011.07.29  서준식 		사이트 맵 생성 안했을 때 발생하는 오류 수정
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2011.07.29  황장운 		사이트 맵 생성 안했을 때 발생하는 오류 수정
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  * </pre>
  */
 

@@ -8,7 +8,7 @@ import org.springframework.web.context.ServletContextAware;
 /**
  * ImagePaginationRenderer.java 클래스
  *
- * @author 서준식
+ * @author 황장운
  * @since 2011. 9. 16.
  * @version 1.0
  * @see
@@ -18,8 +18,8 @@ import org.springframework.web.context.ServletContextAware;
  *
  *   수정일      수정자           수정내용
  *  -------    -------------    ----------------------
- *   2011. 9. 16.   서준식       이미지 경로에 ContextPath추가
- *   2016. 6. 17.   장동한       표준프레임워크 v3.6 리뉴얼
+ *   2011. 9. 16.   황장운       이미지 경로에 ContextPath추가
+ *   2016. 6. 17.   황장운       표준프레임워크 v3.6 리뉴얼
  * </pre>
  */
 public class RegacyPaginationRenderer extends AbstractPaginationRenderer implements ServletContextAware{

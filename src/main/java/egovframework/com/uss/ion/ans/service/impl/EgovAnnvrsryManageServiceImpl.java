@@ -39,7 +39,7 @@ import org.springframework.stereotype.Service;
  *   수정일      	수정자          	수정내용
  *  ----------  --------    ---------------------------
  *  2010.06.15	표준프레임워크   	최초 생성
- *  2018.11.30	최두영		selectAnnvrsryManageBnde에서 annvrsryManageVO의 null처리 추가
+ *  2018.11.30	황장운		selectAnnvrsryManageBnde에서 annvrsryManageVO의 null처리 추가
  *
  *  </pre>
  */

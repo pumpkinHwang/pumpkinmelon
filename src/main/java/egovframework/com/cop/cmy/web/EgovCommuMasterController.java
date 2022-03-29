@@ -28,7 +28,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 커뮤니티 정보를 관리하기 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -38,12 +38,12 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   
  *   수정일      수정자           수정내용
  *   -------       --------    ---------------------------
- *   2009.4.2	이삼섭          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
- *   2011.9.7	정진오			커뮤니티 탈퇴 요청이 정상적으로 이뤄지지 않은 사항 수정함
+ *   2009.4.2	황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
+ *   2011.9.7	황장운			커뮤니티 탈퇴 요청이 정상적으로 이뤄지지 않은 사항 수정함
  *   							커뮤니티 탈퇴 요청시 승인자를 선택하므로 탈퇴 승인자가 자신이 될 수 없음에도
  *   							세션에서 가져온 값(탈퇴신청자)을 탈퇴승인자로 설정하도록 되어 있었음
- *   2016.06.13 김연호          표준프레임워크 v3.6 개선
+ *   2016.06.13 황장운          표준프레임워크 v3.6 개선
  * </pre>
  */
 
@@ -131,7 +131,7 @@ public class EgovCommuMasterController {
 
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }
@@ -223,7 +223,7 @@ public class EgovCommuMasterController {
 
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-		// KISA 보안취약점 조치 (2018-12-10, 신용호)
+		// KISA 보안취약점 조치 (2018-12-10, 황장운)
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";
         }

@@ -5,10 +5,10 @@
  *
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2009.01.13    조재영          최초 생성
- *   2017.03.03         조성원 	      시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+ *   2009.01.13    황장운          최초 생성
+ *   2017.03.03         황장운 	      시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
  *
- *  @author 공통 서비스 개발팀 조재영
+ *  @author 공통 서비스 개발팀 황장운
  *  @since 2009. 01. 13
  *  @version 1.0
  *  @see
@@ -63,7 +63,7 @@ public class EgovNetInfo {
 				while (b_out.ready()) {
 					//도스명령어 실행시 결과는 3번째 라인부터 출력됨..
 					tmp = b_out.readLine();
-					//2017.03.03 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+					//2017.03.03 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 					if(tmp != null){
 						if (tmp.length() <= MAX_STR_LEN) {
 							if (i > 1) {

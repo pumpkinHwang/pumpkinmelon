@@ -7,7 +7,7 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 
 /**
  * 메시지 리소스 사용을 위한 MessageSource 인터페이스 및 ReloadableResourceBundleMessageSource 클래스의 구현체
- * @author 공통서비스 개발팀 이문준
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -17,8 +17,8 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.03.11  이문준          최초 생성
- *   2017.07.21  장동한 			args, locale 설정
+ *   2009.03.11  황장운          최초 생성
+ *   2017.07.21  황장운 			args, locale 설정
  *
  * </pre>
  */

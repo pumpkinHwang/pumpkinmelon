@@ -5,13 +5,13 @@
  *
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2009.01.13    조재영          최초 생성
- *   2017.03.03       조성원 	         시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2017.03.03    조성원          시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
- *   2018.03.19    신용호          createDirectories() 추가 : 여러 레벨의 디렉토리를 한번에 생성
+ *   2009.01.13    황장운          최초 생성
+ *   2017.03.03       황장운 	         시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2017.03.03    황장운          시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+ *   2018.03.19    황장운          createDirectories() 추가 : 여러 레벨의 디렉토리를 한번에 생성
  *   
  *
- *  @author 공통 서비스 개발팀 조재영,박지욱
+ *  @author 공통 서비스 개발팀 황장운,황장운
  *  @since 2009. 01. 13
  *  @version 1.0
  *  @see
@@ -54,7 +54,7 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
  *
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2020.12.07   신용호            KISA 보안약점 조치
+ *  2020.12.07   황장운            KISA 보안약점 조치
  *  
  * </pre>
  */
@@ -452,7 +452,7 @@ public class EgovFileTool {
 		String result = "";
 		try {
 			if (!file.exists()) {
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(file.createNewFile()){
 					LOGGER.debug("[file.createNewFile] file : Path Creation Success");
 				}else{
@@ -862,7 +862,7 @@ public class EgovFileTool {
 				else {
 					BufferedReader b_out = null;
 					try {
-						//2017.03.03 조성원 시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+						//2017.03.03 황장운 시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 						if(p != null){
 							b_out = new BufferedReader(new InputStreamReader(p.getInputStream()));
 							while (b_out.ready()) {
@@ -945,7 +945,7 @@ public class EgovFileTool {
 				result = filePath;
 			} else {
 				// 존재하지 않으면 생성함
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(new File(file.getParent()).mkdirs()){
 					LOGGER.debug("[file.mkdirs] file : File Creation Success");
 				}else{
@@ -991,7 +991,7 @@ public class EgovFileTool {
 					File f = new File(EgovWebUtil.filePathBlackList(dirDeletePath) + "/" + fileList[i]);
 					if (f.isFile()) {
 						//디렉토리에 속한 파일들을 모두 삭제한다.
-						//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+						//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 						if(f.delete()){
 							LOGGER.debug("[file.delete] f : File Deletion Success");
 						}else{
@@ -2322,7 +2322,7 @@ public class EgovFileTool {
 				result = false;
 			} else {
 				File targetDir = new File(EgovWebUtil.filePathBlackList(targetDirPath1));
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(targetDir.mkdirs()){
 					LOGGER.debug("[file.mkdirs] targetDir : Directory Creation Success");
 				}else{					
@@ -2394,7 +2394,7 @@ public class EgovFileTool {
 				result = false;
 			} else {
 				File targetDir = new File(EgovWebUtil.filePathBlackList(targetDirPath1));
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(targetDir.mkdirs()){
 					LOGGER.debug("[file.mkdirs] targetDir : Directory Creation Success");
 				}else{					
@@ -2467,7 +2467,7 @@ public class EgovFileTool {
 			} else {
 				File targetDir = new File(EgovWebUtil.filePathBlackList(targetDirPath1));
 				
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(targetDir.mkdirs()){
 					LOGGER.debug("[file.mkdirs] targetDir : Directory Creation Success");
 				}else{					

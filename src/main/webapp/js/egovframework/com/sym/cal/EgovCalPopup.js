@@ -5,8 +5,8 @@
  *
  *    수정일      수정자     Version        Function 명
  * ------------    ---------   -------------  ----------------------------
- * 2009.03.30    이중호       1.0             최초생성
- * 2011.08.30	 이기하		  1.1			  contextpath 적용
+ * 2009.03.30    황장운       1.0             최초생성
+ * 2011.08.30	 황장운		  1.1			  contextpath 적용
  *
  *
  */
@@ -67,7 +67,7 @@ loadScript(getContextPath() + '/js/egovframework/com/cmm/showModalDialog.js');
  *
  * 수정일        수정자      수정내용
  * ------        ------     -------------------
- * 2009.03.30    이중호      신규작업
+ * 2009.03.30    황장운      신규작업
  *
  */
 
@@ -105,7 +105,7 @@ function fn_egov_AdministCalendar(frm, sDate, vDate) {
  *
  * 수정일        수정자      수정내용
  * ------        ------     -------------------
- * 2009.03.30    이중호      신규작업
+ * 2009.03.30    황장운      신규작업
  *
  */
 function fn_egov_NormalCalendar(frm, sDate, vDate) {
@@ -166,7 +166,7 @@ function calendarCallback(retVal) {
  *
  * 수정일        수정자      수정내용
  * ------        ------     -------------------
- * 2009.10.13    이중호      신규작업
+ * 2009.10.13    황장운      신규작업
  *
  */
 function fn_egov_Calendar(frm, sDate, vDate) {

@@ -6,13 +6,13 @@
   * @
   * @  수정일     수정자          수정내용
   * @ -------    --------    ---------------------------
-  * @ 2009.03.02  조재영          최초 생성
-  * @ 2015.06.16  조정국          password 중복필드 정리
-  * @ 2016.06.13  장동한          표준프레임워크 v3.6 개선
-  * @ 2017.07.21  장동한          로그인인증제한 작업
-  * @ 2021.05.30  정진오          디지털원패스 연동해지
+  * @ 2009.03.02  황장운          최초 생성
+  * @ 2015.06.16  황장운          password 중복필드 정리
+  * @ 2016.06.13  황장운          표준프레임워크 v3.6 개선
+  * @ 2017.07.21  황장운          로그인인증제한 작업
+  * @ 2021.05.30  황장운          디지털원패스 연동해지
   *
-  *  @author 공통서비스 개발팀 조재영
+  *  @author 공통서비스 개발팀 황장운
   *  @since 2009.03.02
   *  @version 1.0
   *  @see
@@ -72,7 +72,7 @@ function fnUpdate(form){
 	}
 }
 
-// 2021.05.30, 정진오, 디지털원패스 연동해지
+// 2021.05.30, 황장운, 디지털원패스 연동해지
 function onepassCancel() {
 	if (confirm("디지털원패스 연동해지를 진행하시겠습니까?")) { 
 		document.onepassForm.action = '/uss/umt/onepass/onepassCancel.do';
@@ -122,7 +122,7 @@ function onepassCancel() {
 		<tr>
 			<th><label for="mberId">${title}</label> <span class="pilsu">*</span></th>
 			<td class="left">
-				<!-- 2021.05.30, 정진오, 디지털원패스 연동해지 -->
+				<!-- 2021.05.30, 황장운, 디지털원패스 연동해지 -->
 				<c:choose>
 					<c:when test="${not empty onepassUserkey && not empty onepassIntfToken}">
 						<form:input path="mberId" id="mberId" title="${title} ${inputTxt}" size="20" readonly="true" maxlength="20" style="width:70%"/>
@@ -298,7 +298,7 @@ function onepassCancel() {
 </form:form>
 <!-- content end -->
 
-<!-- 2021.05.30, 정진오, 디지털원패스 연동해지 -->
+<!-- 2021.05.30, 황장운, 디지털원패스 연동해지 -->
 <form id="onepassForm" name="onepassForm" method="post">
 <input type="hidden" name="userKey" id="userKey" value="<c:out value='${onepassUserkey}'/>"/>
 <input type="hidden" name="intfToken" id="intfToken" value="<c:out value='${onepassIntfToken}'/>"/>

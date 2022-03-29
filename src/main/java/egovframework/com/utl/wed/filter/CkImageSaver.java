@@ -56,10 +56,10 @@ import org.egovframe.rte.fdl.cryptography.EgovEnvCryptoService;
  *  수정일               수정자                  수정내용
  *  ----------   -----------   ---------------------------
  *  2014.12.04   표준프레임워크       최초 적용 (패키지 변경 및 소스 정리)
- *  2016.04.21   장동한                 공통컴포넌트 V3.6 수정
- *  2018.12.11   신용호                 KISA 보안취약점 등 수정
- *  2018.12.28   신용호                 업로드 이미지 URL 생성 부분 수정
- *  2020-08-28   신용호                 보안약점 조치 (Private 배열에 Public 데이터 할당[CWE-496])
+ *  2016.04.21   황장운                 공통컴포넌트 V3.6 수정
+ *  2018.12.11   황장운                 KISA 보안취약점 등 수정
+ *  2018.12.28   황장운                 업로드 이미지 URL 생성 부분 수정
+ *  2020-08-28   황장운                 보안약점 조치 (Private 배열에 Public 데이터 할당[CWE-496])
  *  
  * </pre>
  */
@@ -150,7 +150,7 @@ public class CkImageSaver {
 			// Compressed version of the document.domain automatic fix script.
 			// The original script can be found at [fckeditor_dir]/_dev/domain_fix_template.js
 			// sb.append("(function(){var d=document.domain;while (true){try{var A=window.parent.document.domain;break;}catch(e) {};d=d.replace(/.*?(?:\\.|$)/,'');if (d.length==0) break;try{document.domain=d;}catch (e){break;}}})();\n");
-			// KISA 보안약점 조치 (2018-12-11, 신용호)
+			// KISA 보안약점 조치 (2018-12-11, 황장운)
 			String funcNo = EgovWebUtil.clearXSSMaximum(request.getParameter(FUNC_NO));
 			sb.append("window.parent.CKEDITOR.tools.callFunction(").append(funcNo).append(", '");
 			sb.append(relUrl);

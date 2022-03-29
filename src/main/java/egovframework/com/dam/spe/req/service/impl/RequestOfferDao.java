@@ -10,7 +10,7 @@ import egovframework.com.dam.spe.req.service.RequestOfferVO;
 import org.springframework.stereotype.Repository;
 /**
  * 지식정보제공/지식정보요청를 처리하는 Dao Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.08.30
  * @version 1.0
  * @see <pre>
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.08.30  장동한          최초 생성
+ *   2010.08.30  황장운          최초 생성
  *
  * </pre>
  */

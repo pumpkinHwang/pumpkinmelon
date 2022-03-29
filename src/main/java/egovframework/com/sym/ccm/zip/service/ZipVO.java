@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  *
  * 우편번호 VO 클래스
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -15,8 +15,8 @@ import java.io.Serializable;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
- *   2011.11.21  이기하          도로명주소 추가(searchList, searchCondition, searchCondition2)
+ *   2009.04.01  황장운          최초 생성
+ *   2011.11.21  황장운          도로명주소 추가(searchList, searchCondition, searchCondition2)
  *
  * </pre>
  */

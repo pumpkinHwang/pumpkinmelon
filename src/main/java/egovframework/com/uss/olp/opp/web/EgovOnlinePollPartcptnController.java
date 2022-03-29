@@ -31,7 +31,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 온라인POLL참여를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.07.03
  * @version 1.0
  * @see <pre>
@@ -39,9 +39,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
- *   2011.08.26	  정진오	   IncludedInfo annotation 추가
- *   2011.10.27  서준식          온라인 POLL 중복 투표 방지 기능 추가
+ *   2009.07.03  황장운          최초 생성
+ *   2011.08.26	  황장운	   IncludedInfo annotation 추가
+ *   2011.10.27  황장운          온라인 POLL 중복 투표 방지 기능 추가
  * </pre>
  */
 

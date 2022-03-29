@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 발송메일을 상세 조회하는 비즈니스 구현 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.12
  * @version 1.0
  * @see
@@ -27,7 +27,7 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.03.12  박지욱          최초 생성
+ *  2009.03.12  황장운          최초 생성
  *
  *  </pre>
  */
@@ -82,7 +82,7 @@ public class EgovSndngMailDetailServiceImpl extends EgovAbstractServiceImpl impl
 	@Override
 	public void deleteAtchmnFile(SndngMailVO vo) throws Exception {
 
-		// 1. 첨부파일 목록을 삭제한다. (이삼섭 책임 제공)
+		// 1. 첨부파일 목록을 삭제한다. (황장운 책임 제공)
 		FileVO fileVO = new FileVO();
 		fileVO.setAtchFileId(vo.getAtchFileId());
 		egovFileMngService.deleteAllFileInf(fileVO);

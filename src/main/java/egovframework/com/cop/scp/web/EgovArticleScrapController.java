@@ -27,7 +27,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 스크랩관리 서비스 컨트롤러 클래스
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.07.10
  * @version 1.0
  * @see
@@ -37,8 +37,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.10  한성곤          최초 생성
- *   2016.06.13	김연호		표준프레임워크 3.6 개선
+ *   2009.07.10  황장운          최초 생성
+ *   2016.06.13	황장운		표준프레임워크 3.6 개선
  *
  * </pre>
  */
@@ -76,7 +76,7 @@ public class EgovArticleScrapController {
     @RequestMapping("/cop/scp/selectArticleScrapList.do")
     public String selectArticleScrapList(@ModelAttribute("searchVO") ScrapVO scrapVO, ModelMap model) throws Exception {
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
@@ -120,7 +120,7 @@ public class EgovArticleScrapController {
     @RequestMapping("/cop/scp/selectArticleScrapDetail.do")
     public String selectArticleScrapDetail(@ModelAttribute("searchVO") ScrapVO scrapVO, ModelMap model) throws Exception {
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {

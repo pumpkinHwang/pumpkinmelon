@@ -54,9 +54,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
  *  2010.06.28   장철호            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2019.12.09   신용호            KISA 보안약점 조치 (위험한 형식 파일 업로드)
- *  2020.10.27   신용호            파일 업로드 수정 (multiRequest.getFiles), 널(null) 값 체크
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2019.12.09   황장운            KISA 보안약점 조치 (위험한 형식 파일 업로드)
+ *  2020.10.27   황장운            파일 업로드 수정 (multiRequest.getFiles), 널(null) 값 체크
  *
  * </pre>
  *
@@ -472,7 +472,7 @@ public class EgovDeptJobController {
 
 		//로그인 객체 선언
 		LoginVO loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {
@@ -604,7 +604,7 @@ public class EgovDeptJobController {
 	public String updateDeptJob(final MultipartHttpServletRequest multiRequest, @RequestParam Map<String, Object> commandMap, @ModelAttribute("deptJobVO") DeptJobVO deptJobVO, BindingResult bindingResult, ModelMap model) throws Exception{
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
-   	 	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+   	 	// KISA 보안취약점 조치 (2018-12-10, 황장운)
 
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";

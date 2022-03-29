@@ -28,7 +28,7 @@ import org.egovframe.rte.fdl.cryptography.EgovPasswordEncoder;
 
 /**
  * 웹에디터 이미지 upload 처리 Controller
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.08.26
  * @version 1.0
  * @see
@@ -38,12 +38,12 @@ import org.egovframe.rte.fdl.cryptography.EgovPasswordEncoder;
  *
  *   수정일                수정자          수정내용
  *  -----------   --------  ---------------------------
- *   2009.08.26   한성곤          최초 생성
- *   2017.08.31   장동한          path, physical 파라미터 노출 암호화 처리
- *   2017.12.12   장동한          출력 모듈 경로 변경 취약점 조치
- *   2018.03.07   신용호          URLEncode 처리
- *   2018.08.17   신용호          URL 암호화 보안 추가 조치
- *   2020.08.05   신용호          imageUploadCk Parameter 수정
+ *   2009.08.26   황장운          최초 생성
+ *   2017.08.31   황장운          path, physical 파라미터 노출 암호화 처리
+ *   2017.12.12   황장운          출력 모듈 경로 변경 취약점 조치
+ *   2018.03.07   황장운          URLEncode 처리
+ *   2018.08.17   황장운          URL 암호화 보안 추가 조치
+ *   2020.08.05   황장운          imageUploadCk Parameter 수정
  *   
  * </pre>
  */

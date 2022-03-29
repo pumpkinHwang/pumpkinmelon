@@ -21,7 +21,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
 
 /**
  * 요소기술 json 관한 controller 클래스를 정의한다.
- * @author 2016 표준프레임웤크 유지보수 장동한
+ * @author 2016 표준프레임웤크 유지보수 황장운
  * @since 2016.07.14
  * @version 1.0
  * @see
@@ -31,7 +31,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2016.07.14  장동한          최초 생성
+ *   2016.07.14  황장운          최초 생성
  *
  * </pre>
  */

@@ -30,7 +30,7 @@ import org.springframework.stereotype.Service;
 /**
  *
  * 기관코드에 대한 서비스 구현클래스를 정의한다.
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -40,10 +40,10 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
- *   2011.09.05	 서준식          파일 읽기 무한 루프 오류 수정
- *   2011.10.07  이기하          finally문을 추가하여 에러시 자원반환할 수 있도록 추가
- *   2017-02-08	  이정은	  시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2009.04.01  황장운          최초 생성
+ *   2011.09.05	 황장운          파일 읽기 무한 루프 오류 수정
+ *   2011.10.07  황장운          finally문을 추가하여 에러시 자원반환할 수 있도록 추가
+ *   2017-02-08	  황장운	  시큐어코딩(ES) - 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
  * Copyright (C) 2009 by MOPAS  All right reserved.
  * </pre>
  */
@@ -183,7 +183,7 @@ public class EgovInsttCodeRecptnServiceImpl extends EgovAbstractServiceImpl impl
 				if (listFile.isFile()) {
 					if (recvOldFile.getParentFile() != null) {//KISA 보안약점 조치 (2018-10-29, 윤창원)
 						if (recvOldFile.getParentFile().isDirectory()) {
-							//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+							//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 							if(listFile.renameTo(recvOldFile)){
 								LOGGER.debug("[file.renameTo] listFile : File Rename Successs ");
 							}else{							
@@ -330,7 +330,7 @@ public class EgovInsttCodeRecptnServiceImpl extends EgovAbstractServiceImpl impl
 
 						// 로그인VO에서  사용자 정보 가져오기
 						LoginVO loginVO = (LoginVO) EgovUserDetailsHelper.getAuthenticatedUser();
-						// KISA 보안취약점 조치 (2018-12-10, 신용호)
+						// KISA 보안취약점 조치 (2018-12-10, 황장운)
 						String uniqId = "";
 						if (loginVO!=null) loginVO.getUniqId();
 						insttCodeRecptn.setFrstRegisterId(uniqId);

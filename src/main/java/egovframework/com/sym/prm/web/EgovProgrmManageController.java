@@ -41,8 +41,8 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.03.20  이  용          최초 생성
- *   2011.08.22  서준식          selectProgrmChangRequstProcess() 메서드 처리일자 trim 처리
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2011.08.22  황장운          selectProgrmChangRequstProcess() 메서드 처리일자 trim 처리
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  * </pre>
  */
 

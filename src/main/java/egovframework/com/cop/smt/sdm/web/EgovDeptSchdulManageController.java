@@ -38,7 +38,7 @@ import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  * 부서일정관리를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -48,9 +48,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *    2009.04.10  장동한          최초 생성
- *    2011.8.26	정진오			IncludedInfo annotation 추가
- *	  2011.9.1	정진오			10월 주별 달력 테이블에 날짜가 이상하게 나와서 수정함
+ *    2009.04.10  황장운          최초 생성
+ *    2011.8.26	황장운			IncludedInfo annotation 추가
+ *	  2011.9.1	황장운			10월 주별 달력 테이블에 날짜가 이상하게 나와서 수정함
  *
  * Copyright (C) 2009 by MOPAS  All right reserved.
  * </pre>

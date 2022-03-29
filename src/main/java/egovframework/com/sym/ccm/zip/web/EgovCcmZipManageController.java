@@ -37,7 +37,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  *
  * 우편번호에 관한 요청을 받아 서비스 클래스로 요청을 전달하고 서비스클래스에서 처리한 결과를 웹 화면으로 전달을 위한 Controller를 정의한다
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -47,11 +47,11 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2009.04.01   이중호            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2011.10.07   이기하            보안취약점 수정(파일 업로드시 엑셀파일만 가능하도록 추가)
- *  2011.11.21   이기하            도로명주소 추가(rdnmadZip)
- *  2021.02.16   신용호            WebUtils.getNativeRequest(request,MultipartHttpServletRequest.class);
+ *  2009.04.01   황장운            최초 생성
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2011.10.07   황장운            보안취약점 수정(파일 업로드시 엑셀파일만 가능하도록 추가)
+ *  2011.11.21   황장운            도로명주소 추가(rdnmadZip)
+ *  2021.02.16   황장운            WebUtils.getNativeRequest(request,MultipartHttpServletRequest.class);
  *
  * </pre>
  */

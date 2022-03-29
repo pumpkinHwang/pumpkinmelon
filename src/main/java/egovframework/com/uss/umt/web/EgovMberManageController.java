@@ -32,7 +32,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 일반회원관련 요청을  비지니스 클래스로 전달하고 처리된결과를  해당   웹 화면으로 전달하는  Controller를 정의한다
- * @author 공통서비스 개발팀 조재영
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -42,13 +42,13 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.10  조재영         최초 생성
- *   2011.08.26  정진오         IncludedInfo annotation 추가
- *   2014.12.08  이기하         암호화방식 변경(EgovFileScrty.encryptPassword)
- *   2015.06.16  조정국         수정시 유효성체크 후 에러발생 시 목록으로 이동하여 에러메시지 표시
- *   2015.06.19  조정국         미인증 사용자에 대한 보안처리 기준 수정 (!isAuthenticated)
- *   2017.07.21  장동한         로그인인증제한 작업
- *   2021.05.30  정진오         디지털원패스 정보 조회
+ *   2009.04.10  황장운         최초 생성
+ *   2011.08.26  황장운         IncludedInfo annotation 추가
+ *   2014.12.08  황장운         암호화방식 변경(EgovFileScrty.encryptPassword)
+ *   2015.06.16  황장운         수정시 유효성체크 후 에러발생 시 목록으로 이동하여 에러메시지 표시
+ *   2015.06.19  황장운         미인증 사용자에 대한 보안처리 기준 수정 (!isAuthenticated)
+ *   2017.07.21  황장운         로그인인증제한 작업
+ *   2021.05.30  황장운         디지털원패스 정보 조회
  *
  * </pre>
  */
@@ -256,7 +256,7 @@ public class EgovMberManageController {
 		model.addAttribute("mberManageVO", mberManageVO);
 		model.addAttribute("userSearchVO", userSearchVO);
 
-		// 2021.05.30, 정진오, 디지털원패스 정보 조회
+		// 2021.05.30, 황장운, 디지털원패스 정보 조회
 		LoginVO loginVO = (LoginVO)request.getSession().getAttribute("loginVO");
 		String onepassUserId = loginVO.getUniqId();
 		String onepassUserkey = loginVO.getOnepassUserkey();
@@ -343,7 +343,7 @@ public class EgovMberManageController {
 			return "index";
 		}
 
-		// 2021.05.30, 정진오, 디지털원패스 정보 조회
+		// 2021.05.30, 황장운, 디지털원패스 정보 조회
 		LoginVO loginVO = (LoginVO)request.getSession().getAttribute("loginVO");
 		String onepassUserkey = loginVO.getOnepassUserkey();
 		String onepassIntfToken = loginVO.getOnepassIntfToken();

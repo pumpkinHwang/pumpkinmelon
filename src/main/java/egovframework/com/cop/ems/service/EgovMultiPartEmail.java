@@ -9,7 +9,7 @@ import org.apache.commons.mail.MultiPartEmail;
 
 /**
  * 발송메일에 첨부파일용으로 사용되는 VO 클래스
- * @author 공통서비스 개발팀 이기하
+ * @author 공통서비스 개발팀 황장운
  * @since 2011.12.06
  * @version 1.0
  * @see
@@ -19,8 +19,8 @@ import org.apache.commons.mail.MultiPartEmail;
  *
  *    수정일      	수정자          수정내용
  *  ----------     --------    ---------------------------
- *  2011.12.06		이기하          최초 생성
- *  2013.05.23		이기하          thread-safe 하게 변경
+ *  2011.12.06		황장운          최초 생성
+ *  2013.05.23		황장운          thread-safe 하게 변경
  *
  *  </pre>
  */

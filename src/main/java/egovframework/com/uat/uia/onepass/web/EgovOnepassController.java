@@ -29,7 +29,7 @@ import egovframework.com.uat.uia.service.EgovLoginService;
 
 /**
  * 디티털원패스 연동을 처리하는 컨트롤러 클래스
- * @author 전자정부 표준프레임워크 정진오
+ * @author 전자정부 표준프레임워크 황장운
  * @since 2021.05.30
  * @version 1.0
  * @see
@@ -39,7 +39,7 @@ import egovframework.com.uat.uia.service.EgovLoginService;
  *
  *  수정일       수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2021.05.30   정진오           최초 생성
+ *  2021.05.30   황장운           최초 생성
  *  
  *  </pre>
  */

@@ -5,7 +5,7 @@ import egovframework.com.sec.rgm.service.AuthorGroup;
 
 /**
  * 부서권한에 대한 model 클래스를 정의한다.
- * @author 공통서비스 개발팀 이문준
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -15,7 +15,7 @@ import egovframework.com.sec.rgm.service.AuthorGroup;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.03.20  이문준          최초 생성
+ *   2009.03.20  황장운          최초 생성
  *
  * </pre>
  */

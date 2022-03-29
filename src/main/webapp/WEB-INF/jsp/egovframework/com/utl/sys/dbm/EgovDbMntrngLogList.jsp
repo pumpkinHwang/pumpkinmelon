@@ -14,7 +14,7 @@
  * @  수정일             수정자            수정내용
  * @ -------     --------   ---------------------------
  * @ 2010.08.07   김진만           최초 생성
- * @ 2018.08.03   신용호           fn_egov_remove_string을 replace function으로 삭제
+ * @ 2018.08.03   황장운           fn_egov_remove_string을 replace function으로 삭제
  *
  *  @author 김진만
  *  @since 2010.08.07

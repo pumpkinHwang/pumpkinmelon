@@ -50,8 +50,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
   *  수정일              수정자           수정내용
   *  ---------   --------   ---------------------------
   *  2009.08.05   이창원           최초 생성
-  *  2011.08.26   정진오           IncludedInfo annotation 추가
-  *  2019.05.17   신용호           취약점 조치 및 보완
+  *  2011.08.26   황장운           IncludedInfo annotation 추가
+  *  2019.05.17   황장운           취약점 조치 및 보완
   *
   * </pre>
  */

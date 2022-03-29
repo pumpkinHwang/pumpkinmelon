@@ -46,7 +46,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *   수정일       수정자           수정내용
  *  -------     --------    ---------------------------
  *  2010.9.8   박종선     최초 생성
- *  2011.8.26	정진오			IncludedInfo annotation 추가
+ *  2011.8.26	황장운			IncludedInfo annotation 추가
  * </pre>
  */
 
@@ -188,7 +188,7 @@ public class EgovProcessMonController {
     	//로그인 객체 선언
     	LoginVO loginVO = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
     	
-    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
+    	Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 황장운)
 
         if(!isAuthenticated) {
             return "egovframework/com/uat/uia/EgovLoginUsr";

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * 우편번호에 대한 데이터 접근 클래스를 정의한다
- * @author 공통서비스 개발팀 이기하
+ * @author 공통서비스 개발팀 황장운
  * @since 2011.11.21
  * @version 1.0
  * @see
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
  *
  *     수정일      	수정자           수정내용
  *  -----------    --------    ---------------------------
- *   2011.11.21		이기하           도로명주소 최초 생성
+ *   2011.11.21		황장운           도로명주소 최초 생성
  *
  * </pre>
  */

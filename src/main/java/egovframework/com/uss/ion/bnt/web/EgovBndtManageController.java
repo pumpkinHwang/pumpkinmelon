@@ -55,9 +55,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *  수정일              수정자             수정내용
  *  ----------  --------    ---------------------------
  *  2009.06.25   이용              최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2018.08.29   신용호            xlsx 업로드 할수 있도록 수정
- *  2020.11.02   신용호            KISA 보안약점 조치 - 자원해제
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2018.08.29   황장운            xlsx 업로드 할수 있도록 수정
+ *  2020.11.02   황장운            KISA 보안약점 조치 - 자원해제
  *
  *  </pre>
  */

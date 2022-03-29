@@ -15,9 +15,9 @@
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2011.8.23  정진오 		SQL Map에서 정의한 파라미터 클래스와 실제 전달하는 클래스가 달라서 발생하는 에러 수정
+ *   2011.8.23  황장운 		SQL Map에서 정의한 파라미터 클래스와 실제 전달하는 클래스가 달라서 발생하는 에러 수정
  *   						new DtaUseStats() -> new DtaUseStatsVO()
- *   2011.9.29	이기하		게시판외 다운로드시 에러발생(dtaUseStats 값이 null)을 방지
+ *   2011.9.29	황장운		게시판외 다운로드시 에러발생(dtaUseStats 값이 null)을 방지
  *
  * </pre>
  */
@@ -120,7 +120,7 @@ public class EgovDtaUseStatsServiceImpl extends EgovAbstractServiceImpl implemen
 		// 2011.09.29 게시판외 다운로드시 에러발생(dtaUseStats 값이 null)을 방지
 		if (dtaUseStats != null) {
 			DtaUseStats vo = new DtaUseStatsVO();			//2011.08.23 수정 부분
-			String id = user == null ? "" : EgovStringUtil.isNullToString(user.getId()); // KISA 보안약점 조치 (2018-12-11, 신용호)
+			String id = user == null ? "" : EgovStringUtil.isNullToString(user.getId()); // KISA 보안약점 조치 (2018-12-11, 황장운)
 			vo.setDtaUseStatsId(egovDtaUseStatsIdGnrService.getNextStringId());
 			vo.setBbsId(dtaUseStats.getBbsId());
 			vo.setNttId(dtaUseStats.getNttId());

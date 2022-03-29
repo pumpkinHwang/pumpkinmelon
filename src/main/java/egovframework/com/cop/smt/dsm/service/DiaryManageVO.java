@@ -5,7 +5,7 @@ import java.io.Serializable;
 import egovframework.com.cmm.ComDefaultVO;
 /**
  * 일지관리 VO Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -15,7 +15,7 @@ import egovframework.com.cmm.ComDefaultVO;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.10  장동한          최초 생성
+ *   2009.04.10  황장운          최초 생성
  *
  * </pre>
  */

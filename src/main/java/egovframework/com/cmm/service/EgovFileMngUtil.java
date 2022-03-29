@@ -40,12 +40,12 @@ import org.springframework.web.multipart.MultipartFile;
  *
  *   수정일               수정자            수정내용
  *   ----------   --------   ---------------------------
- *   2009.02.13   이삼섭            최초 생성
- *   2011.08.09   서준식            utl.fcc패키지와 Dependency제거를 위해 getTimeStamp()메서드 추가
- *   2017.03.03   조성원            시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2020.10.26   신용호            parseFileInf(List<MultipartFile> files ...) 추가
+ *   2009.02.13   황장운            최초 생성
+ *   2011.08.09   황장운            utl.fcc패키지와 Dependency제거를 위해 getTimeStamp()메서드 추가
+ *   2017.03.03   황장운            시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2020.10.26   황장운            parseFileInf(List<MultipartFile> files ...) 추가
  *   
- * @author 공통 서비스 개발팀 이삼섭
+ * @author 공통 서비스 개발팀 황장운
  * @since 2009. 02. 13
  * @version 1.0
  * @see
@@ -90,7 +90,7 @@ public class EgovFileMngUtil {
 		File saveFolder = new File(EgovWebUtil.filePathBlackList(storePathString));
 
 		if (!saveFolder.exists() || saveFolder.isFile()) {
-			//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			if (saveFolder.mkdirs()){
 				LOGGER.debug("[file.mkdirs] saveFolder : Creation Success ");
 			}else{
@@ -190,7 +190,7 @@ public class EgovFileMngUtil {
 		File saveFolder = new File(EgovWebUtil.filePathBlackList(storePathString));
 
 		if (!saveFolder.exists() || saveFolder.isFile()) {
-			//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			if (saveFolder.mkdirs()){
 				LOGGER.debug("[file.mkdirs] saveFolder : Creation Success ");
 			}else{
@@ -389,7 +389,7 @@ public class EgovFileMngUtil {
 			File cFile = new File(EgovWebUtil.filePathBlackList(stordFilePath));
 
 			if (!cFile.isDirectory()){
-				//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if (cFile.mkdirs()){
 					LOGGER.debug("[file.mkdirs] saveFolder : Creation Success ");
 				}else{

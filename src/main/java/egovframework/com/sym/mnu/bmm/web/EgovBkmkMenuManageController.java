@@ -26,7 +26,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * 바로가기메뉴관리 정보를 관리하기 위한 컨트롤러 클래스
- * @author 공통컴포넌트팀 윤성록
+ * @author 공통컴포넌트팀 황장운
  * @since 2009.09.25
  * @version 1.0
  * @see
@@ -36,8 +36,8 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.9.25  윤성록          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2009.9.25  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

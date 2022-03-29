@@ -26,7 +26,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
 /**
  *
  * 행정코드에 관한 요청을 받아 서비스 클래스로 요청을 전달하고 서비스클래스에서 처리한 결과를 웹 화면으로 전달을 위한 Controller를 정의한다
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -36,8 +36,8 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
- *   2011.08.26	정진오			IncludedInfo annotation 추가
+ *   2009.04.01  황장운          최초 생성
+ *   2011.08.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

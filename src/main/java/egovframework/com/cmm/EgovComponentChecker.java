@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * EgovComUtil 클래스
  * 
- * @author 서준식
+ * @author 황장운
  * @since 2011.09.15
  * @version 1.0
  * @see
@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  *   
  *   수정일      수정자           수정내용
  *  -------    -------------    ----------------------
- *   2011.09.15  서준식        최초 생성
+ *   2011.09.15  황장운        최초 생성
  * </pre>
  */
 

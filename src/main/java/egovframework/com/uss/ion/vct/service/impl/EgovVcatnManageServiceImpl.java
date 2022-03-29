@@ -111,7 +111,7 @@ public class EgovVcatnManageServiceImpl extends EgovAbstractServiceImpl implemen
     	String  sDay   =Integer.toString(cal.get(java.util.Calendar.DATE));
 
     	LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-    	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+    	// KISA 보안취약점 조치 (2018-12-10, 황장운)
 		String uniqId = "";
 		if (user!=null){
 			uniqId=user.getUniqId();		

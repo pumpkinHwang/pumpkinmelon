@@ -22,7 +22,7 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
 
 /**
  * RSS태그관리를 처리하는 Dao Class 구현
- * @author 공통콤포넌트 장동한
+ * @author 공통콤포넌트 황장운
  * @since 2010.06.16
  * @version 1.0
  * @see <pre>
@@ -30,11 +30,11 @@ import egovframework.com.utl.fcc.service.EgovStringUtil;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
- *   2011.10.18  서준식          Altibase DB 처리를 위한 코드 추가
- *   2018.10.22  신용호          connection close 관련 수정
- *   2018.12.05  신용호          selectRssTagManageTableList(),selectRssTagManageTableColumnList() 테이블 목록 화이트리스트 제약
- *   2019.05.10  신용호          WhiteList 기능 보완
+ *   2009.07.03  황장운          최초 생성
+ *   2011.10.18  황장운          Altibase DB 처리를 위한 코드 추가
+ *   2018.10.22  황장운          connection close 관련 수정
+ *   2018.12.05  황장운          selectRssTagManageTableList(),selectRssTagManageTableColumnList() 테이블 목록 화이트리스트 제약
+ *   2019.05.10  황장운          WhiteList 기능 보완
  * </pre>
  */
 @Repository("rssManageDao")
@@ -68,10 +68,10 @@ public class RssTagManageDao extends EgovComAbstractDAO {
 			tables = dbmd.getTables(null, null, null, TABLE_AND_VIEW_TYPES);
 			while (tables.next()) {
 
-				// KISA 보안약점 조치 (2018-12-05, 신용호)
+				// KISA 보안약점 조치 (2018-12-05, 황장운)
 				String tableName = tables.getString(TABLE_NAME);
 				if (tableName==null) tableName="";
-				// WhiteList 기능 보완 (2019-05-10, 신용호)
+				// WhiteList 기능 보완 (2019-05-10, 황장운)
 				if ( tableWhiteList.contains(tableName.toLowerCase()) == true ) {
 					ComDefaultCodeVO codeVO = new ComDefaultCodeVO();
 					codeVO.setCode(tables.getString(TABLE_NAME));
@@ -109,8 +109,8 @@ public class RssTagManageDao extends EgovComAbstractDAO {
 		try {
 			conn = getSqlSession().getConnection(); //getSqlMapClientTemplate().getDataSource().getConnection();
 
-			// KISA 보안약점 조치 (2018-12-05, 신용호)
-			// WhiteList 기능 보완 (2019-05-10, 신용호)
+			// KISA 보안약점 조치 (2018-12-05, 황장운)
+			// WhiteList 기능 보완 (2019-05-10, 황장운)
 			if ( tableWhiteList.contains(sTableName.toLowerCase()) == true ) {
 			
 				if ( sDbType.equals("mysql") || sDbType.equals("maria") || sDbType.equals("postgres") ) {

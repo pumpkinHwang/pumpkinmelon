@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 /**
  * EgovMybaitsUtil 클래스
  *
- * @author 장동한
+ * @author 황장운
  * @since 2016.06.07
  * @version 1.0
  * @see
@@ -21,9 +21,9 @@ import org.slf4j.LoggerFactory;
  *
  *   수정일        수정자           수정내용
  *  -------      -------------  ----------------------
- *   2016.06.07  장동한           최초 생성
- *   2017.03.03     조성원 	  시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
- *   2017.07.21  장동한 			isEquals에서 String Character 비교 가능하도록
+ *   2016.06.07  황장운           최초 생성
+ *   2017.03.03     황장운 	  시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
+ *   2017.07.21  황장운 			isEquals에서 String Character 비교 가능하도록
  *   
  * </pre>
  */
@@ -64,7 +64,7 @@ public class EgovMybaitsUtil {
 			}
 		
 			return false;
-		//2017.03.03 	조성원 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
+		//2017.03.03 	황장운 	시큐어코딩(ES)-오류 메시지를 통한 정보노출[CWE-209]
 		} catch(IllegalArgumentException e) {
 			logger.error("[IllegalArgumentException] Try/Catch...usingParameters Runing : "+ e.getMessage());
 		} catch(Exception e) {

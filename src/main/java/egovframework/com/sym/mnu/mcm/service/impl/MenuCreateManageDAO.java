@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * 메뉴생성, 사이트맵 생성에 대한 DAO 클래스를 정의한다. *
- * @author 공통컴포넌트 개발팀 서준식
+ * @author 공통컴포넌트 개발팀 황장운
  * @since 2011.06.30
  * @version 1.0
  * @see

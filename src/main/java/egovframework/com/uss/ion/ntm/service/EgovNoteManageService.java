@@ -8,7 +8,7 @@ import egovframework.com.cmm.ComDefaultVO;
 import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 쪽지 관리(보내기)를 처리하는 Service Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2010.06.16
  * @version 1.0
  * @see
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.03  장동한          최초 생성
+ *   2009.07.03  황장운          최초 생성
  *
  * </pre>
  */

@@ -5,9 +5,9 @@
  *
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2009.02.04    박지욱          최초 생성
+ *   2009.02.04    황장운          최초 생성
  *
- *  @author 공통 서비스 개발팀 박지욱
+ *  @author 공통 서비스 개발팀 황장운
  *  @since 2009. 02. 04
  *  @version 1.0
  *  @see
@@ -36,9 +36,9 @@ import org.apache.commons.codec.binary.Base64;
  *
  *    수정일                 수정자              수정내용
  *    ----------    -------     -------------------
- *    2019.11.29	신용호		encryptPassword(String data) 삭제 : KISA 보안약점 조치 (비밀번호 해시함수 적용 시 솔트를 사용하여야 함)
+ *    2019.11.29	황장운		encryptPassword(String data) 삭제 : KISA 보안약점 조치 (비밀번호 해시함수 적용 시 솔트를 사용하여야 함)
  *    
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.08.26
  * @version 1.0
  */
@@ -197,7 +197,7 @@ public class EgovFileScrty {
     public static String encryptPassword(String password, String id) throws Exception {
 
 		if (password == null) return "";
-		if (id == null) return ""; // KISA 보안약점 조치 (2018-12-11, 신용호)
+		if (id == null) return ""; // KISA 보안약점 조치 (2018-12-11, 황장운)
 		
 		byte[] hashValue = null; // 해쉬값
 	

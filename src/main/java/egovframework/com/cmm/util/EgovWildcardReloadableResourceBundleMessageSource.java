@@ -19,9 +19,9 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * @
  * @  수정일         수정자                   수정내용
  * @ -------    --------    ---------------------------
- * @ 2016.06.10    장동한          최초 생성
+ * @ 2016.06.10    황장운          최초 생성
  *
- *  @author 2016 표준프레임워크 유지보수 장동한
+ *  @author 2016 표준프레임워크 유지보수 황장운
  *  @since 2016.06.10
  *  @version 1.0
  *  @see

@@ -23,7 +23,7 @@ import egovframework.com.cmm.util.EgovResourceCloseHelper;
  *
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2019.12.06   신용호             KISA 보안약점 조치 (부적절한 예외처리)
+ *  2019.12.06   황장운             KISA 보안약점 조치 (부적절한 예외처리)
  *
  * </pre>
  * 

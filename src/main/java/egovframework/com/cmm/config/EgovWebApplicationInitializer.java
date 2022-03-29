@@ -32,7 +32,7 @@ import egovframework.com.utl.wed.filter.CkFilter;
  * <Disclaimer>
  *		N/A
  *
- * @author 장동한
+ * @author 황장운
  * @since 2016.06.23
  * @version 1.0
  * @see
@@ -42,10 +42,10 @@ import egovframework.com.utl.wed.filter.CkFilter;
  *
  *   수정일        수정자           수정내용
  *  -------      -------------  ----------------------
- *   2016.06.23  장동한           최초 생성
- *   2018.10.02  신용호           Facebook 관련 HiddenHttpMethodFilter 추가
- *   2018.10.26  신용호           EgovLoginPolicyFilter 추가 (IP접근처리)
- *   2018.12.03  신용호           springMultipartFilter,HTMLTagFilter 추가 (XSS방지처리)
+ *   2016.06.23  황장운           최초 생성
+ *   2018.10.02  황장운           Facebook 관련 HiddenHttpMethodFilter 추가
+ *   2018.10.26  황장운           EgovLoginPolicyFilter 추가 (IP접근처리)
+ *   2018.12.03  황장운           springMultipartFilter,HTMLTagFilter 추가 (XSS방지처리)
  * </pre>
  */
 

@@ -42,7 +42,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *   수정일      수정자           수정내용
  *  -------        --------    ---------------------------
  *   2010.8.12  박종선          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

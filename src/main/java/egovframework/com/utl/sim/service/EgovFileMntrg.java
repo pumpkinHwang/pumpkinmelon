@@ -5,10 +5,10 @@
  *
  *     수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2009.01.13    조재영          최초 생성
- *   2017.03.06    조성원          시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+ *   2009.01.13    황장운          최초 생성
+ *   2017.03.06    황장운          시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
  *
- *  @author 공통 서비스 개발팀 조재영
+ *  @author 공통 서비스 개발팀 황장운
  *  @since 2009. 01. 13
  *  @version 1.0
  *  @see
@@ -87,7 +87,7 @@ public class EgovFileMntrg extends Thread {
 		file = new File(filename);
 		// 1. 최초생성시 현재 디렉토리의 하위정보를 ArrayList에 보관한다. 보관정보 ==>  절대경로 + "," + 최종수정일시 + "," + 사이즈
 		File[] fList = file.listFiles();
-		//2017.03.06 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+		//2017.03.06 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 		if(fList == null){
 			fList = new File[0];
 		}
@@ -144,7 +144,7 @@ public class EgovFileMntrg extends Thread {
 			file = new File(filename);
 			// 현재정보를 ArrayList에 담는다.
 			File[] fList = file.listFiles();
-			//2017.03.06 	조성원 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
+			//2017.03.06 	황장운 	시큐어코딩(ES)-Null Pointer 역참조[CWE-476]
 			if(fList == null){
 				fList = new File[0];
 			}

@@ -33,7 +33,7 @@ import twitter4j.auth.AccessToken;
 
 /**
  * 트위터 수신, 송신를 처리하는 Controller Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2010.10.04
  * @version 1.0
  * @see
@@ -42,8 +42,8 @@ import twitter4j.auth.AccessToken;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.10.04  장동한          최초 생성
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2010.10.04  황장운          최초 생성
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
  */

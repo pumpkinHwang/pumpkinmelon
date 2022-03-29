@@ -36,10 +36,10 @@ import org.egovframe.rte.fdl.excel.EgovExcelService;
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2009.03.20  이  용          최초 생성
- *   2011.07.01  서준식			자기 메뉴 정보를 상위메뉴 정보로 참조하는 메뉴정보가 있는지 조회하는
+ *   2011.07.01  황장운			자기 메뉴 정보를 상위메뉴 정보로 참조하는 메뉴정보가 있는지 조회하는
  *   										selectUpperMenuNoByPk() 메서드 추가
- *   2017-02-13  이정은          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2019-12-06  신용호          KISA 보안약점 조치 (부적절한 예외처리)
+ *   2017-02-13  황장운          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2019-12-06  황장운          KISA 보안약점 조치 (부적절한 예외처리)
  *
  * </pre>
  */
@@ -385,7 +385,7 @@ public class EgovMenuManageServiceImpl extends EgovAbstractServiceImpl implement
 			requestValue = "99";
 			
 		} catch (Exception e) {
-			//2017.02.13 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.13 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());
 			requestValue = "99";
 		}
@@ -445,7 +445,7 @@ public class EgovMenuManageServiceImpl extends EgovAbstractServiceImpl implement
 			success = false;
 			
 		} catch (Exception e) {
-			//2017.02.13 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.13 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());
 			success = false;
 		}
@@ -519,7 +519,7 @@ public class EgovMenuManageServiceImpl extends EgovAbstractServiceImpl implement
 			success = false;
 			
 		} catch (Exception e) {
-			//2017.02.13 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.13 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());
 			success = false;
 		}

@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * 블로그게시판 관리를 위한 VO 클래스
- * @author 공통서비스개발팀 양희훈
+ * @author 공통서비스개발팀 황장운
  * @since 2017.09.12
  * @version 1.0
  * @see
@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *   
  *   수정일            수정자           수정내용
  *  -----------   --------   ---------------------------
- *   2017.09.12  양희훈          최초 생성
+ *   2017.09.12  황장운          최초 생성
  *
  * </pre>
  */

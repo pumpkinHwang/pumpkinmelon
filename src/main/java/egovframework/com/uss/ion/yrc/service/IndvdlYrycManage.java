@@ -8,7 +8,7 @@ import egovframework.com.cmm.ComDefaultVO;
  *
  * 상세내용
  * - 연차관리의 발생연도,사용자ID,연차발생갯수,사용연차갯수,잔여연차갯수,최초등록자ID,최초등록시점,최종수정자ID,최종수정시점 항목을 관리한다.
- * @author 이기하
+ * @author 황장운
  * @version 1.0
  * @created 2014.11.14
  */

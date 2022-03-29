@@ -43,9 +43,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
  *  2010.06.21   김진만            최초 생성
- *  2011.08.26   정진오            IncludedInfo annotation 추가
- *  2017-02-14   이정은            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *  2019.12.06   신용호            KISA 보안약점 조치 (부적절한 예외처리)
+ *  2011.08.26   황장운            IncludedInfo annotation 추가
+ *  2017-02-14   황장운            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *  2019.12.06   황장운            KISA 보안약점 조치 (부적절한 예외처리)
  *  
  * </pre>
  */

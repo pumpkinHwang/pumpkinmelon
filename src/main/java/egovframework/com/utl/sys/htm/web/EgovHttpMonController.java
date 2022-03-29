@@ -46,7 +46,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *   수정일       수정자           수정내용
  *  -------     --------    ---------------------------
  *  2010.06.17   박종선     최초 생성
- *  2011.8.26	정진오			IncludedInfo annotation 추가
+ *  2011.8.26	황장운			IncludedInfo annotation 추가
  * </pre>
  */
 

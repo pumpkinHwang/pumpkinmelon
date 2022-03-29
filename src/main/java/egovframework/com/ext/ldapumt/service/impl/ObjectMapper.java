@@ -48,7 +48,7 @@ import org.springframework.ldap.core.DirContextAdapter;
 *   수정일      수정자           수정내용
 *  -------    --------    ---------------------------
 *   2014.10.12  전우성          최초 생성
-*   2017-02-13  이정은          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+*   2017-02-13  황장운          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 *
 * </pre>
 */
@@ -71,7 +71,7 @@ public class ObjectMapper<T> implements ContextMapper<Object> {
 		
 		try {
 			vo = (LdapObject) type.newInstance();
-		//2017-02-13  이정은          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+		//2017-02-13  황장운          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 		} catch (InstantiationException e2) {
 			throw new RuntimeException(e2);
 		} catch (IllegalAccessException e2) {
@@ -105,7 +105,7 @@ public class ObjectMapper<T> implements ContextMapper<Object> {
 							PropertyUtils.setProperty(vo, descriptor.getName(),
 									"Y".equals(((String) attrs.get(descriptor.getName()).get())));//KISA 보안약점 조치 (2018-10-29, 윤창원)
 		
-					//2017-02-13  이정은          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]	
+					//2017-02-13  황장운          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]	
 					} catch (IllegalAccessException e) {
 						throw new RuntimeException(e);
 					} catch (InvocationTargetException e) {

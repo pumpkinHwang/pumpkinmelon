@@ -3,7 +3,7 @@ package egovframework.com.sec.rnc.service;
 
 /**
  * 실명인증관리에 관한 인터페이스클래스를 정의한다.
- * @author 공통서비스 개발팀 조재영
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -13,7 +13,7 @@ package egovframework.com.sec.rnc.service;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.10  조재영          최초 생성
+ *   2009.04.10  황장운          최초 생성
  *
  * </pre>
  */

@@ -40,7 +40,7 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  * 상세내용
  * - 동기화대상 서버관리에 대한 등록, 수정, 삭제, 조회 기능을 제공한다.
  * - 동기화대상 서버관리의 조회기능은 목록조회, 상세조회로 구분된다.
- * @author 이문준
+ * @author 황장운
  * @version 1.0
  * @created 28-6-2010 오전 10:44:34
  * <pre>
@@ -48,9 +48,9 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  * 
  *  수정일                수정자           수정내용
  *  ----------   --------   ---------------------------
- *  2010.06.28   이문준           최초 생성
- *  2011.08.26   정진오           IncludedInfo annotation 추가
- *  2019.12.09   신용호           KISA 보안약점 조치 (위험한 형식 파일 업로드)
+ *  2010.06.28   황장운           최초 생성
+ *  2011.08.26   황장운           IncludedInfo annotation 추가
+ *  2019.12.09   황장운           KISA 보안약점 조치 (위험한 형식 파일 업로드)
  * </pre>
  */
 
@@ -226,7 +226,7 @@ public class EgovSynchrnServerController {
 			return "egovframework/com/utl/sys/ssy/EgovSynchrnServerRegist";
 		} else {
 	   	    LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-	   	    Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated(); //KISA 보안취약점 조치 (2018-12-10, 이정은)
+	   	    Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated(); //KISA 보안취약점 조치 (2018-12-10, 황장운)
 
 	        if(!isAuthenticated) {
 	            return "egovframework/com/uat/uia/EgovLoginUsr";
@@ -278,7 +278,7 @@ public class EgovSynchrnServerController {
     		return "egovframework/com/utl/sys/ssy/EgovSynchrnServerUpdt";
     	} else {
     		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-    		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 이정은)
+    		Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();	//KISA 보안취약점 조치 (2018-12-10, 황장운)
 
             if(!isAuthenticated) {
                 return "egovframework/com/uat/uia/EgovLoginUsr";

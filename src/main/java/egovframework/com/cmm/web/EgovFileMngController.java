@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 파일 조회, 삭제, 다운로드 처리를 위한 컨트롤러 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.3.25  이삼섭          최초 생성
- *   2016.10.13 장동한           deleteFileInf 메소드 return 방식 수정
+ *   2009.3.25  황장운          최초 생성
+ *   2016.10.13 황장운           deleteFileInf 메소드 return 방식 수정
  *
  * </pre>
  */

@@ -22,9 +22,9 @@ import org.springframework.stereotype.Service;
  *
  *    수정일       수정자         수정내용
  *    -------        -------     -------------------
- *    2009. 3. 11.     이삼섭
+ *    2009. 3. 11.     황장운
  *
- * @author 공통 서비스 개발팀 이삼섭
+ * @author 공통 서비스 개발팀 황장운
  * @since 2009. 3. 11.
  * @version
  * @see

@@ -8,7 +8,7 @@ import java.util.List;
  *
  * 상세내용
  * - 장애정보의 목록 항목, 조회조건, 삭제대상을 관리한다.
- * @author 이문준
+ * @author 황장운
  * @version 1.0
  * @created 28-6-2010 오전 10:44:58
  */

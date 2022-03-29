@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!-- 
 	수정일                 수정자                          수정내용
   =========     =======    =================================================
-  2011.09.07   	서준식     	 	NTCE_BGNDE, NTCE_ENDDE 컬럼 빈공간에 의한 비교 오류 때문에 Rtrim() 추가 
-  2011.09.21    서준식              selectMaxNttId문에 COMMIT 될때까지 LOCK설정
-  2011.09.21    서준식              NTT_ID를 IDGENT서비스를 사용해서 생성하므로 selectMaxNttId문은 실제 사용하지 않음
+  2011.09.07   	황장운     	 	NTCE_BGNDE, NTCE_ENDDE 컬럼 빈공간에 의한 비교 오류 때문에 Rtrim() 추가
+  2011.09.21    황장운              selectMaxNttId문에 COMMIT 될때까지 LOCK설정
+  2011.09.21    황장운              NTT_ID를 IDGENT서비스를 사용해서 생성하므로 selectMaxNttId문은 실제 사용하지 않음
 -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">

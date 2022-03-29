@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * 권한별 롤관리에 대한 DAO 클래스를 정의한다.
- * @author 공통서비스 개발팀 이문준
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -20,8 +20,8 @@ import org.springframework.stereotype.Repository;
  *   
  *  수정일               수정자               수정내용
  *  ----------   ---------   ---------------------------
- *  2009.03.11   이문준              최초 생성
- *  2021.02-09   신용호              updateAuthorRole 삭제
+ *  2009.03.11   황장운              최초 생성
+ *  2021.02-09   황장운              updateAuthorRole 삭제
  *
  * </pre>
  */

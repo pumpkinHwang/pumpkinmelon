@@ -29,7 +29,7 @@ import org.egovframe.rte.fdl.idgnr.EgovIdGnrService;
  * 
  *  수정일                수정자             수정내용
  *  ----------   --------    ---------------------------
- *  2019.12.05   신용호              KISA 보안약점 조치 (경로조작및 자원 삽입, 부적절한 예외처리)
+ *  2019.12.05   황장운              KISA 보안약점 조치 (경로조작및 자원 삽입, 부적절한 예외처리)
  * </pre>
  */
 public class ProxyServer extends Thread {

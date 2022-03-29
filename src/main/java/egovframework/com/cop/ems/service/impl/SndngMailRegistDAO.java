@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * 발송메일을 등록하는 DAO 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.12
  * @version 1.0
  * @see
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.03.12  박지욱          최초 생성
+ *  2009.03.12  황장운          최초 생성
  *
  *  </pre>
  */

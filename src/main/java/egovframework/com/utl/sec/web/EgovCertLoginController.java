@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * GPKISecureWeb 인증서 로그인 Controller
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.08.06
  * @version 1.0
  * @see
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.08.06  한성곤          최초 생성
+ *   2009.08.06  황장운          최초 생성
  *
  * </pre>
  */

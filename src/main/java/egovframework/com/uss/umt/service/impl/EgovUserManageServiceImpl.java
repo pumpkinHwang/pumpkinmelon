@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 사용자관리에 관한 비지니스 클래스를 정의한다.
- * @author 공통서비스 개발팀 조재영
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.10
  * @version 1.0
  * @see
@@ -26,9 +26,9 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.10  조재영          최초 생성
- *   2014.12.08	 이기하			암호화방식 변경(EgovFileScrty.encryptPassword)
- *   2017.07.21  장동한 			로그인인증제한 작업
+ *   2009.04.10  황장운          최초 생성
+ *   2014.12.08	 황장운			암호화방식 변경(EgovFileScrty.encryptPassword)
+ *   2017.07.21  황장운 			로그인인증제한 작업
  *
  * </pre>
  */

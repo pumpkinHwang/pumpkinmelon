@@ -4,7 +4,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * 스크랩 서비스를 위한 VO 클래스
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.07.10
  * @version 1.0
  * @see
@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.07.10  한성곤          최초 생성
+ *   2009.07.10  황장운          최초 생성
  *
  * </pre>
  */

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 화면 통계 검색 비즈니스 구현 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.12
  * @version 1.0
  * @see
@@ -23,8 +23,8 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자          수정내용
  *  -------    --------    ---------------------------
- *  2009.03.19  박지욱          최초 생성
- *  2011.06.30  이기하          패키지 분리(sts -> sts.sst)
+ *  2009.03.19  황장운          최초 생성
+ *  2011.06.30  황장운          패키지 분리(sts -> sts.sst)
  *
  *  </pre>
  */

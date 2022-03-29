@@ -44,8 +44,8 @@ import org.springframework.web.multipart.MultipartFile;
  * 
  *      수정일         수정자                   수정내용
  *   -------    --------    ---------------------------
- *   2017-02-08    이정은        시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *   2018-11-12    이정은        processFtp() FILE_TYPE 설정 수정
+ *   2017-02-08    황장운        시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *   2018-11-12    황장운        processFtp() FILE_TYPE 설정 수정
  * 
  */
 @Service("egovSynchrnServerService")
@@ -419,7 +419,7 @@ public class EgovSynchrnServerServiceImpl extends EgovAbstractServiceImpl implem
 		File uploadFile = new File(EgovWebUtil.filePathBlackList(filePath));
 		
 		if(!uploadFile.exists()){
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			if(uploadFile.mkdirs()){
 				LOGGER.debug("[file.mkdirs] uploadFile : Directory Creation Success");
 			}else{
@@ -462,7 +462,7 @@ public class EgovSynchrnServerServiceImpl extends EgovAbstractServiceImpl implem
 			File cFile = new File(EgovWebUtil.filePathBlackList(stordFilePath));
 
 			if (!cFile.isDirectory())
-				//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				if(cFile.mkdir()){
 					LOGGER.debug("[file.mkdirs] cFile : Directory Creation Success");
 				}else{
@@ -504,7 +504,7 @@ public class EgovSynchrnServerServiceImpl extends EgovAbstractServiceImpl implem
 
 		for (int i = 0; i < strDeleteFiles.length; i++) {
 			File uploadFile = new File(EgovWebUtil.filePathBlackList(stordFilePath + strDeleteFiles[i]));
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			if(uploadFile.delete()){
 				LOGGER.debug("[file.delete] uploadFile : File Deletion Success");
 			}else{

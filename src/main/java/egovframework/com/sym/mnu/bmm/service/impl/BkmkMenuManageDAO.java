@@ -17,9 +17,9 @@ import org.springframework.stereotype.Repository;
  *
  *    수정일       수정자         수정내용
  *    -------        -------     -------------------
- *    2009. 9. 25.     윤성록
+ *    2009. 9. 25.     황장운
  *
- * @author 공통 컴포넌트 개발팀 윤성록
+ * @author 공통 컴포넌트 개발팀 황장운
  * @since 2009. 9. 25.
  * @version
  * @see

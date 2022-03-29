@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 협업에서 사용할 사용자 조회 서비스 기능 구현 클래스
- * @author 공통서비스개발팀 이삼섭
+ * @author 공통서비스개발팀 황장운
  * @since 2009.06.01
  * @version 1.0
  * @see
@@ -25,7 +25,7 @@ import org.springframework.stereotype.Service;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.4.6  이삼섭          최초 생성
+ *   2009.4.6  황장운          최초 생성
  *
  * </pre>
  */

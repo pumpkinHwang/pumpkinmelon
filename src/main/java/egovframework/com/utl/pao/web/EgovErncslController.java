@@ -22,7 +22,7 @@ import egovframework.com.utl.pao.service.PrntngOutptVO;
 /**
  *
  * 전자관인에 관한 Util 테스트를 위한 화면 Controller
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -32,9 +32,9 @@ import egovframework.com.utl.pao.service.PrntngOutptVO;
  *
  *  수정일               수정자            수정내용
  *  ----------   --------   ---------------------------
- *  2009.04.01   이중호            최초 생성
- *  2017-02-14   이정은            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *  2019.12.06   신용호            KISA 보안약점 조치 (부적절한 예외처리) , EgovPropertyService 삭제
+ *  2009.04.01   황장운            최초 생성
+ *  2017-02-14   황장운            시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *  2019.12.06   황장운            KISA 보안약점 조치 (부적절한 예외처리) , EgovPropertyService 삭제
  *
  * </pre>
  */
@@ -82,7 +82,7 @@ public class EgovErncslController extends HttpServlet {
 			throw new RuntimeException("Service call error", e);
 		} catch (Exception e) {
 //			LOGGER.error(e.getMessage());
-			// 2017-02-14  이정은          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			// 2017-02-14  황장운          시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			LOGGER.error("["+ e.getClass() +"] : ", e.getMessage());
 			throw new RuntimeException("Service call error", e);
 		}

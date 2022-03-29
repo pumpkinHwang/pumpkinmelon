@@ -37,11 +37,11 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *     수정일               수정자             수정내용
  *  ------------   --------    ---------------------------
  *   2009.03.20		이  용             최초 생성
- * 	 2011.07.29		서준식             사이트맵 저장경로 수정
- *	 2011.08.26		정진오             IncludedInfo annotation 추가
- *	 2013.06.17		이기하             사이트맵 생성시 경로 오류 수정
- *   2018.08.09		신용호             X-XSS 관련 크롬에서 오탐되는 부분 수정
- *   2018.09.10		신용호             selectMenuCreatManagList 불필요한 로직 제거
+ * 	 2011.07.29		황장운             사이트맵 저장경로 수정
+ *	 2011.08.26		황장운             IncludedInfo annotation 추가
+ *	 2013.06.17		황장운             사이트맵 생성시 경로 오류 수정
+ *   2018.08.09		황장운             X-XSS 관련 크롬에서 오탐되는 부분 수정
+ *   2018.09.10		황장운             selectMenuCreatManagList 불필요한 로직 제거
  * </pre>
  */
 

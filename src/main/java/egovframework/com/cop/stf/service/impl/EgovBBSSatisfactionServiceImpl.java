@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 만족도조사를 위한 서비스 구현 클래스
- * @author 공통컴포넌트개발팀 한성곤
+ * @author 공통컴포넌트개발팀 황장운
  * @since 2009.06.29
  * @version 1.0
  * @see
@@ -30,9 +30,9 @@ import org.springframework.stereotype.Service;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.06.29  한성곤          최초 생성
- *   2011.09.15  서준식          addedOptions 적용 방법 수정
- *   2011.10.18  서준식          StsfdgNo 자동 생성 방식으로 변경
+ *   2009.06.29  황장운          최초 생성
+ *   2011.09.15  황장운          addedOptions 적용 방법 수정
+ *   2011.10.18  황장운          StsfdgNo 자동 생성 방식으로 변경
  * </pre>
  */
 @Service("EgovBBSSatisfactionService")

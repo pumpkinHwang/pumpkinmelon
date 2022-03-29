@@ -5,9 +5,9 @@
 
       수정일         수정자                   수정내용
     -------    --------    ---------------------------
-     2010.07.07    장동한          최초 생성
+     2010.07.07    황장운          최초 생성
 
-    author   : 공통서비스 개발팀 장동한
+    author   : 공통서비스 개발팀 황장운
     since    : 2010.07.07
 
 --%>
@@ -68,10 +68,10 @@
 		try {
 			accessToken = twitter.getOAuthAccessToken(requestToken,oauthVerifier);
 		} catch (TwitterException te) {
-			//te.printStackTrace();// KISA 보안취약점 조치 (2018-12-10, 신용호)
+			//te.printStackTrace();// KISA 보안취약점 조치 (2018-12-10, 황장운)
 			EgovBasicLogger.debug("Twitter Access Token getting error", te);
 		} catch (Exception e) {
-			//e.printStackTrace();// KISA 보안취약점 조치 (2018-12-10, 신용호)
+			//e.printStackTrace();// KISA 보안취약점 조치 (2018-12-10, 황장운)
 			EgovBasicLogger.debug("error", e);
 		}
 	}

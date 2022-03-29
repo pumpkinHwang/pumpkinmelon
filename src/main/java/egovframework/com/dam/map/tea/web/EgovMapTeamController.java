@@ -39,8 +39,8 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *   수정일		 수정자		수정내용
  *  -------     --------    ---------------------------
  *   2010.7.22	박종선		최초 생성
- *   2011.8.26	정진오		IncludedInfo annotation 추가
- *   2018.8.03	신용호		updateMapTeam method 수정 않되는 문제 처리
+ *   2011.8.26	황장운		IncludedInfo annotation 추가
+ *   2018.8.03	황장운		updateMapTeam method 수정 않되는 문제 처리
  *
  * </pre>
  */

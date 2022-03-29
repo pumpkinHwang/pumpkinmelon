@@ -35,7 +35,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 /**
  *
  * 연계기관 관리에 관한 요청을 받아 서비스 클래스로 요청을 전달하고 서비스클래스에서 처리한 결과를 웹 화면으로 전달을 위한 Controller를 정의한다
- * @author 공통서비스 개발팀 이중호
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.04.01
  * @version 1.0
  * @see
@@ -45,9 +45,9 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.04.01  이중호          최초 생성
- *   2011.8.26	 정진오			IncludedInfo annotation 추가
- *   2011.09.14  서준식			연계시스템 수정시 입력 데이터 표신 안되는 문제 수정
+ *   2009.04.01  황장운          최초 생성
+ *   2011.8.26	 황장운			IncludedInfo annotation 추가
+ *   2011.09.14  황장운			연계시스템 수정시 입력 데이터 표신 안되는 문제 수정
  * Copyright (C) 2009 by MOPAS  All right reserved.
  * </pre>
  */

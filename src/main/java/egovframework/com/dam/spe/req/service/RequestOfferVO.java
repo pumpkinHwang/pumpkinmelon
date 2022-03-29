@@ -3,7 +3,7 @@ package egovframework.com.dam.spe.req.service;
 
 /**
  * 지식정보제공/지식정보요청 Model and VO Class 구현
- * @author 공통서비스 장동한
+ * @author 공통서비스 황장운
  * @since 2010.08.30
  * @version 1.0
  * @see <pre>
@@ -11,7 +11,7 @@ package egovframework.com.dam.spe.req.service;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2010.08.30  장동한          최초 생성
+ *   2010.08.30  황장운          최초 생성
  *
  * </pre>
  */

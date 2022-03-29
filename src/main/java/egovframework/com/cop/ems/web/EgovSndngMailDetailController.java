@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 발송메일을 상세 조회하는 컨트롤러 클래스
- * @author 공통서비스 개발팀 박지욱
+ * @author 공통서비스 개발팀 황장운
  * @since 2009.03.12
  * @version 1.0
  * @see
@@ -34,11 +34,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  *  수정일                 수정자             수정내용
  *  ----------    --------    ---------------------------
- *  2009.03.12    박지욱              최초 생성
- *  2011.10.10	   이기하		    보안점검 후속조치(교차접속 스크립트 공격 취약성 방지(파라미터 문자열 교체),
+ *  2009.03.12    황장운              최초 생성
+ *  2011.10.10	   황장운		    보안점검 후속조치(교차접속 스크립트 공격 취약성 방지(파라미터 문자열 교체),
  *  											  HTTP 응답분할 방지)
- *  2017.03.03 	   조성원 	           시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *  2019.11.29 	   신용호 	      KISA 보안약점 조치 : HTTP응답분할(HTTP_Response_Splitting,CRLF)취약점 조치
+ *  2017.03.03 	   황장운 	           시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *  2019.11.29 	   황장운 	      KISA 보안약점 조치 : HTTP응답분할(HTTP_Response_Splitting,CRLF)취약점 조치
  *
  *  </pre>
  */
@@ -139,7 +139,7 @@ public class EgovSndngMailDetailController {
 				if (in != null) {
 					try {
 						in.close();
-					 //2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+					 //2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			         }catch (IOException ignore){
 			        	 LOGGER.error("[IOException] : Connection Close");
 			         } catch (Exception ignore) {

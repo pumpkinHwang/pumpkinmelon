@@ -3,7 +3,7 @@ package egovframework.com.utl.fcc.service;
 /**
  * 
  * 포맷유효성체크 에 대한 Util 클래스 
- * @author 공통컴포넌트 개발팀 윤성록
+ * @author 공통컴포넌트 개발팀 황장운
  * @since 2009.06.23
  * @version 1.0
  * @see
@@ -13,7 +13,7 @@ package egovframework.com.utl.fcc.service;
  *   
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2009.06.23  윤성록          최초 생성
+ *   2009.06.23  황장운          최초 생성
  *
  * </pre>
  */

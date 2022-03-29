@@ -19,7 +19,7 @@ import org.egovframe.rte.fdl.cryptography.EgovPasswordEncoder;
 
 /**
  * 암호화/복호화 관한 controller 클래스를 정의한다.
- * @author 공통서비스 개발팀 신용호
+ * @author 공통서비스 개발팀 황장운
  * @since 2018.12.03
  * @version 3.8
  * @see
@@ -29,7 +29,7 @@ import org.egovframe.rte.fdl.cryptography.EgovPasswordEncoder;
  *   
  *  수정일               수정자              수정내용
  *  ----------   --------    ---------------------------
- *  2018.12.03   신용호              최초 생성
+ *  2018.12.03   황장운              최초 생성
  * </pre>
  */
 

@@ -48,8 +48,8 @@ import org.springmodules.validation.commons.DefaultBeanValidator;
  *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
- *   2011.08.16  정진오          VcatnManageVO Dependency 제거, 사용하지 않는 객체 선언
- *   2011.8.26	정진오			IncludedInfo annotation 추가
+ *   2011.08.16  황장운          VcatnManageVO Dependency 제거, 사용하지 않는 객체 선언
+ *   2011.8.26	황장운			IncludedInfo annotation 추가
  *
  * </pre>
 
@@ -413,7 +413,7 @@ public class EgovRwardManageController {
 		beanValidator.validate(rwardManage, bindingResult); //validation 수행
 
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
-    	// KISA 보안취약점 조치 (2018-12-10, 신용호)
+    	// KISA 보안취약점 조치 (2018-12-10, 황장운)
         Boolean isAuthenticated = EgovUserDetailsHelper.isAuthenticated();
 
         if(!isAuthenticated) {

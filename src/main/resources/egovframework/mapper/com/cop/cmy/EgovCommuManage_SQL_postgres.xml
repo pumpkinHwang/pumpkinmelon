@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!-- 
 	수정일                 수정자                          수정내용
   =========     =======    =================================================
-  2011.9.7   	정진오     	 	deleteCommunityUserInf과 deleteAllCommunityUserInf의 update 문에
+  2011.9.7   	황장운     	 	deleteCommunityUserInf과 deleteAllCommunityUserInf의 update 문에
   							MNGR_AT = 'N' 추가(커뮤니티 탈퇴 시 운영자 인 경우 강제로 비운영자로 변경 필요) 
 -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 

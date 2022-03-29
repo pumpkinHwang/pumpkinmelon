@@ -21,8 +21,8 @@ import org.springframework.context.ApplicationContext;
  *    수정일       	    수정자         수정내용
  *    ----------  -------   -------------------
  *    2010.07.13   김진만         	최초생성
- *    2017-02-08   이정은         	시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *    2019-12-11   신용호         	KISA 보안약점 조치 (오류 상황 대응 부재)
+ *    2017-02-08   황장운         	시큐어코딩(ES) - 시큐어코딩 부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *    2019-12-11   황장운         	KISA 보안약점 조치 (오류 상황 대응 부재)
  *
  * @author  김진만
  * @since 2010.07.13
@@ -56,7 +56,7 @@ public class DbMntrngChecker {
 			conn = datasource.getConnection();
 			stmt = conn.prepareStatement(ceckSql);
 
-			//2017.02.08 	이정은 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+			//2017.02.08 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 			rs = stmt.executeQuery();
 
 			return new DbMntrngResult(true, null);

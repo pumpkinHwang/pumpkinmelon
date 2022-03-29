@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @author 이기하(슈퍼개발자K3)
+ * @author 황장운(슈퍼개발자K3)
  */
 package egovframework.com.ext.oauth.service.impl;
 
@@ -30,7 +30,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 
 /**
  * 소셜 로그인 구현 클래스
- * @author 이기하
+ * @author 황장운
  * @since 2014.10.08
  * @version 1.0
  * @see
@@ -40,7 +40,7 @@ import org.springframework.web.context.request.NativeWebRequest;
  *
  *   수정일     	수정자          수정내용
  *  -----------    --------    ---------------------------
- *  2014.10.08		이기하          최초 생성
+ *  2014.10.08		황장운          최초 생성
  *  </pre>
  */
 

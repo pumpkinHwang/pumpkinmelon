@@ -31,7 +31,7 @@ import org.egovframe.rte.psl.dataaccess.util.EgovMap;
 
 /**
  *
- * @author 공통서비스 개발팀 서준식
+ * @author 공통서비스 개발팀 황장운
  * @since 2011. 8. 29.
  * @version 1.0
  * @see
@@ -41,13 +41,13 @@ import org.egovframe.rte.psl.dataaccess.util.EgovMap;
  *
  *  수정일               수정자        	 수정내용
  *  ----------   --------   ---------------------------
- *  2011.08.29   서준식            최초생성
+ *  2011.08.29   황장운            최초생성
  *  2011.12.12   유지보수         사용자 로그인 정보 간섭 가능성 문제(멤버 변수 EgovUserDetails userDetails를 로컬변수로 변경)
  *  2014.03.07   유지보수         로그인된 상태에서 다시 로그인 시 미처리 되는 문제 수정 (로그인 처리 URL 파라미터화)
- *  2017.03.03 	  조성원 	       시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
- *  2017.07.10   장동한            실행환경 v3.7(Spring Security 4.0.3 적용)
- *  2017.07.21 	  장동한 		로그인인증제한 작업
- *  2020.06.25 	  신용호 		로그인 메시지 처리 수정
+ *  2017.03.03 	  황장운 	       시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+ *  2017.07.10   황장운            실행환경 v3.7(Spring Security 4.0.3 적용)
+ *  2017.07.21 	  황장운 		로그인인증제한 작업
+ *  2020.06.25 	  황장운 		로그인 메시지 처리 수정
  *
  *  </pre>
  */
@@ -125,7 +125,7 @@ public class EgovSpringSecurityLoginFilter implements Filter {
 						LOGGER.debug("after security filter call....");
 
 					}
-				//2017.03.03 	조성원 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
+				//2017.03.03 	황장운 	시큐어코딩(ES)-부적절한 예외 처리[CWE-253, CWE-440, CWE-754]
 				} catch(IllegalArgumentException e) {
 					LOGGER.error("[IllegalArgumentException] Try/Catch...usingParameters Runing : "+ e.getMessage());
 				} catch(Exception e) {
