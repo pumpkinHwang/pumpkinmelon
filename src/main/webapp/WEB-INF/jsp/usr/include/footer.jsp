@@ -26,6 +26,9 @@
 <script>
     var jsonk = $.parseJSON('<c:out escapeXml="false" value="${jsonMap.writeValueAsString(listk)}"/>')
     var jsonv = $.parseJSON('{}')
+    $(document).ready(function(){
+        // $.post('/statistics/statisticsInsert',{'origin':'w','visitmenu':$.trim($('.location-list').text()).replace(/\n/ig,'>').replace(/\s/ig,'').replace(/>>/ig,'>')||'메인'})
+    })
 </script>
 
 <textarea id="osiu-jsonv" style="display: none"><c:out value="${jsonMap.writeValueAsString(listv)}"/></textarea>
