@@ -21,7 +21,7 @@
 	    <script type="text/javascript" src="/js/commonFn.js"></script>
 
 	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	    <script src="http://osiu.kr/incpro/js/JIdFJ42ifCptqhZgimF3ig%3D%3D/osiu.js?url=${requestScope['javax.servlet.forward.servlet_path']}"></script>
+	    <script src="/js/incpro/osiu.js"></script>
 <script language="javascript">
 function fncGoAfterErrorPage(){
     history.back(-2);

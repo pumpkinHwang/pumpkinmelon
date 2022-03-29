@@ -3,7 +3,7 @@
 <footer id="footer">
     <div class="inner">
         <p class="footer-copyright">
-            Copyright C 2021 CANON KOREA Inc. All Rights reserved
+            Copyright C 2021 PUMPKIN HWANG Inc. All Rights reserved
         </p>
         <div class="footer-util">
             <a href="/mng/common/termsPrivacy">개인정보취급방침</a>

@@ -71,7 +71,7 @@ function fnChangePw(){
     <div class="inner">
         <h1 class="logo">
             <a href="#">
-                <span class="blind">CANON</span>
+                <span class="blind">PUMPKIN HWANG</span>
             </a>
         </h1>
         <div class="box-gray">
@@ -101,7 +101,7 @@ function fnChangePw(){
 	        </div>
         </form>
         <p class="comment">
-            <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <br class="mo-br"><em>‘서비스지원팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>서정일</em> jiseo@kr.canon)
+            <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <br class="mo-br"><em>‘서비스지원팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>서정일</em> jiseo@kr.pumpkin)
         </p>
     </div>
 </div>

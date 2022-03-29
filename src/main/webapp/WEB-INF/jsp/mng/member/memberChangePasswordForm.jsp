@@ -64,7 +64,7 @@ function fnCancel(){
 	        <div class="inner">
 	            <h1 class="logo">
 	                <a href="#">
-	                    <span class="blind">CANON</span>
+	                    <span class="blind">PUMPKIN HWANG</span>
 	                </a>
 	            </h1>
 	            <div class="flex pwc">
@@ -88,7 +88,7 @@ function fnCancel(){
                      </div>
                  </div>
 	             <p class="comment">
-                 	<em>비밀번호 변경</em> 시, 문제가 발생할 경우 <em>‘서비스지원팀’</em> 으로 연락 바랍니다. (담당자 : <em>서정일</em> jiseo@kr.canon)
+                 	<em>비밀번호 변경</em> 시, 문제가 발생할 경우 <em>‘서비스지원팀’</em> 으로 연락 바랍니다. (담당자 : <em>서정일</em> jiseo@kr.pumpkin)
                  </p>
 	        </div>
 	    </div>

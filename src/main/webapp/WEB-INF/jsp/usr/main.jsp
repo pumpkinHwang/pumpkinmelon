@@ -1,1 +1,1 @@
-canon/kr/cis/usr/main
+pumpkin/kr/cis/usr/main

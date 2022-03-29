@@ -19,7 +19,7 @@
 			<header id="header" > <!-- 메인 타입 컨펌 전이라 아직 -->
 				<div class="inner">
 					<h1 class="header-logo">
-				        <a href="/main"><span class="blind">CANON</span></a>
+				        <a href="/main"><span class="blind">PUMPKIN HWANG</span></a>
 				    </h1>
 					<tiles:insertAttribute name="menu" />
 					<tiles:insertAttribute name="sidebar" />

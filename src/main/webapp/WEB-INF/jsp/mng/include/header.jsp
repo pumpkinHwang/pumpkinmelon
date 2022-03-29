@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
-	    <title>CANONKOREA CIS admin </title>
+	    <title>PUMPKIN HWANG admin </title>
 	    <link rel="stylesheet" type="text/css" href="/css/mng/style.css">
 		<link rel="stylesheet" type="text/css" href="/css/incpro/osiu.css"/>
 	    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -16,7 +16,7 @@
 	    <!-- 에디터-->
 		<script type="text/javascript" src="/lib/se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="http://osiu.kr/incpro/js/JIdFJ42ifCptqhZgimF3ig%3D%3D/osiu.js?url=${requestScope['javax.servlet.forward.servlet_path']}"></script>
+		<script src="/js/incpro/osiu.js"></script>
 
 		<script type="text/javascript">
 		$(document).ready(function () {
