@@ -649,7 +649,7 @@
     <build>
         <defaultGoal>install</defaultGoal>
         <directory>${basedir}/target</directory>
-        <finalName>kr.co.biztechpartners</finalName>
+        <finalName>com.pumpkin.melon</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
