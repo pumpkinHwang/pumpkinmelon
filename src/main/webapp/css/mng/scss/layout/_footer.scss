@@ -1,0 +1,30 @@
+#footer {
+    background-color: $bg-f6f6f6;
+    height: 8rem;
+
+    .inner {
+        @include flex-flow;
+        position: relative;
+        width: 120rem;
+        height: 100%;
+        margin: 0 auto;
+
+        .footer-copyright {
+            @include fs($fs14);
+            color: $color-666;
+        }
+
+        .footer-util {
+            @include fs($fs14);
+
+            a {
+                text-decoration: underline;
+                color: $color-666;
+
+                & + a {
+                    margin-left: 5rem;
+                }
+            }
+        }
+    }
+}

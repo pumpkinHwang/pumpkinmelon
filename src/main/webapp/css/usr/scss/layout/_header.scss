@@ -1,0 +1,556 @@
+#header {
+    position: relative;
+    z-index: 2;
+    @include wh(100%, 11rem);
+    border-bottom: 1px solid #eee;
+    background-color: $bg-fff;
+
+    @include mobile {
+        @include wh(100%, 5rem);
+    }
+
+    &.on {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 32rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .sub-menu {
+            overflow: hidden;
+            height: 36rem;
+
+            @include mobile {
+                height: auto;
+            }
+        }
+    }
+
+    &.type2 {
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 17rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    >.inner {
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        position: relative;
+        left: -8rem;
+        width: 136.2rem;
+        height: 100%;
+        margin: 0 auto;
+        // margin-left: 19.8rem;
+        padding: 1.5rem 0;
+
+        @include mobile {
+            align-items: center;
+            width: 100%;
+            margin-left: 0;
+            left: inherit;
+        }
+
+        .header-logo {
+
+            @include mobile {
+                margin: 0 auto;
+            }
+
+            a {
+                display: block;
+            }
+
+            a::after {
+                content: "";
+                display: inline-block;
+                @include wh(16.2rem, 6rem);
+                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                background-size: 100%;
+
+                @include mobile {
+                    @include wh(7.7rem, 2.8rem);
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .header-util {
+            position: absolute;
+            right: 0;
+
+            .btn-close {
+                display: block;
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+            button {
+                font-weight: $fw-m;
+                font-size: 1.6rem;
+                padding: 0 0;
+                padding-left: 2.8rem;
+                line-height: 2.4rem;
+
+                &+button {
+                    padding-left: 2.8rem;
+                }
+
+            }
+
+            .btn-search {
+                background: url($path-img-common + 'ico_search_1.svg') no-repeat;
+            }
+
+            .btn-qsearch {
+                background: url($path-img-common + 'ico_quick_searh.svg') no-repeat;
+            }
+
+            .btn-search-view {
+                position: relative;
+                padding: 0 0;
+
+                @include mobile {
+                    position: relative;
+                    width: 50%;
+                }
+
+                &.on {
+                    z-index: 1;
+                }
+
+                &~.btn-search-view {
+                    margin-left: 3rem;
+
+                    @include mobile {
+                        margin-left: 0;
+                    }
+
+                    &:before {
+                        @include mobile {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            @include wh(1px, 2.5rem);
+                            background-color: $bg-e6e6e6;
+                        }
+                    }
+                }
+
+                .integrate-search-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -70.5rem;
+                    top: 0rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+
+                    .inner {
+                        width: 90rem;
+                    }
+                }
+
+                .quicksearch-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -113rem;
+                    top: .5rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+
+                    .inner {
+                        width: 120rem;
+
+                        .btn-red {
+                            padding: 0 1rem !important;
+                            font-size: 2rem;
+                            line-height: 4.4rem !important;
+                        }
+                    }
+                }
+            }
+
+            .search1:hover>.integrate-search-wrap,
+            .search2:hover>.quicksearch-wrap {
+                display: block;
+            }
+
+            .search1:hover + .search2 .quicksearch-wrap {
+                display: none;
+            }
+        }
+
+        .header-user {
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+            display: flex;
+
+            @include mobile {
+                display: none;
+            }
+
+            .account {
+                @include fs($fs15);
+                font-weight: $fw-m;
+                margin-right: 4rem;
+                line-height: inherit;
+            }
+
+            .my {
+                @include fs ($fs12);
+                line-height: 2.2rem;
+                color: $color-666;
+
+                a {
+                    padding-right: 6px;
+                    color:$color-666;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    &+a:before {
+                        content: "";
+                        margin-right: 8px;
+                        display: inline-block;
+                        @include wh(1px, 10px);
+                        background-color: #999;
+                    }
+                }
+            }
+        }
+
+        .nav-toggle {
+            display: none;
+            @include wh(2.4rem, 2.4rem);
+            @include position(2rem, 1.3rem);
+            z-index: 101;
+            cursor: pointer;
+
+            @include mobile {
+                display: block;
+            }
+
+            .hamburger {
+
+                @include position (0, 1rem);
+                @include wh(2.4rem, .2rem);
+                background-color: #000;
+
+                &:before,
+                &:after {
+                    content: "";
+                    @include wh(2.4rem, .2rem);
+                    background-color: #000;
+                }
+
+                &:before {
+                    @include position (0, -.7rem);
+                }
+
+                &:after {
+                    content: "";
+                    @include position (0, .7rem);
+                }
+            }
+
+            &.on {
+                left: inherit;
+                right: 2rem;
+                background-color: $bg-fff;
+
+                .hamburger {
+                    background-color: transparent;
+
+                    &:before,
+                    &:after {
+                        top: 0;
+                        transition: all .2s ease-in-out;
+                        background-color: #aaa;
+                    }
+
+                    &:before {
+                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    flex: 0 0 auto;
+
+    @include mobile {
+        display: none;
+        overflow: hidden;
+        @include position (0, 0);
+        position: fixed;
+        @include wh(100%, 100vh);
+        background-color: $bg-fff;
+    }
+
+    &.on {
+
+        @include mobile {
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+
+    &:hover {
+        .sub-menu {
+            display: block;
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &-wrap {
+        height: 100%;
+        margin-left: 13.1rem;
+        display: flex;
+        align-items: end;
+
+        @include mobile {
+            display: block;
+            margin-left: 0;
+            padding-top: 4rem;
+        }
+
+        .info-user {
+            display: none;
+            margin-left: 2rem;
+            font-weight: $fw-b;
+            font-size: 2rem;
+            line-height: 3rem;
+
+            @include mobile {
+                display: block;
+            }
+
+            &+.header-util {
+                display: none;
+
+                @include mobile {
+                    display: flex !important;
+                    justify-content: center;
+                    position: static !important;
+                    padding: 1.6rem 0;
+                    margin-top: 1.5rem;
+                    border-top: 1px solid $color-e6e6e6;
+                    border-bottom: 1px solid $color-e6e6e6;
+                }
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: baseline;
+
+            @include mobile {
+                width: 100%;
+                flex-direction: column;
+                align-items: baseline;
+                margin-top: 0;
+                padding: 0 2rem;
+            }
+
+            >li>a {
+                padding-bottom: 4px;
+                border-bottom: 4px solid transparent;
+                padding: 0 0 3px;
+
+                @include mobile {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                    padding: 0 0 0;
+                }
+            }
+
+            >li:hover>a {
+                border-bottom: 4px solid $color-red;
+
+                @include mobile {
+                    border-bottom: 0;
+                }
+            }
+
+            >li {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+
+                @include mobile {
+                    padding-right: 0 !important;
+                    width: 100%;
+                    border-bottom: 1px solid $color-e6e6e6;
+                    cursor: none;
+                }
+
+                &:last-child a {
+                    margin-right: 0;
+                }
+
+                >a {
+                    margin-right: 8rem;
+                    @include fs($fs18);
+                    color: $color-000;
+                    font-weight: $fw-m;
+
+                    @include mobile {
+                        position: relative;
+                        @include fs($fs16);
+                        display: block;
+                        height: 5rem;
+                        padding-right: 0;
+                        line-height: 5rem;
+                        margin-right: 0;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            right: .5rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition-duration: .2s;
+                            background: url($path-img-main + 'ico_arrow_acco.svg') no-repeat right top / cover;
+                            @include wh(1.5rem, 1.5rem);
+                        }
+
+                        &.on:after {
+                            transform: rotate(180deg);
+                            transform-origin: 50% 25%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .sub-menu {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 5.2rem;
+
+            @include mobile {
+                position: static;
+                margin-top: 5px;
+                padding-top: 0;
+                background-color: transparent;
+            }
+
+            li {
+                a {
+                    display: block;
+                    padding: 1rem 0;
+                    @include fs($fs14);
+                    color: $color-000;
+
+                    @include mobile {
+                        padding-left: 1rem;
+                    }
+
+                    &:hover {
+                        color: $color-red;
+                        text-decoration: underline;
+
+                        @include mobile {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-footer {
+            display: none;
+
+            @include mobile {
+                display: block;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 8rem;
+            }
+
+            #footer {
+                @include mobile {
+                    position: fixed;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 9;
+                    height: 4.8rem;
+                    padding-top: 0;
+                    background-color: transparent;
+                }
+
+                .inner {
+                    @include mobile {
+                        padding: 0 0 0 2rem;
+                        align-items: baseline;
+                        background-color: $bg-f6f6f6;
+                    }
+
+                    .footer-util {
+                        @include mobile {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav__log-link {
+            display: none;
+
+            @include mobile {
+                display: block;
+                padding:0 2rem;
+                @include flex-flow;
+            }
+        }
+
+        .logout, .pw {
+            display: none;
+
+            @include mobile {
+                display: inline-block;
+                padding:1.5rem 0;
+                @include fs($fs13);
+                color: $color-666;
+            }
+        }
+    }
+}

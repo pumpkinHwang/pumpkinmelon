@@ -115,7 +115,7 @@ function fnFindPw() {
 	        </div>
         </form>
         <p class="comment">
-           <em>아이디 찾기/비밀번호 찾기</em> 시, 문제가 발생할 경우 <br class="mo-br"><em>‘서비스지원팀’</em>으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>서정일</em> jiseo@kr.pumpkin)
+           <em>아이디 찾기/비밀번호 찾기</em> 시, 문제가 발생할 경우 <br class="mo-br"><em>‘펌킨팀’</em>으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>펌킨황</em> pumpkinHwang8404@gmail.com)
         </p>
     </div>
 </div>

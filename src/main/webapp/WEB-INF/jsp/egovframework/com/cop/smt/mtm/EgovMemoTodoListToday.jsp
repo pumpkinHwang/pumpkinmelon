@@ -65,7 +65,7 @@
 	<div class="search_box" title="<spring:message code="common.searchCondition.msg" />">
 		<ul>
 			<li>
-				<span class="btn_b"><a href="#" onclick="fn_egov_list_memotodo(); return false;" title="<spring:message code="comCopSmtMtm.memoTodoListToday.allList"/>"><spring:message code="comCopSmtMtm.memoTodoListToday.allList"/></a></span><!-- 전체목록 -->
+				<span class="btn_b"><a href="javascript:" onclick="fn_egov_list_memotodo(); return false;" title="<spring:message code="comCopSmtMtm.memoTodoListToday.allList"/>"><spring:message code="comCopSmtMtm.memoTodoListToday.allList"/></a></span><!-- 전체목록 -->
 			</li>
 		</ul>
 	</div>

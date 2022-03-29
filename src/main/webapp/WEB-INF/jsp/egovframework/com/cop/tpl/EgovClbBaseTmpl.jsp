@@ -207,8 +207,8 @@ $(document).ready(function() {
 			<ul class="gnb r">
 			<c:choose>
 				<c:when test="${loginUserCnt == 1}">
-				<li><a href="#">카테고리등록</a></li><!-- 카테고리등록 -->
-				<li><a href="#">개인블로그관리</a></li> <!-- 개인블로그관리  -->
+				<li><a href="javascript:">카테고리등록</a></li><!-- 카테고리등록 -->
+				<li><a href="javascript:">개인블로그관리</a></li> <!-- 개인블로그관리  -->
 			</ul>
 				<button class="write"><spring:message code="button.create" /></button>
 				</c:when>
@@ -259,7 +259,7 @@ $(document).ready(function() {
 		</div>
 		<div class="cnt">&amp;amp;lt;p&amp;amp;gt;내용&amp;amp;amp;nbsp;&amp;amp;lt;/p&amp;amp;gt;</div>
 		<!-- 댓글 -->
-		<div class="comm_List"><dl><dt><strong>답글 #1</strong><span>2019-01-28 11:26:49</span><div align="right"><a href="#">삭제</a></div></dt><dd>111</dd></dl><dl><dt><strong>답글 #2</strong><span>2019-01-28 11:26:53</span><div align="right"><a href="#">삭제</a></div></dt><dd>222</dd></dl><dl><dt><strong>답글 #3</strong><span>2019-01-28 11:26:56</span><div align="right"><a href="#">삭제</a></div></dt><dd>333</dd></dl><dl><dd><form id="formComment" name="formComment" method="post"><textarea name="commentCn" placeholder="댓글은 500byte 까지 작성할 수 있습니다."></textarea><button type="button" onclick="#">등록</button><input name="bbsId" type="hidden" value=""><input name="nttId" type="hidden" value=""><input name="blogId" type="hidden" value=""><input name="modified" type="hidden" value=""><input name="commentNo" type="hidden" value=""><input name="blogAt" type="hidden" value="Y"></form></dd></dl></div>
+		<div class="comm_List"><dl><dt><strong>답글 #1</strong><span>2019-01-28 11:26:49</span><div align="right"><a href="javascript:">삭제</a></div></dt><dd>111</dd></dl><dl><dt><strong>답글 #2</strong><span>2019-01-28 11:26:53</span><div align="right"><a href="javascript:">삭제</a></div></dt><dd>222</dd></dl><dl><dt><strong>답글 #3</strong><span>2019-01-28 11:26:56</span><div align="right"><a href="javascript:">삭제</a></div></dt><dd>333</dd></dl><dl><dd><form id="formComment" name="formComment" method="post"><textarea name="commentCn" placeholder="댓글은 500byte 까지 작성할 수 있습니다."></textarea><button type="button" onclick="#">등록</button><input name="bbsId" type="hidden" value=""><input name="nttId" type="hidden" value=""><input name="blogId" type="hidden" value=""><input name="modified" type="hidden" value=""><input name="commentNo" type="hidden" value=""><input name="blogAt" type="hidden" value="Y"></form></dd></dl></div>
 	</div>
 	<!-- 블로그 본문 //-->
 </div>

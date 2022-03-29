@@ -97,8 +97,8 @@ function fn_egov_search_RecentSrchwrd(){
 				</select>
 				<input class="s_input2 vat" name="searchKeyword" type="text" value="<c:out value='${searchKeyword}'/>" size="10" title="<spring:message code="input.input"/>" /><!-- 검색단어입력 -->
 				
-				<span class="btn_b"><a href="#" onclick="fn_egov_search_RecentSrchwrd(); return false;" title="<spring:message code="button.inquire" />"><spring:message code="button.inquire" /></a></span>
-				<span class="btn_b"><a href="#" onclick="fn_egov_deleteAll_RecentSrchwrd(); return false;" title="<spring:message code="ussIonRsm.recentSrchwrdResultList.deleteAllButton"/>"><spring:message code="ussIonRsm.recentSrchwrdResultList.deleteAllButton"/></a></span><!-- 전체삭제 -->
+				<span class="btn_b"><a href="javascript:" onclick="fn_egov_search_RecentSrchwrd(); return false;" title="<spring:message code="button.inquire" />"><spring:message code="button.inquire" /></a></span>
+				<span class="btn_b"><a href="javascript:" onclick="fn_egov_deleteAll_RecentSrchwrd(); return false;" title="<spring:message code="ussIonRsm.recentSrchwrdResultList.deleteAllButton"/>"><spring:message code="ussIonRsm.recentSrchwrdResultList.deleteAllButton"/></a></span><!-- 전체삭제 -->
 			</li>
 		</ul>
 	</div>

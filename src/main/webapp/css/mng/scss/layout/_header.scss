@@ -1,0 +1,361 @@
+#header {
+    position: relative;
+    z-index: 1;
+    @include wh(100%, 11rem);
+    border-bottom: 1px solid #eee;
+    background-color: $bg-fff;
+
+    &.on {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 32rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .sub-menu {
+            overflow: hidden;
+            height: 36rem;
+        }
+    }
+
+    &.type2 {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 17rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    >.inner {
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        position: relative;
+        left: -8rem;
+        width: 136.2rem;
+        height: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+
+        .header-logo {
+
+            a {
+                display: block;
+            }
+
+            a::after {
+                content: "";
+                display: inline-block;
+                @include wh(16.2rem, 6rem);
+                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                background-size: 100%;
+            }
+        }
+
+        .header-util {
+            position: absolute;
+            right: 0;
+
+            button {
+                font-size: 1.6rem;
+                padding: 0 0;
+                padding-left: 2.8rem;
+                line-height: 2.4rem;
+
+                &+button {
+                    padding-left: 2.8rem;
+                }
+
+            }
+
+            .btn-search {
+                background: url($path-img-common + 'ico_search_1.svg') no-repeat;
+            }
+
+            .btn-qsearch {
+                background: url($path-img-common + 'ico_quick_searh.svg') no-repeat;
+            }
+
+            .btn-search-view {
+                position: relative;
+                padding: 0 0;
+
+                &.on {
+                    z-index: 1;
+                }
+
+                &~.btn-search-view {
+                    margin-left: 3rem;
+
+                    &:before {
+                    }
+                }
+
+                .integrate-search-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -70.5rem;
+                    top: 0rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+
+                    .inner {
+                        width: 90rem;
+                    }
+                }
+
+                .quicksearch-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -113rem;
+                    top: 0rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+
+                    .inner {
+                        width: 120rem;
+
+                        .btn-red {
+                            padding: 0 1rem !important;
+                            font-size: 2rem;
+                            line-height: 4.4rem !important;
+                        }
+                    }
+                }
+            }
+
+            .search1:hover>.integrate-search-wrap,
+            .search2:hover>.quicksearch-wrap {
+                display: block;
+            }
+
+            .search1:hover .quicksearch-wrap {
+                display: none;
+            }
+        }
+
+        .header-user {
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+            display: flex;
+
+            .account {
+                @include fs($fs15);
+                font-weight: $fw-m;
+                margin-right: 4rem;
+                line-height: inherit;
+            }
+            .search {
+                @include fs($fs12);
+                margin: -2px 0 0 1rem;
+                border: 1px solid #707070;
+                color: $color-666;
+                padding: 0 1rem;
+                height: 2.6rem;
+                line-height: 2.4rem;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            .my {
+                @include fs ($fs12);
+                line-height: 2.2rem;
+                color: $color-666;
+
+                a {
+                    padding-right: 6px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    &+a:before {
+                        content: "";
+                        margin-right: 8px;
+                        display: inline-block;
+                        @include wh(1px, 10px);
+                        background-color: #999;
+                    }
+                }
+            }
+        }
+
+        .nav-toggle {
+            display: none;
+            @include wh(2.4rem, 2.4rem);
+            @include position(2rem, 1.3rem);
+            z-index: 101;
+            cursor: pointer;
+
+            .hamburger {
+
+                @include position (0, 1rem);
+                @include wh(2.4rem, .2rem);
+                background-color: #000;
+
+                &:before,
+                &:after {
+                    content: "";
+                    @include wh(2.4rem, .2rem);
+                    background-color: #000;
+                }
+
+                &:before {
+                    @include position (0, -.7rem);
+                }
+
+                &:after {
+                    content: "";
+                    @include position (0, .7rem);
+                }
+            }
+
+            &.on {
+                left: inherit;
+                right: 2rem;
+                background-color: $bg-fff;
+
+                .hamburger {
+                    background-color: transparent;
+
+                    &:before,
+                    &:after {
+                        top: 0;
+                        transition: all .2s ease-in-out;
+                        background-color: #aaa;
+                    }
+
+                    &:before {
+                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    flex: 0 0 auto;
+
+    &.on {
+    }
+
+    &:hover {
+        .sub-menu {
+            display: block;
+        }
+    }
+
+    &-wrap {
+        height: 100%;
+        margin-left: 5.5rem;
+        display: flex;
+        align-items: end;
+
+        .info-user {
+            display: none;
+            margin-left: 2rem;
+            font-weight: $fw-b;
+            font-size: 2rem;
+            line-height: 3rem;
+
+            &+.header-util {
+                display: none;
+
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: baseline;
+
+            >li>a {
+                padding-bottom: 4px;
+                border-bottom: 4px solid transparent;
+                padding: 0 0 3px;
+            }
+
+            >li:hover>a {
+                border-bottom: 4px solid $color-red;
+
+            }
+
+            >li {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+
+                &:last-child a {
+                    margin-right: 0;
+                }
+
+                >a {
+                    margin-right: 6rem;
+                    @include fs($fs18);
+                    color: $color-000;
+                    font-weight: $fw-m;
+                }
+            }
+        }
+
+        .sub-menu {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 5.2rem;
+
+            li {
+                a {
+                    display: block;
+                    padding: 1rem 0;
+                    @include fs($fs14);
+                    color: $color-000;
+
+                    &:hover {
+                        color: $color-red;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .nav-footer {
+            display: none;
+
+            #footer {
+
+                .inner {
+
+                    .footer-util {
+
+                    }
+                }
+            }
+        }
+
+        .logout {
+            display: none;
+        }
+    }
+}

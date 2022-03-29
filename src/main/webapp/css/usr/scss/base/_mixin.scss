@@ -1,0 +1,216 @@
+//---------------------------------------------------
+// mixin : 재사용 스타일
+//---------------------------------------------------
+
+//responsive
+
+//Mobile
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+//transition
+@mixin transition($value) {
+    transition: $value;
+};
+
+//clearfix
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+};
+
+//blind
+@mixin blind {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+//flex
+@mixin flex-flow ($justify: space-between, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//position
+@mixin position ($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+};
+
+//transform
+@mixin transform {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+};
+
+//border
+@mixin border-radius($radius : 100%){
+    border-radius: $radius;
+};
+
+//font
+@mixin fs-type ($size, $line: $txt-lh, $letter: $txt-ls){
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $letter;
+}
+
+@mixin fs ($size){
+
+    //50px
+    @if $size == $fs50 {
+        font-size: $fs50;
+        line-height: $lh50;
+        letter-spacing: $ls50;
+    }
+
+    //40px
+    @if $size == $fs40 {
+        font-size: $fs40;
+        line-height: $lh40;
+        letter-spacing: $ls40;
+    }
+
+    //30px
+    @if $size == $fs30 {
+        font-size: $fs30;
+        line-height: $lh30;
+        letter-spacing: $ls30;
+    }
+
+    //24px
+    @if $size == $fs24 {
+        font-size: $fs24;
+        line-height: $lh24;
+        letter-spacing: $ls24;
+    }
+
+    //20px
+    @if $size == $fs20 {
+        font-size: $fs20;
+        line-height: $lh20;
+        letter-spacing: $ls20;
+    }
+
+    //18px
+    @if $size == $fs18 {
+        font-size: $fs18;
+        line-height: $lh18;
+        letter-spacing: $ls18;
+    }
+
+    //16px
+    @if $size == $fs16 {
+        font-size: $fs16;
+        line-height: $lh16;
+        letter-spacing: $ls16;
+    }
+
+    //15px
+    @if $size == $fs15 {
+        font-size: $fs15;
+        line-height: $lh15;
+        letter-spacing: $ls15;
+    }
+
+    //14px
+    @if $size == $fs14 {
+        font-size: $fs14;
+        line-height: $lh14;
+        letter-spacing: $ls14;
+    }
+
+    //13px
+    @if $size == $fs13 {
+        font-size: $fs13;
+        line-height: $lh13;
+        letter-spacing: $ls13;
+    }
+
+    //12px
+    @if $size == $fs12 {
+        font-size: $fs12;
+        line-height: $lh12;
+        letter-spacing: $ls12;
+    }
+}
+
+
+//bullet
+@mixin bullet-txt {
+    position: relative;
+    padding-left: 8px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left:0px;
+        width: 3px;
+        height: 3px;
+        border-radius: 100%;
+        background-color: $txt-dg-color;
+        transform: translateY(-50%);
+    }
+    @content;
+}
+
+//ellipsis
+@mixin ellipsis($line: 1){
+    display: block;
+
+    @if $line == 1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @else if $line == 2 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @else if $line == 5 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+    @content;
+}
+
+
+//margin, padding
+@mixin mp($mg,$pd) {
+    margin: $mg;
+    padding: $pd;
+}
+
+//width, height
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}

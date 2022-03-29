@@ -1,0 +1,290 @@
+//---------------------------------------------------
+// reset : 초기화 스타일
+//---------------------------------------------------
+
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
+dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {
+    margin:0;
+    padding:0;
+    font-family:'Roboto', $notosans;
+    font-size:10px;
+    color:#111;
+    box-sizing: border-box;
+}c
+
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    width:100%; 
+    background:#fff;
+    min-width:320px;
+    -webkit-text-size-adjust:none;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body, input, select, textarea, button {
+    border:none;
+    font-size:1.2rem;
+    color: #111;
+}
+
+ul, ol, li{
+    list-style:none;
+}
+
+table{
+    width:100%;
+    border-spacing:0;
+    border-collapse:collapse;
+}
+
+img, fieldset{
+    border:0;
+}
+
+address, cite, code, em{
+    font-style:normal;
+    font-weight:normal;
+}
+
+label, img, input, select, textarea, button {
+    vertical-align: middle;
+}
+
+.hide, caption, legend {
+    line-height:0;
+    font-size:1px;
+    overflow:hidden;
+}
+
+hr {
+    display:none;
+}
+
+main, header, section, nav, footer, aside, article, figure{
+    display:block;
+}
+
+a{
+    color:#111;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+button {
+    margin:0;
+    padding:0;
+    background:0;
+    cursor: pointer;
+}
+
+select {
+    @include wh (100%, 4.5rem);
+    @include fs($fs14);
+    padding: 12px 10px;
+    color: $color-111;
+    background-color: $bg-fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    background:#fff url($path-img-ico + 'ico_arrow_select_def.svg') no-repeat right 10px top 50% / 12px;
+    appearance:none;
+    cursor: pointer;
+
+    &[readonly],&[disabled] {
+        @include wh (100%, 4.5rem);
+        color: $color-111;
+        background:$bg-f6f6f6 url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / 12px;
+        border: 1px solid #e6e6e6;
+
+        @include mobile {
+            background-position: right 15px top 50%;
+        }
+    }
+}
+
+input {
+    &[type=tel],
+    &[type=time],
+    &[type=text],
+    &[type=password],
+    &[type=search],
+    &[type=email],
+    &[type=file],
+    &[type=url],
+    &[type=number],
+    &[type=date] {
+        width: 100%;
+        height: 4.5rem;
+        @include fs($fs14);
+        padding: 12px 20px;
+        color: $color-111;
+        background-color: $bg-fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        vertical-align:middle;
+
+        @include mobile {
+            height: 4rem;
+            padding: 9px 15px;
+        }
+    }
+
+    &[type=tel][readonly],
+    &[type=text][readonly],
+    &[type=password][readonly],
+    &[type=search][readonly],
+    &[type=email][readonly],
+    &[type=tel][disabled],
+    &[type=text][disabled],
+    &[type=password][disabled],
+    &[type=search][disabled],
+    &[type=email][disabled]{
+        @include wh (100%, 4.5rem);
+        @include fs($fs14);
+        padding: 12px 20px;
+        color: $color-111;
+        background-color: $bg-f6f6f6;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        vertical-align:middle;
+
+        @include mobile {
+            height: 4rem;
+            padding: 9px 15px;
+        }
+    }
+
+    &[type=tel].disabled,
+    &[type=text].disabled,
+    &[type=password].disabled,
+    &[type=search].disabled,
+    &[type=email].disabled{
+        @include wh (100%, 4.5rem);
+        @include fs($fs14);
+        padding: 12px 20px;
+        color: $color-111;
+        background-color: $bg-f6f6f6;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        vertical-align:middle;
+
+        @include mobile {
+            height: 4rem;
+            padding: 9px 15px;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color:#898989;
+        font-size:1.4rem;
+        line-height:100%;
+    }
+
+    &:focus {
+        border: 1px solid #111;
+    }
+}
+
+input {
+    &[type=text][class*='lg'],
+    &[type=tel][class*='lg'],
+    &[type=time][class*='lg'],
+    &[type=text][class*='lg'],
+    &[type=password][class*='lg'],
+    &[type=search][class*='lg'],
+    &[type=email][class*='lg'],
+    &[type=file][class*='lg'],
+    &[type=url][class*='lg'],
+    &[type=number][class*='lg'],
+    &[type=date][class*='lg'] {
+        height: 6rem;
+        @include fs($fs16);
+        padding: 18px 20px;
+        color: $color-111;
+        background-color: $bg-fff;
+        border: 1px solid $color-ccc;
+        border-radius: 12px;
+        vertical-align:middle;
+    }
+}
+
+textarea {
+    width:100%;
+    font-size:1.6rem;
+    color:#111;
+    padding:5px 0;
+    border:1px solid #e9e9e9;
+    background:#fff;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    appearance:none;
+    border-radius:0px;
+
+    &[readonly],
+    &[disabled]{
+        padding:11px;
+        font-size:1.6rem;
+        color:#666; 
+        font-weight:normal;
+        line-height:140%;
+        height:78px;
+        background:#eaeaea;
+        border:1px solid #c0c0c0;
+    }
+
+    &::-webkit-input-placeholder {
+        color:#b5b5b5;
+        font-size:1.6rem;
+        line-height:100%;
+    }
+
+    &:focus {
+        border: 1px solid #111;
+    }
+
+}
+
+.clear{
+    @include clearfix;
+}
+
+.blind {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.hide {
+    display: none !important;
+}
+
+* {
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
+
+
+

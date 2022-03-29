@@ -5,5 +5,5 @@
            <a href="/mng/member/memberlogOut" class="log">로그아웃</a>
            <a href="/mng/member/memberChangePasswordForm" class="pw">비밀번호변경</a>
        </div>
-       <a href="#" class="search">통합검색 관리</a>
+       <a href="javascript:" class="search">통합검색 관리</a>
    </div>

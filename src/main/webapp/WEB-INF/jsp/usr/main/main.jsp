@@ -319,7 +319,7 @@
 					<form:form modelAttribute="searchVO" id="noticeForm" name="noticeForm" method="post" action="">
 						<input type="hidden" name="seq" id="seq" />
 						<c:forEach var="result" items="${noticeList}" varStatus="status">
-							<a href="#">
+							<a href="javascript:">
 								<p class="ellipsis" onclick="noticeView('<c:out value="${result.seq}"/>');">${result.title}</p>
 								<span><fmt:formatDate value="${result.registDatetime}" pattern="yyyy.MM.dd" /></span>
 							</a>

@@ -67,7 +67,7 @@ function fnChangePw(){
 	    <div class="log-wrap">
 	        <div class="inner">
 	            <h1 class="logo">
-	                <a href="#">
+	                <a href="javascript:">
 	                    <span class="blind">PUMPKIN HWANG</span>
 	                </a>
 	            </h1>
@@ -86,7 +86,7 @@ function fnChangePw(){
 	             </div>
 	            </form>
 	            <p class="comment">
-	                <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <em>‘서비스지원팀’</em> 으로 연락 바랍니다. (담당자 : <em>서정일</em> jiseo@kr.pumpkin)
+	                <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <em>‘펌킨팀’</em> 으로 연락 바랍니다. (담당자 : <em>펌킨황</em> pumpkinHwang8404@gmail.com)
 	            </p>
 	        </div>
 	    </div>

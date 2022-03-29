@@ -178,7 +178,7 @@ function fMenuManageSelect(){
 				<input class="s_btn" type="submit" value='<spring:message code="button.inquire" />' title='<spring:message code="button.inquire" />' onclick="selectMenuManageList(); return false;" /><!-- 조회 -->
 				<span class="btn_b"><a href="<c:url value='/sym/mnu/mpm/EgovMenuRegistInsert.do'/>" onclick="bndeInsertMenuManage(); return false;" title="<spring:message code="button.bulkUpload" />"><spring:message code="button.bulkUpload" /></a></span><!-- 일괄등록 -->
 				<span class="btn_b"><a href="<c:url value='/sym/mnu/mpm/EgovMenuRegistInsert.do'/>" onclick="insertMenuManage(); return false;" title='<spring:message code="button.create" />'><spring:message code="button.create" /></a></span><!-- 등록 -->
-				<span class="btn_b"><a href="#" onclick="fDeleteMenuList(); return false;" title='<spring:message code="button.delete" />'><spring:message code="button.delete" /></a></span><!-- 삭제 -->
+				<span class="btn_b"><a href="javascript:" onclick="fDeleteMenuList(); return false;" title='<spring:message code="button.delete" />'><spring:message code="button.delete" /></a></span><!-- 삭제 -->
 			</li>
 		</ul>
 	</div>

@@ -162,7 +162,7 @@ function press() {
 				<input id="strServerNm" class="s_input2 vat" name="searchKeyword" type="text" value='<c:out value="${server.serverNm}"/>' size="20" onkeypress="press();" title="<spring:message code="title.search"/>" readonly="readonly" /><!-- 검색 -->
 				
 				<span class="btn_b"><a href="<c:url value='/sym/sym/srv/saveServerEqpmnRelate.do'/>?pageIndex=<c:out value='${serverEqpmnRelateVO.pageIndex}'/>" onclick="fncAddServerEqpmnRelateInsert(); return false;" title='<spring:message code="button.save" />'><spring:message code="button.save" /></a></span><!-- 저장 -->
-				<span class="btn_b"><a href="#" onclick="self.close();"><spring:message code="button.close" /></a></span><!-- 닫기 -->
+				<span class="btn_b"><a href="javascript:" onclick="self.close();"><spring:message code="button.close" /></a></span><!-- 닫기 -->
 			</li>
 		</ul>
 	</div>

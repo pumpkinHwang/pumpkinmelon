@@ -70,14 +70,14 @@ function fnChangePw(){
 <div class="log-wrap">
     <div class="inner">
         <h1 class="logo">
-            <a href="#">
+            <a href="javascript:">
                 <span class="blind">PUMPKIN HWANG</span>
             </a>
         </h1>
         <div class="box-gray">
-            <p class="b-item">- 본 사이트는 캐논코리아 직조직 및 대리점 사원을 위한 Information Server 입니다.</p>
-            <p class="b-item">- 본 사이트의 모든 내용은 보안사항으로 ID 및 Password 가 유출되지 않도록 각별히 주의하여 주시기 바랍니다.</p>
-            <p class="b-item">- 로그인 하시면 내용을 볼 수 있음과 동시에 정보 유출 시 현재 아이디 사용자가 모든 책임을 갖게 되는 것을 의미합니다.</p>
+            <p class="b-item">- 본 사이트는 펌킨황의 개인사이트입니다.</p>
+<%--            <p class="b-item">- 본 사이트의 모든 내용은 보안사항으로 ID 및 Password 가 유출되지 않도록 각별히 주의하여 주시기 바랍니다.</p>--%>
+<%--            <p class="b-item">- 로그인 하시면 내용을 볼 수 있음과 동시에 정보 유출 시 현재 아이디 사용자가 모든 책임을 갖게 되는 것을 의미합니다.</p>--%>
         </div>
         <div class="agree">
         	<label class="checkbox">
@@ -101,7 +101,7 @@ function fnChangePw(){
 	        </div>
         </form>
         <p class="comment">
-            <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <br class="mo-br"><em>‘서비스지원팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>서정일</em> jiseo@kr.pumpkin)
+            <em>회원가입 문의, 사용문의 및 접속문제 발생</em> 시, <br class="mo-br"><em>‘펌킨팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>펌킨황</em> pumpkinHwang8404@gmail.com)
         </p>
     </div>
 </div>

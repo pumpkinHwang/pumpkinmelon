@@ -79,7 +79,7 @@ function fnInit() {
 				</li>
 				<li>
 					<ul class="btn_idpw" >
-						<li><a href="#" onclick="fnShowLogin(0);"><spring:message code="comUatUia.loginForm.login.normal"/></a></li><!-- 일반로그인 -->
+						<li><a href="javascript:" onclick="fnShowLogin(0);"><spring:message code="comUatUia.loginForm.login.normal"/></a></li><!-- 일반로그인 -->
 					</ul>
 					<ul class="btn_idpw" >
 						<li>※ <spring:message code="comUatUia.loginForm.gpki.descrption"/></li>

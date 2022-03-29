@@ -171,7 +171,7 @@
 			<th><label for="schdulCn">${title}</label> </th>
 			<td class="left">
 			   <input name="adbkUser" id="adbkUser" size="40" readonly="true" maxlength="255" style="width:94%;" />
-			   <a href="#" onClick="fn_egov_inqire_user();return false;"><img src="<c:url value='/images/egovframework/com/cmm/btn/btn_search.gif'/>" align="middle" style="border:0px" alt=<spring:message code="comCopAdb.regist.findAdbkUser"/> title="<spring:message code="comCopAdb.regist.findAdbkUser"/>"></a>
+			   <a href="javascript:" onClick="fn_egov_inqire_user();return false;"><img src="<c:url value='/images/egovframework/com/cmm/btn/btn_search.gif'/>" align="middle" style="border:0px" alt=<spring:message code="comCopAdb.regist.findAdbkUser"/> title="<spring:message code="comCopAdb.regist.findAdbkUser"/>"></a>
 			</td>
 		</tr>
 		<c:set var="title"><spring:message code="comCopSmtDsm.regist.drctMatter"/></c:set>

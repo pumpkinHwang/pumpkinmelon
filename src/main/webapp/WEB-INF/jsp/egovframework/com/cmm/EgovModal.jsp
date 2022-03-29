@@ -46,9 +46,9 @@
 		<div class="modal-footer">
 			
 			<div id="footer" >
-			<span class="btn_style1 blue"><a href="#">확 인</a></span>
-			<span class="btn_style1 blue"><a href="#">확 인</a></span>
-			<span class="btn_style1 gray" id='btnModalClose'><a href="#">닫 기</a></span>
+			<span class="btn_style1 blue"><a href="javascript:">확 인</a></span>
+			<span class="btn_style1 blue"><a href="javascript:">확 인</a></span>
+			<span class="btn_style1 gray" id='btnModalClose'><a href="javascript:">닫 기</a></span>
 			</div>
 			
 			

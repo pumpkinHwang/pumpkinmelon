@@ -160,8 +160,8 @@ function makeList(xmlStr){
 				<input type="text" name="confmKey" id="confmKey" style="width:250px;" value="bnVsbDIwMTQxMDAxMTQwNDA1" title="<spring:message code="symAdr.adressCntcList.scConfmKey" /> <spring:message code="input.input" />" />
 			</li>
 			<li>
-				<span class="btn_b"><a href="#" onclick="getAddrLoc();" title="<spring:message code="symAdr.btn.addrLoc" /> <spring:message code="input.button" />"><spring:message code="symAdr.btn.addrLoc" /></a></span><!-- 주소가져오기(Controller) -->
-				<span class="btn_b"><a href="#" onclick="getAddr();" title="<spring:message code="symAdr.btn.addrjson" /> <spring:message code="input.button" />"><spring:message code="symAdr.btn.addrjson" /></a></span><!-- 주소가져오기(JSON) -->
+				<span class="btn_b"><a href="javascript:" onclick="getAddrLoc();" title="<spring:message code="symAdr.btn.addrLoc" /> <spring:message code="input.button" />"><spring:message code="symAdr.btn.addrLoc" /></a></span><!-- 주소가져오기(Controller) -->
+				<span class="btn_b"><a href="javascript:" onclick="getAddr();" title="<spring:message code="symAdr.btn.addrjson" /> <spring:message code="input.button" />"><spring:message code="symAdr.btn.addrjson" /></a></span><!-- 주소가져오기(JSON) -->
 			</li>
 		</ul>
 	</div>

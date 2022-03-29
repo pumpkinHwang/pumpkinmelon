@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//base
+@import "base/variable";       // 기본 재사용 선언 스타일
+@import "base/mixin";          // 재사용 스타일
+@import "base/font";           // 폰트 스타일
+@import "base/reset";          // 초기화 스타일
+
+@import "base/layout";         // 레이아웃 스타일
+@import "base/common";         // 공통 스타일
+@import "base/library";        // 라이브러리
+@import "base/ui";             // 스타일
+
+//layout
+@import "layout/header";       // header 스타일
+@import "layout/footer";       // footer 스타일
+
+
+
+
+
+
+
+
+
+

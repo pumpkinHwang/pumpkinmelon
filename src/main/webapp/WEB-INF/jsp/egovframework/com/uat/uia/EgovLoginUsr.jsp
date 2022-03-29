@@ -272,12 +272,12 @@ function fnOnepassLogin() {
 				</li>
 				<li>
 					<ul class="btn_idpw" >
-						<li><a href="#" onclick="goRegiUsr(); return false;"><spring:message code="comUatUia.loginForm.regist"/></a></li> <!-- 회원가입  -->
+						<li><a href="javascript:" onclick="goRegiUsr(); return false;"><spring:message code="comUatUia.loginForm.regist"/></a></li> <!-- 회원가입  -->
 					</ul>
 				</li>
 				<li>
 					<ul class="btn_idpw" >
-						<li><a href="#" onclick="fnShowLogin(1);"><spring:message code="comUatUia.loginForm.login.gpki"/></a></li><!-- 인증서로그인 -->
+						<li><a href="javascript:" onclick="fnShowLogin(1);"><spring:message code="comUatUia.loginForm.login.gpki"/></a></li><!-- 인증서로그인 -->
 						<li><a href="<c:url value='/uat/uia/egovGpkiIssu.do'/>"><spring:message code="comUatUia.loginForm.gpki.info"/></a></li><!-- 인증서안내 -->
 					</ul>
 				</li>
@@ -296,7 +296,7 @@ function fnOnepassLogin() {
 				</li>
 				<li>
 					<ul class="btn_idpw" >
-						<li><a href="#" onclick="fnShowLogin(0);"><spring:message code="comUatUia.loginForm.login.normal"/></a></li><!-- 일반로그인 -->
+						<li><a href="javascript:" onclick="fnShowLogin(0);"><spring:message code="comUatUia.loginForm.login.normal"/></a></li><!-- 일반로그인 -->
 					</ul>
 					<ul class="btn_idpw" >
 						<li>※ <spring:message code="comUatUia.loginForm.gpki.descrption"/></li>
@@ -319,7 +319,7 @@ function fnOnepassLogin() {
 		<ul style="margin:10px 0px 10px;">
 			<li style="text-align:center;">
 				하나의 아이디로 간편하게
-				<a href="#" onclick="javascript:fnOnepassLogin();"><img src="<c:url value='/images/egovframework/com/uat/uia/onepass.png'/>" alt="디지털원패스 로그인" title="디지털원패스 로그인"></a>
+				<a href="javascript:" onclick="javascript:fnOnepassLogin();"><img src="<c:url value='/images/egovframework/com/uat/uia/onepass.png'/>" alt="디지털원패스 로그인" title="디지털원패스 로그인"></a>
 			</li>
 		</ul>
 	</div>

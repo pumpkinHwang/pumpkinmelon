@@ -1,0 +1,35 @@
+//---------------------------------------------------
+// layout : 헤더 푸터 제외한 공통된 레이아웃 style
+//---------------------------------------------------
+
+//ios safe area
+:root {
+	--safeTop:env(safe-area-inset-top);
+	--safeBtm:env(safe-area-inset-bottom);
+}
+
+body {
+    padding:var(--safeTop) 0 var(--safeBtm) !important;
+}
+
+.wrap {
+    @include fs ($fs24);
+    overflow: hidden;
+    position: relative;
+    min-width: 108rem;
+
+    &.fixed {
+        position: fixed;
+    }
+}
+
+//container
+#container {
+    min-height: calc(100vh - 8rem);
+    padding-bottom: 7rem;
+
+    .contents {
+        width: 120rem;
+        margin: 0 auto;
+    }
+}

@@ -132,7 +132,7 @@ function windowOpen(serverId) {
 			    <td><c:out value="${server.serverNm}"/></td>
 			    <td><c:out value="${server.serverKndNm}"/></td>
 			    <td><c:out value="${server.regstYmd}"/></td>
-			    <td><a href="#" onclick="windowOpen('<c:out value="${server.serverId}"/>')"><img src="<c:url value='/images/egovframework/com/cmm/icon/search2.gif'/>" alt="" /></a></td>
+			    <td><a href="javascript:" onclick="windowOpen('<c:out value="${server.serverId}"/>')"><img src="<c:url value='/images/egovframework/com/cmm/icon/search2.gif'/>" alt="" /></a></td>
 			  </tr>
 			 </c:forEach>
 		</tbody>

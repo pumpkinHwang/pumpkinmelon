@@ -1,0 +1,97 @@
+//---------------------------------------------------
+// variable : 기본 재사용 선언 스타일
+//---------------------------------------------------
+
+$notosans: 'NotoSansKR', Arial, AppleGothic, verdana, sans-serif;
+$roboto: 'Roboto', Arial, AppleGothic, verdana, sans-serif;
+$path-img: '../img/';
+$path-img-common: $path-img + 'common/';
+$path-img-ico: $path-img + 'ico/';
+$path-img-main: $path-img + 'main/';
+$path-img-btn: $path-img + 'btn/';
+
+//font
+$fw-b: 700;
+$fw-m: 500;
+$fw-r: 400;
+
+//50px
+$fs50: 5rem;
+$lh50: 1.4;
+$ls50: -0.5px;
+
+//40px
+$fs40: 4rem;
+$lh40: 1.5;
+$ls40: -0.4px;
+
+//30px
+$fs30: 3rem;
+$lh30: 1.5;
+$ls30: -0.3px;
+
+
+//28px
+$fs28: 2.8rem;
+$lh28: 1.5;
+$ls28: -0.4px;
+
+//24px
+$fs24: 2.4rem;
+$lh24: 1.5;
+$ls24: -0.4px;
+
+//20px
+$fs20: 2rem;
+$lh20: 1.75;
+$ls20: -0.2px;
+
+//18px
+$fs18: 1.8rem;
+$lh18: 1.44;
+$ls18: -0.18px;
+
+//16px
+$fs16: 1.6rem;
+$lh16: 1.5;
+$ls16: -0.16px;
+
+//15px
+$fs15: 1.5rem;
+$lh15: 1.4;
+$ls15: -0.15px;
+
+//14px
+$fs14: 1.4rem;
+$lh14: 1.43;
+$ls14: -0.14px;
+
+//13px
+$fs13: 1.3rem;
+$lh13: normal;
+$ls13: -0.3px;
+
+//12px
+$fs12: 1.2rem;
+$lh12: 1.42;
+$ls12: -0.12px;
+
+//color
+$color-red: #dc000c;
+$color-fff: #fff;
+$color-000: #000;
+$color-111: #111;
+$color-666: #666;
+$color-f6f6f6: #f6f6f6;
+$color-e6e6e6: #e6e6e6;
+$color-ccc: #ccc;
+
+//bg color
+$bg-red: #dc000c;
+$bg-fff: #fff;
+$bg-000: #000;
+$bg-111: #111;
+$bg-666: #666;
+$bg-f6f6f6: #f6f6f6;
+$bg-e6e6e6: #e6e6e6;
+$bg-ccc: #ccc;

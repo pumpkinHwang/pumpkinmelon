@@ -64,7 +64,7 @@ function fnCancel(){
 <div class="log-wrap">
     <div class="inner">
         <h1 class="logo">
-            <a href="#">
+            <a href="javascript:">
                 <span class="blind">PUMPKIN HWANG</span>
             </a>
         </h1>
@@ -89,7 +89,7 @@ function fnCancel(){
             </div>
         </div>
         <p class="comment">
-            <em>비밀번호 변경 시, 문제가 발생할 경우 <br class="mo-br">‘서비스지원팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>서정일</em> jiseo@kr.pumpkin)
+            <em>비밀번호 변경 시, 문제가 발생할 경우 <br class="mo-br">‘펌킨팀’</em> 으로 연락 바랍니다. <br class="mo-br">(담당자 : <em>펌킨황</em> pumpkinHwang8404@gmail.com)
          </p>
     </div>
 </div>
