@@ -26,7 +26,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberLogin" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
-        /* memberDAO.memberLogin */
+        /* memberMapper.memberLogin */
         <![CDATA[
         SELECT CUSTOMER_NUM,
 		       CUSTCODE,
@@ -117,7 +117,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberSpCisLoginInfoSelect" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" statementType="CALLABLE" resultType="egovMap">
-        /* memberDAO.memberSpCisLoginInfoSelect */
+        /* memberMapper.memberSpCisLoginInfoSelect */
         <![CDATA[
         EXEC SP_CIS_LOGIN_INFO_SELECT #{id}
         ]]>
@@ -130,7 +130,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberSpGetSha256Password" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" statementType="CALLABLE" resultType="string">
-        /* memberDAO.memberSpGetSha256Password */
+        /* memberMapper.memberSpGetSha256Password */
         <![CDATA[
         EXEC SP_GET_SHA256_PASSWORD #{id},#{passWd},#{encodePassWd}
         ]]>
@@ -143,7 +143,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberAccessProgram" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="string">
-        /* memberDAO.memberAccessProgram */
+        /* memberMapper.memberAccessProgram */
 		SELECT REPLACE(REPLACE(REPLACE(STUFF(
 			(SELECT * FROM (
 				SELECT ',' + SUBSTRING(D.menuurl, 0, LEN(D.menuurl) - CHARINDEX('/', reverse(D.menuurl))+1)  AS accessMenuUrl FROM CIS_AccessMaster A 
@@ -182,7 +182,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberfindId" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
-        /* memberDAO.memberfindId */
+        /* memberMapper.memberfindId */
         <![CDATA[
         	SELECT ID AS id,
         		   EMAIL AS mberCertEmail
@@ -199,7 +199,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberfindIdEmailForm" parameterType="egovMap" resultType="egovMap">
-        /* memberDAO.memberfindIdEmailForm */
+        /* memberMapper.memberfindIdEmailForm */
         <![CDATA[
         	SELECT SEQ AS seq,
 			       CODE AS code,
@@ -225,7 +225,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberfindPw" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
-        /* memberDAO.memberfindPw */
+        /* memberMapper.memberfindPw */
         <![CDATA[
         	SELECT ID AS id,
         		   EMAIL AS mberCertEmail,
@@ -245,7 +245,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberckbsPasswordCreateFunc" parameterType="egovMap" statementType="CALLABLE" resultType="string">
-        /* memberDAO.memberckbsPasswordCreateFunc */
+        /* memberMapper.memberckbsPasswordCreateFunc */
         <![CDATA[
         EXEC CKBS_PASSWORD_CREATE_FUNC 10
         ]]>
@@ -258,7 +258,7 @@
 	 * @exception Exception
 	 -->
 	<update id="memberUpdatePassword" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.memberUpdatePassword */
+		/* memberMapper.memberUpdatePassword */
 		UPDATE CIS_USER 
 		SET PASSWORD = #{passWd}
 		, PasswordChangeYn = 'y'
@@ -272,7 +272,7 @@
 	 * @exception Exception
 	 -->
 	<insert id="memberInsertPasswordHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.memberInsertPasswordHistory */
+		/* memberMapper.memberInsertPasswordHistory */
 		INSERT INTO CIS_USERPASSWORDHISTORY
 		            (USERID,
 		             TYPE,
@@ -291,7 +291,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberfindPasswordEmailForm" parameterType="egovMap" resultType="egovMap">
-        /* memberDAO.memberfindPasswordEmailForm */
+        /* memberMapper.memberfindPasswordEmailForm */
         <![CDATA[
         	SELECT *
 			FROM   CIS_NOTICEEMAILSETTINGS
@@ -308,7 +308,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberChangePasswordForm" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
-        /* memberDAO.memberChangePasswordForm */
+        /* memberMapper.memberChangePasswordForm */
         <![CDATA[
         
         
@@ -322,7 +322,7 @@
 	 * @exception Exception
 	 -->
 	<insert id="memberInsertLoginHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO"  keyProperty="seq" useGeneratedKeys="true">
-		/* memberDAO.memberInsertLoginHistory */
+		/* memberMapper.memberInsertLoginHistory */
 		INSERT INTO CIS_LoginHistory
 		(USERID, REMOTEADDRESS, STATUS, REGISTDATETIME)
 		VALUES(#{id}, #{remoteAddress}, #{status}, getdate())
@@ -335,7 +335,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberLoginFailHistoryCnt" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="int">
-        /* memberDAO.memberLoginFailHistoryCnt */
+        /* memberMapper.memberLoginFailHistoryCnt */
         <![CDATA[
         SELECT COUNT(*) CNT
 		FROM CIS_LOGINFAILHISTORY
@@ -350,7 +350,7 @@
 	 * @exception Exception
 	 -->
 	<update id="memberUpdateEnableYn" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.memberLoginFailHistoryCnt */
+		/* memberMapper.memberLoginFailHistoryCnt */
 		UPDATE CIS_USER 
 		SET ENABLEYN = #{enableyn}
 		WHERE ID = #{id}
@@ -363,7 +363,7 @@
 	 * @exception Exception
 	 -->
 	<insert id="memberInsertLoginFailHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" keyProperty="loginHistorySeq" useGeneratedKeys="true">
-		/* memberDAO.memberInsertLoginFailHistory */
+		/* memberMapper.memberInsertLoginFailHistory */
 		INSERT INTO CIS_LOGINFAILHISTORY
 		(USERID, REMOTEADDRESS,  REGISTDATETIME)
 		VALUES(#{id}, #{remoteAddress}, getdate())
@@ -376,7 +376,7 @@
 	 * @exception Exception
 	 -->
 	<delete id="memberDeleteLoginFailHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.memberDeleteLoginFailHistory */
+		/* memberMapper.memberDeleteLoginFailHistory */
 		DELETE CIS_LOGINFAILHISTORY 
 		WHERE USERID = #{id}
 	</delete>  
@@ -388,7 +388,7 @@
 	 * @exception Exception
 	 -->
 	<insert id="memberInsertLoginStatus" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.memberInsertLoginStatus */
+		/* memberMapper.memberInsertLoginStatus */
 		INSERT INTO CIS_LOGINSTATUS
 		(USERID, LOGINHISTORYSEQ)
 		VALUES(#{id}, #{loginHistorySeq})
@@ -403,7 +403,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberInfo" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
-		/* memberDAO.memberInfo */
+		/* memberMapper.memberInfo */
         <![CDATA[
 			SELECT seq as seq
 			     , id as id
@@ -429,7 +429,7 @@
 	 * @exception Exception
 	 -->
 	<update id="updateUser" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.updateUser */
+		/* memberMapper.updateUser */
 		UPDATE CIS_User
 		SET Name = #{name},
 		    Email = #{email},
@@ -448,7 +448,7 @@
 	 * @exception Exception
 	 -->
 	<insert id="insertDepartment" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
-		/* memberDAO.insertDepartment */
+		/* memberMapper.insertDepartment */
 		INSERT INTO CIS_UserAgencyDepartment
 		(Code,
 		 TYPE,
@@ -476,7 +476,7 @@
 	 * @exception Exception
 	 -->
 	<select id="memberPasswordChangeNoticeYearList" resultType="egovMap">
-        /* memberDAO.memberPasswordChangeNoticeYearList */
+        /* memberMapper.memberPasswordChangeNoticeYearList */
         <![CDATA[
         SELECT a.id, a.Email from (
 			SELECT 
@@ -507,7 +507,7 @@
 	 * @exception Exception
 	 -->
 	<update id="updateMemberMonthPasswordChangeYn" parameterType="egovMap">
-		/* memberDAO.updateMemberMonthPasswordChangeYn */
+		/* memberMapper.updateMemberMonthPasswordChangeYn */
 		<![CDATA[
 		UPDATE CIS_USER 
 		SET PasswordChangeYn = #{passwordChangeYn}
@@ -544,7 +544,7 @@
 	 * @exception Exception
 	 -->
 	<update id="updateMemberYearPasswordChangeYn" parameterType="egovMap">
-		/* memberDAO.updateMemberYearPasswordChangeYn */
+		/* memberMapper.updateMemberYearPasswordChangeYn */
 		<![CDATA[
 		UPDATE CIS_USER 
 			SET PasswordChangeYn = #{passwordChangeYn}
@@ -579,7 +579,7 @@
 	 * @exception Exception
 	 -->
 	<update id="updateMemberYearEnableYn">
-		/* memberDAO.updateMemberYearPasswordChangeYn */
+		/* memberMapper.updateMemberYearPasswordChangeYn */
 		<![CDATA[
 		UPDATE CIS_USER 
 			SET PasswordChangeYn = 'd'
