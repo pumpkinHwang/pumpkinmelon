@@ -5,7 +5,7 @@ import org.egovframe.rte.fdl.idgnr.EgovIdGnrService;
 import com.pumpkin.melon.cmmn.mail.service.MailService;
 import com.pumpkin.melon.cmmn.util.ReqUtils;
 import com.pumpkin.melon.mng.member.service.MemberLoginMngService;
-import com.pumpkin.melon.usr.member.service.MemberVO;
+import com.pumpkin.melon.mng.member.service.MemberMngVO;
 import com.pumpkin.melon.usr.member.service.impl.MemberMapper;
 import egovframework.com.utl.sim.service.EgovFileScrty;
 
@@ -57,7 +57,7 @@ public class MemberLoginMngServiceImpl extends EgovAbstractServiceImpl implement
 	 * @return data[memberLoginMngVO]
 	 * @exception
 	 */
-	public EgovMap memberLogin(MemberVO vo) throws Exception {
+	public EgovMap memberLogin(MemberMngVO vo) throws Exception {
 //		return memberLoginMngDAO.memberLogin(memberLoginMngVO);
 
 		EgovMap memberMap = new EgovMap();
@@ -160,14 +160,14 @@ public class MemberLoginMngServiceImpl extends EgovAbstractServiceImpl implement
 	
 	/**
 	 * 로그인.아이디 찾기
-	 * @param vo - memberVO
-	 * @return data[memberVO]
+	 * @param vo - memberMngVO
+	 * @return data[memberMngVO]
 	 * @exception
 	 */
-	public EgovMap memberfindId(MemberVO memberVO) throws Exception {
+	public EgovMap memberfindId(MemberMngVO memberMngVO) throws Exception {
 		
 		EgovMap memberMap = new EgovMap();
-		memberMap = memberDAO.memberfindId(memberVO);
+		memberMap = memberDAO.memberfindId(memberMngVO);
 		
 		if(memberMap != null) {
 			

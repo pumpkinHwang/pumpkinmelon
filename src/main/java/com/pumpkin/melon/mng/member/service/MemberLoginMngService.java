@@ -1,7 +1,7 @@
 package com.pumpkin.melon.mng.member.service;
 
 import org.egovframe.rte.psl.dataaccess.util.EgovMap;
-import com.pumpkin.melon.usr.member.service.MemberVO;
+import com.pumpkin.melon.mng.member.service.MemberMngVO;
 
 /**
  * @Class Name : MemberLoginMngService.java
@@ -30,6 +30,6 @@ public interface MemberLoginMngService {
 	 * @return data[memberLoginMngVO]
 	 * @exception Exception
 	 */
-	EgovMap memberLogin(MemberVO vo) throws Exception;
+	EgovMap memberLogin(MemberMngVO vo) throws Exception;
 
 }

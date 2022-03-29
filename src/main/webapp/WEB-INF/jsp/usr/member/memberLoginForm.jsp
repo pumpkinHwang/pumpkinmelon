@@ -18,7 +18,7 @@ function login() {
 		fnModalOpen('modaltest2', 'passWd', 'fnValidatonFocus(\'passWd\')');
 		return false;
     }
-	var param = {'id' : $('#id').val(), 'passWd': $('#passWd').val()};
+	var param = {'id' : $('#id').val(), 'pw': $('#passWd').val()};
    	var url = '/usr/member/memberLoginAjax';
    	$.ajax({
         type :"POST",

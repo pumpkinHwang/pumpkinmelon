@@ -7,7 +7,7 @@ import com.pumpkin.melon.mng.member.service.MemberUserMngVO;
 import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import com.pumpkin.melon.cmmn.util.ReqUtils;
-import com.pumpkin.melon.usr.member.service.MemberVO;
+import com.pumpkin.melon.mng.member.service.MemberMngVO;
 import egovframework.com.cmm.EgovMessageSource;
 
 import javax.annotation.Resource;
@@ -259,7 +259,7 @@ public class MemberUserMngController {
 	@RequestMapping(value = "/mng/member/UserMng/UserMngSave", method = RequestMethod.POST)
 	public ModelAndView UserMngSave(@ModelAttribute("memberUserMngVO") MemberUserMngVO memberUserMngVO, HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {
 		ModelAndView modelAndView = new ModelAndView("jsonView");
-		MemberVO loginVO = (MemberVO) request.getSession().getAttribute("loginMngVO");
+		MemberMngVO loginVO = (MemberMngVO) request.getSession().getAttribute("loginMngVO");
 		memberUserMngVO.setSessionUserId(loginVO.getId());							//로그인한 사용자 아이디
 		memberUserMngVO.setSessionUserName(loginVO.getName());				//로그인한 사용자 이름
 		EgovMap resultMap = memberUserMngService.userMngSave(memberUserMngVO);

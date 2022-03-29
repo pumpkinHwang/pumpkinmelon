@@ -14,7 +14,7 @@ function login() {
 		return false;
     }
 	
-	var param = {'id' : $('#id').val(), 'passWd': $('#passWd').val()};
+	var param = {'id' : $('#id').val(), 'pw': $('#passWd').val()};
    	var url = '/mng/member/memberLoginAjax';
    	$.ajax({
         type :"POST",

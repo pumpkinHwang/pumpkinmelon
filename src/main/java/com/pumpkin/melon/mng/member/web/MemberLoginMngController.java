@@ -10,7 +10,7 @@ import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import com.pumpkin.melon.cmmn.mail.service.MailService;
 import com.pumpkin.melon.cmmn.util.ReqUtils;
 import com.pumpkin.melon.usr.member.service.MemberService;
-import com.pumpkin.melon.usr.member.service.MemberVO;
+import com.pumpkin.melon.mng.member.service.MemberMngVO;
 import egovframework.com.cmm.EgovMessageSource;
 import egovframework.com.utl.sim.service.EgovClntInfo;
 
@@ -64,7 +64,7 @@ public class MemberLoginMngController {
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberLogin")
-	public String memberLogin(@ModelAttribute("memberLoginMngVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberLogin(@ModelAttribute("memberLoginMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return "/mng/member/memberLoginForm";
 	}
 	
@@ -77,14 +77,14 @@ public class MemberLoginMngController {
 	 */
 	@RequestMapping(value = "/mng/member/memberLoginAjax")
 	public ModelAndView memberLoginAjax(HttpServletRequest request, HttpServletResponse response, ModelMap model
-			, @RequestBody MemberVO memberVO) throws Exception {
+			, @RequestBody MemberMngVO memberMngVO) throws Exception {
 		
 		ModelAndView mv = new ModelAndView("jsonView");
 		
-		if(!ReqUtils.getEmptyResult((String)memberVO.getId(),"").equals("")) {
+		if(!ReqUtils.getEmptyResult((String)memberMngVO.getId(),"").equals("")) {
 			// 회원정보 조회
-			memberVO.setRemoteAddress(EgovClntInfo.getClntIP(request));
-			EgovMap loginMap = memberLoginMngService.memberLogin(memberVO);
+			memberMngVO.setRemoteAddress(EgovClntInfo.getClntIP(request));
+			EgovMap loginMap = memberLoginMngService.memberLogin(memberMngVO);
 		
 			if(ReqUtils.getEmptyResult((String)loginMap.get("result"),"").equals("true")) {
 				
@@ -100,8 +100,8 @@ public class MemberLoginMngController {
 				}
 				
 				if(ReqUtils.getEmptyResult((String)loginMap.get("sessionUserId"),"").equals("")){
-					MemberVO loginMngVO = new MemberVO();
-					loginMngVO = (MemberVO) ReqUtils.convertMapToObject(loginMap, loginMngVO);
+					MemberMngVO loginMngVO = new MemberMngVO();
+					loginMngVO = (MemberMngVO) ReqUtils.convertMapToObject(loginMap, loginMngVO);
 					SessionCookieUtil.setSessionAttribute(request, "loginMngVO", loginMngVO);
 				}
 			}else {
@@ -117,10 +117,10 @@ public class MemberLoginMngController {
 				}else if(ReqUtils.getEmptyResult((String)loginMap.get("message"),"").equals("empty")) {
 					mv.addObject("message", egovMessageSource.getMessage("fail.common.login",request.getLocale()));
 				}else if(ReqUtils.getEmptyResult((String)loginMap.get("message"),"").equals("dormantUser")) {
-					memberVO.setId((String)loginMap.get("id"));
-					memberVO.setName((String)loginMap.get("name"));
-					memberVO.setEmail((String)loginMap.get("email"));
-					memberService.memberfindPw(memberVO);
+					memberMngVO.setId((String)loginMap.get("id"));
+					memberMngVO.setName((String)loginMap.get("name"));
+					memberMngVO.setEmail((String)loginMap.get("email"));
+					memberService.memberfindPw(memberMngVO);
 					mv.addObject("code", "7777");
 					mv.addObject("message", egovMessageSource.getMessage("fail.common.dormant.user",request.getLocale()));
 				}else {
@@ -133,13 +133,13 @@ public class MemberLoginMngController {
 
 	/**
 	 * 로그아웃
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindId"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberlogOut")
-	public String memberlogOut(@ModelAttribute("memberVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberlogOut(@ModelAttribute("memberMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		String returnPath = "/mng/member/memberLoginForm";
 		request.getSession().invalidate();
@@ -150,30 +150,30 @@ public class MemberLoginMngController {
 	
 	/**
 	 * 로그인.아이디 찾기 화면
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindId"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberfindId")
-	public String memberfindId(@ModelAttribute("memberVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberfindId(@ModelAttribute("memberMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return "/mng/member/memberfindId";
 	}
 	
 	/**
 	 * 로그인.아이디 찾기
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindId"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberfindIdAjax")
 	public ModelAndView memberfindIdAjax(HttpServletRequest request, HttpServletResponse response, ModelMap model
-			, @RequestBody MemberVO memberVO) throws Exception {	
+			, @RequestBody MemberMngVO memberMngVO) throws Exception {
 
 		ModelAndView mv = new ModelAndView("jsonView");
 		
-		EgovMap resultMap = memberService.memberfindId(memberVO);
+		EgovMap resultMap = memberService.memberfindId(memberMngVO);
 		
 		if(ReqUtils.getEmptyResult((String)resultMap.get("result"),"").equals("true")) {
 			mv.addObject("code", "0000");
@@ -186,30 +186,30 @@ public class MemberLoginMngController {
 	
 	/**
 	 * 로그인.비밀번호 찾기 화면
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindPw"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberfindPw")
-	public String memberfindPw(@ModelAttribute("memberVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberfindPw(@ModelAttribute("memberMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return "/mng/member/memberfindId";
 	}
 	
 	/**
 	 * 로그인.비밀번호 찾기
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindPw"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberfindPwAjax")
 	public ModelAndView memberfindPw(HttpServletRequest request, HttpServletResponse response, ModelMap model
-			, @RequestBody MemberVO memberVO) throws Exception {	
+			, @RequestBody MemberMngVO memberMngVO) throws Exception {
 
 		ModelAndView mv = new ModelAndView("jsonView");
 			
-		EgovMap resultMap = memberService.mngMemberfindPw(memberVO);
+		EgovMap resultMap = memberService.mngMemberfindPw(memberMngVO);
 		
 		if(ReqUtils.getEmptyResult((String)resultMap.get("result"),"").equals("true")) {
 			mv.addObject("code", "0000");
@@ -221,35 +221,35 @@ public class MemberLoginMngController {
 	
 	/**
 	 * 로그인.비밀번호변경.비밀번호변경 화면
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberChangePasswordForm"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberChangePasswordForm")
-	public String memberChangePasswordForm(@ModelAttribute("memberVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberChangePasswordForm(@ModelAttribute("memberMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		model.addAttribute("memberVO", memberVO);
+		model.addAttribute("memberMngVO", memberMngVO);
 		return "/mng/member/memberChangePasswordForm";
 	}
 	
 	/**
 	 * 로그인.비밀번호변경
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberChangePasswordForm"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberChangePassword")
 	public ModelAndView directReplySave(HttpServletRequest request, HttpServletResponse response, ModelMap model
-			, @RequestBody MemberVO memberVO, HttpSession session) throws Exception {	
+			, @RequestBody MemberMngVO memberMngVO, HttpSession session) throws Exception {
 		
 		ModelAndView mv = new ModelAndView("jsonView");
 		
-		MemberVO loginVO = (MemberVO) session.getAttribute("loginMngVO");
-		memberVO.setId(loginVO.getId());
+		MemberMngVO loginVO = (MemberMngVO) session.getAttribute("loginMngVO");
+		memberMngVO.setId(loginVO.getId());
 		
-		EgovMap loginMap = memberService.mngMemberChangePasswordForm(memberVO);
+		EgovMap loginMap = memberService.mngMemberChangePasswordForm(memberMngVO);
 		
 		if(ReqUtils.getEmptyResult((String)loginMap.get("result"),"").equals("true")) {
 			mv.addObject("code", "0000");	
@@ -262,13 +262,13 @@ public class MemberLoginMngController {
 	
 	/**
 	 * 권한이 없는 경우 이동하는 페이지
-	 * @param vo - memberVO
+	 * @param vo - memberMngVO
 	 * @param model
 	 * @return "/usr/member/memberfindPw"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/mng/member/memberAccessFail")
-	public String memberAccessFail(@ModelAttribute("memberVO") MemberVO memberVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public String memberAccessFail(@ModelAttribute("memberMngVO") MemberMngVO memberMngVO, ModelMap model, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		return "/memberAccessFail";
 	}
 
