@@ -7,3 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 !/codestream.xml
+.idea
+*~
+.env
+.DS_Store

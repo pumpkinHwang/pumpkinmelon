@@ -23,3 +23,7 @@
 hs_err_pid*
 !/.idea/
 !/.idea/codestream.xml
+.idea
+*~
+.env
+.DS_Store
