@@ -78,7 +78,7 @@
                 content: "";
                 display: inline-block;
                 @include wh(16.2rem, 6rem);
-                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                background: url($path-img-common + 'pumpkin.png') no-repeat 0 0;
                 background-size: 100%;
 
                 @include mobile {

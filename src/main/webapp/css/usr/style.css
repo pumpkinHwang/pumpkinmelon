@@ -8980,14 +8980,14 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     display: inline-block;
     width: 23rem;
     height: 8.7rem;
-    background: url("/img/mng/common/logo.svg") no-repeat 0 0;
+    background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
     background-size: 100%;
 }
 @media (max-width: 1024px) {
     .log .inner .logo a::after {
         width: 16.5rem;
         height: 6.25rem;
-        background: url("/img/mng/common/logo.svg") no-repeat 0 0;
+        background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
     }
 }
 .log .inner .box-gray {
@@ -10227,7 +10227,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     display: inline-block;
     width: 16.2rem;
     height: 6rem;
-    background: url("/img/mng/common/logo.svg") no-repeat 0 0;
+    background: url("/img/mng/common/pumpkin.png") no-repeat 0 0;
     background-size: 100%;
 }
 @media (max-width: 1024px) {
