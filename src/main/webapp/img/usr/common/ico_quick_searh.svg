@@ -1,0 +1,15 @@
+<svg id="ico_quick_searh" xmlns="http://www.w3.org/2000/svg" width="24.571" height="24.352" viewBox="0 0 24.571 24.352">
+    <defs>
+        <style>
+            .cls-5{fill:none}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="사각형_5810" data-name="사각형 5810" transform="translate(2 2)" style="stroke:#dc000c;stroke-width:2px;fill:none">
+        <rect class="cls-4" width="18" height="18" rx="4"/>
+        <rect class="cls-5" x="1" y="1" width="16" height="16" rx="3"/>
+    </g>
+    <g id="패스_3933" data-name="패스 3933" style="fill:#dc000c;stroke-linecap:round;stroke-linejoin:round">
+        <path class="cls-4" d="m4.663 14.19-.469-.91-1.906-3.695-1.489 1.98L-1 13.96v-16.1L.641-.767l8.254 6.901 2.113 1.767H5.955l1.747 3.543.424.861-.844.46-1.721.936-.898.488z" transform="rotate(-14.98 41.523 -36.368)"/>
+        <path d="m5.083 12.822 1.722-.936-2.458-4.985h3.906L0 0v10.965L2.446 7.71l2.637 5.112m0 2a2 2 0 0 1-1.777-1.083L2.13 11.46l-.531.707A2 2 0 0 1-2 10.965V0a2 2 0 0 1 3.283-1.534l8.253 6.9a2 2 0 0 1-1.283 3.535h-.69l1.035 2.1a2 2 0 0 1-.838 2.642l-1.721.936a2 2 0 0 1-.956.243z" style="fill:#fff;stroke:none" transform="rotate(-14.98 41.523 -36.368)"/>
+    </g>
+</svg>

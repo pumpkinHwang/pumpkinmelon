@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : Main_SQL.xml
+ * @Description : Main_SQL 
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @ 
+ * @ 2022.01.26  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 26
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="mainMapper">
+	
+                
+  
+	<!--
+	 * 메인.메인 페이지
+	 * @param vo - mainVO
+	 * @return data[mainVO]
+	 * @exception Exception
+	 -->
+	<select id="main" parameterType="com.pumpkin.melon.usr.main.service.MainVO" resultType="egovMap">
+        /* mainMapper.main */
+        <![CDATA[
+        
+        
+        ]]>
+	</select>
+
+</mapper>

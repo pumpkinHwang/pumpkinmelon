@@ -1,0 +1,10 @@
+<svg id="ico_download_1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#111}
+        </style>
+    </defs>
+    <path id="사각형_5912" data-name="사각형 5912" style="fill:none" d="M0 0h20v20H0z"/>
+    <path id="사각형_5913" data-name="사각형 5913" class="cls-2" transform="translate(3 15)" d="M0 0h14v2H0z"/>
+    <path id="패스_3965" data-name="패스 3965" class="cls-2" d="m-989.383-10028.219 3.094 3.828 2.906-3.828h-1.77v-5.175h-2.44v5.175z" transform="translate(996.383 10037.394)"/>
+</svg>

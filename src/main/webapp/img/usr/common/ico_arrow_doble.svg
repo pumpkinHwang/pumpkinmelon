@@ -1,0 +1,10 @@
+<svg id="ico_arrow_doble" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#999;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_5832" data-name="사각형 5832" style="fill:none" d="M0 0h24v24H0z"/>
+    <path id="패스_3891" data-name="패스 3891" class="cls-2" d="m2840.243 1252.347-6 7.369 6 6.631" transform="translate(-2828.243 -1247.347)"/>
+    <path id="패스_3937" data-name="패스 3937" class="cls-2" d="m2840.243 1252.347-6 7.369 6 6.631" transform="translate(-2822.243 -1247.347)"/>
+</svg>

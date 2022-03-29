@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : ItemDepth_SQL.xml
+ * @Description : ItemDepth_SQL
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @
+ * @ 2022.01.15  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 15
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="itemDepthMapper">
+    <!--
+     * 서비스 카테고리 목록
+     * @param vo - errorCodeMngVO
+     * @return data[errorCodeMngVO]
+     * @exception Exception
+     -->
+    <select id="itemDepthList1" parameterType="egovMap" resultType="egovMap">
+        SELECT ID1_CD AS cd
+             , ID1_NM AS nm
+             , ID1_SORT
+        FROM CIS_ItemDepth
+        GROUP BY ID1_CD, ID1_NM, ID1_SORT
+        ORDER BY ID1_SORT
+    </select>
+
+    <select id="itemDepthList2" parameterType="egovMap" resultType="egovMap">
+        SELECT ID2_CD AS cd
+             , ID2_NM AS nm
+             , ID2_SORT
+        FROM CIS_ItemDepth
+        WHERE ID1_CD = #{cd1}
+        GROUP BY ID2_CD, ID2_NM, ID2_SORT
+        ORDER BY ID2_SORT
+    </select>
+
+    <select id="itemDepthList3" parameterType="egovMap" resultType="egovMap">
+        SELECT ID3_CD AS cd
+             , ID3_NM AS nm
+             , ID3_SORT
+        FROM CIS_ItemDepth
+        WHERE ID1_CD = #{cd1}
+          AND ID2_CD = #{cd2}
+        GROUP BY ID3_CD, ID3_NM, ID3_SORT
+        ORDER BY ID3_SORT
+    </select>
+
+    <select id="itemModelDepthList1" parameterType="egovMap" resultType="egovMap">
+        SELECT CategoryCode1 AS cd,
+               CategoryName1 AS nm
+        FROM CIS_CisProductCategory
+        GROUP BY CategoryCode1, CategoryName1
+        ORDER BY nm
+    </select>
+    <select id="itemModelDepthList2" parameterType="egovMap" resultType="egovMap">
+        SELECT CONCAT(CategoryCode1, CategoryCode2, CategoryCode3) AS cd,
+               CategoryName3 AS nm
+        FROM CIS_CisProductCategory
+        WHERE CategoryCode1 = Substring(#{cd}, 1, 2)
+          AND CategoryCode2 = '01'
+        GROUP BY CategoryCode1, CategoryCode2, CategoryCode3, CategoryName3
+        ORDER BY nm
+    </select>
+    <select id="itemModelDepthList3" parameterType="egovMap" resultType="egovMap">
+        SELECT CONCAT(CategoryCode1, CategoryCode2, CategoryCode3, CategoryCode4, CategoryCode5) AS cd,
+               CONCAT(CategoryName5, '(', CategoryName4, ')') AS nm
+        FROM CIS_CisProductCategory
+        WHERE CategoryCode1 = Substring(#{cd}, 1, 2)
+          AND CategoryCode2 = Substring(#{cd}, 3, 2)
+          AND CategoryCode3 = Substring(#{cd}, 7, 2)
+        GROUP BY CategoryCode1, CategoryCode2, CategoryCode3, CategoryCode4, CategoryCode5, CategoryName4, CategoryName5
+        ORDER BY nm
+    </select>
+</mapper>

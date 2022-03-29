@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : Member_SQL.xml
+ * @Description : Member_SQL 
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @ 
+ * @ 2022.01.26  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 26
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="mailMapper">
+	
+    <!--
+	 * 메일폼 조회
+	 * @param vo - egovMap
+	 * @return data[egovMap]
+	 * @exception Exception
+	 -->
+	<select id="mailDetail" parameterType="egovMap" resultType="egovMap">
+        /* mailMapper.mailDetail */
+        <![CDATA[
+        	SELECT SEQ AS seq,
+			       CODE AS code,
+			       EMAILSENDER AS emailSender,
+			       EMAILTITLE AS emailTitle,
+			       EMAILCONTENTS AS emailContents,
+			       USEYN AS useYn,
+			       REGISTUSER AS registUser,
+			       REGISTDATETIME AS registDatetime,
+			       UPDATEUSER AS updateUser,
+			       UPDATEDATETIME AS updateDatetime
+			FROM   CIS_NOTICEEMAILSETTINGS
+			WHERE  CODE = #{code}
+			AND USEYN = 'Y' 
+        ]]>
+	</select>
+
+
+
+    <!--
+	 * 업무 메일폼 조회
+	 * @param vo - egovMap
+	 * @return data[egovMap]
+	 * @exception Exception
+	 -->
+    <select id="cisMailDetail" parameterType="egovMap" resultType="egovMap">
+        /* mailMapper.cisMailDetail */
+        <![CDATA[
+        select Seq as seq
+             , MenuCode as menuCode
+             , EmailReceivers as emailReceivers
+             , EmailSender as emailSender
+             , EmailTitle as emailTitle
+             , EmailContents as emailContents
+        from CIS_EmailSettings
+        where UseYn = 'y'
+          and menuCode = #{menuCode}
+        ]]>
+    </select>
+	
+</mapper>

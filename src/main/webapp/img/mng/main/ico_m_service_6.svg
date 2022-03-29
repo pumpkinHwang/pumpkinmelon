@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="그룹 7561" transform="translate(34.001 19.5)">
+        <g data-name="사각형 5697" transform="translate(-1 11.249)" style="stroke-width:2px;stroke:#000;fill:#fff">
+            <rect width="50" height="55.751" rx="3" style="stroke:none"/>
+            <rect x="1" y="1" width="48" height="53.751" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="사각형 5872" transform="translate(8 6.5)" style="fill:#d4d4d4;stroke-width:2px;stroke:#000">
+            <rect width="9" height="13" rx="3" style="stroke:none"/>
+            <rect x="1" y="1" width="7" height="11" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="사각형 5873" transform="translate(31.025 6.5)" style="fill:#d4d4d4;stroke-width:2px;stroke:#000">
+            <rect width="9" height="13" rx="3" style="stroke:none"/>
+            <rect x="1" y="1" width="7" height="11" rx="2" style="fill:none"/>
+        </g>
+        <rect data-name="사각형 5698" width="22.667" height="2" rx="1" transform="translate(9.179 28.241)"/>
+        <rect data-name="사각형 5699" width="24.422" height="2" rx="1" transform="translate(9.179 37.591)"/>
+        <rect data-name="사각형 5700" width="16.314" height="2" rx="1" transform="translate(9.179 45.941)"/>
+    </g>
+    <g data-name="그룹 7526">
+        <g data-name="8665767_pen_icon" style="stroke-linecap:round;stroke-linejoin:round;fill:#fff">
+            <path d="M1.232 37.608a.19.19 0 0 1-.144-.072.173.173 0 0 1-.037-.152v-.003l.001-.002 1.956-9.776a.188.188 0 0 1 .051-.096L29.454 1.056l7.907 7.818L11.139 35.6a.187.187 0 0 1-.094.05l-9.776 1.954a.2.2 0 0 1-.037.004z" style="stroke:none" transform="translate(64 41.139)"/>
+            <path d="M29.459 2.466 3.94 28.04l-1.669 8.344 8.332-1.666L35.95 8.884l-6.49-6.418m-.01-2.821 9.323 9.218-26.924 27.442a1.188 1.188 0 0 1-.607.325l-9.776 1.955a1.187 1.187 0 0 1-1.393-1.403l1.955-9.775c.046-.23.16-.441.325-.607L29.449-.355z" style="fill:#dc000c;stroke:none" transform="translate(64 41.139)"/>
+        </g>
+        <path data-name="패스 3921" d="m204.2 927.811 7.622 7.232" transform="translate(-117.205 -878.635)" style="stroke:#dc000c;fill:none;stroke-width:2px"/>
+    </g>
+</svg>

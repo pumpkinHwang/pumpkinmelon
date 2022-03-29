@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+    <g data-name="사각형 6091" style="stroke:#000;stroke-width:1.5px;fill:#fff">
+        <path style="stroke:none" d="M0 0h10v9H0z" transform="translate(49 68)"/>
+        <path style="fill:none" d="M.75.75h8.5v7.5H.75z" transform="translate(49 68)"/>
+    </g>
+    <g data-name="그룹 7561">
+        <path data-name="사각형 5699" d="M0 0h60v3a3 3 0 0 1-3 3H2a2 2 0 0 1-2-2V0z" transform="translate(23.998 63.001)" style="fill:#e5e5e5"/>
+        <g data-name="사각형 5697" transform="translate(22.999 26.999)" style="fill:none;stroke:#000;stroke-width:1.5px">
+            <rect width="62" height="43" rx="3" style="stroke:none"/>
+            <rect x=".75" y=".75" width="60.5" height="41.5" rx="2.25" style="fill:none"/>
+        </g>
+        <g data-name="사각형 5872" style="stroke:#000;stroke-width:1.5px;fill:#fff">
+            <path d="M3 0h2v30H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3z" style="stroke:none" transform="rotate(90 -3.001 71.999)"/>
+            <path d="M3 .75h1.25v28.5H3A2.25 2.25 0 0 1 .75 27V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="rotate(90 -3.001 71.999)"/>
+        </g>
+        <path data-name="사각형 6094" d="M23.998 63h60v1.5h-60z"/>
+    </g>
+    <g data-name="그룹 7733" transform="translate(35.998 29.998)">
+        <g data-name="다각형 10" style="fill:#fff">
+            <path d="M30.607 28.25H5.393a2.222 2.222 0 0 1-1.966-1.156 2.222 2.222 0 0 1 .054-2.28L16.088 4.501A2.236 2.236 0 0 1 18 3.44c.784 0 1.498.397 1.912 1.063l12.607 20.311c.437.704.457 1.557.054 2.28a2.222 2.222 0 0 1-1.966 1.157z" style="stroke:none"/>
+            <path d="M18 4.189c-.25 0-.877.069-1.274.709L4.119 25.209a1.47 1.47 0 0 0-.037 1.52c.13.232.515.771 1.311.771h25.214a1.47 1.47 0 0 0 1.31-.77 1.47 1.47 0 0 0-.036-1.521L19.274 4.898A1.48 1.48 0 0 0 18 4.188m0-1.5c.981 0 1.962.473 2.549 1.419l12.607 20.31c1.24 2-.197 4.583-2.549 4.583H5.393c-2.352 0-3.79-2.584-2.549-4.582L15.451 4.107A2.975 2.975 0 0 1 18 2.689z" style="fill:#dc000c;stroke:none"/>
+        </g>
+        <rect data-name="사각형 6092" width="2" height="8" rx="1" transform="rotate(180 9.501 10)" style="fill:#dc000c"/>
+        <rect data-name="사각형 6093" width="2" height="2" rx="1" transform="rotate(180 9.5 12)" style="fill:#dc000c"/>
+    </g>
+</svg>

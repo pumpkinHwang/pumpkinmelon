@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mberManageDAO">
+
+    <resultMap id="stplatMap" type="egovframework.com.uss.umt.service.StplatVO">
+        <result property="useStplatId" column="USE_STPLAT_ID"/>
+        <result property="useStplatCn" column="USE_STPLAT_CN"/>
+        <result property="infoProvdAgeCn" column="INFO_PROVD_AGRE_CN"/>
+    </resultMap>
+ 
+ <select id="selectMberList" resultType="egovMap">
+ /* mberManageDAO.selectMberList */
+  SELECT (ROW_NUMBER() OVER()) AS rn,  TB.* FROM (
+    SELECT
+        ESNTL_ID               as "uniqId",
+        'USR01'               as "userTy",
+        MBER_ID               as "userId",
+        MBER_NM               as "userNm",
+        MBER_EMAIL_ADRES      as "emailAdres",
+        AREA_NO               as "areaNo",
+        MIDDLE_TELNO          as "middleTelno",
+        END_TELNO             as "endTelno",
+        MBTLNUM           as "moblphonNo",
+        GROUP_ID              as "groupId",
+        MBER_STTUS            as "sttus",
+        SBSCRB_DE             as "sbscrbDe"
+    FROM    COMTNGNRLMBER
+    WHERE 1=1
+        <if test='sbscrbSttus != null and sbscrbSttus neq "0" and sbscrbSttus neq ""'>
+            AND MBER_STTUS LIKE  #{sbscrbSttus}
+        </if>
+        <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(searchKeyword)">
+        <if test="searchCondition == 0">
+            AND MBER_ID LIKE #{searchKeyword}
+        </if>
+        <if test="searchCondition == 1">
+            AND MBER_NM LIKE '%' ||#{searchKeyword}|| '%'
+        </if>
+        </if>
+         <![CDATA[
+        ORDER BY 12 DESC
+        ) TB
+       LIMIT #{recordCountPerPage} OFFSET  #{firstIndex}
+        ]]>
+    </select>
+
+
+        <select id="selectMberListTotCnt" resultType="int">
+            SELECT COUNT(1) totcnt
+            FROM   COMTNGNRLMBER
+            WHERE 1=1
+            <if test='sbscrbSttus != null and sbscrbSttus neq "0" and sbscrbSttus neq ""'>
+                AND MBER_STTUS LIKE  #{sbscrbSttus}
+            </if>
+            <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(searchKeyword)">
+            <if test="searchCondition == 0">
+                AND MBER_ID LIKE #{searchKeyword}
+            </if>
+            <if test="searchCondition == 1">
+                AND MBER_NM LIKE '%' ||#{searchKeyword}|| '%'
+            </if>
+            </if>
+    </select>
+
+    <insert id="insertMber_S">
+		/* mberManageDAO.insertMber_S */
+		INSERT INTO COMTNGNRLMBER
+		       (
+		              MBER_ID 			/* 회원ID */
+		            , MBER_NM 			/* 회원명 */
+		            , PASSWORD 			/* 비밀번호 */
+		            , LOGIN_EMAIL 		/* 로그인 이메일 */
+		            , MBER_STTUS 		/* 회원 상태 코드 */
+		            , MBER_TYPE_CD 		/* 회원 유형 코드 */
+		            <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(socialTypeCd)">
+		            , SOCIAL_TYPE_CD 	/* 소셜 구분 코드 */
+		            </if>
+		            <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(mktAgreeYn)">
+		            , MKT_AGREE_YN 		/* 마케팅 수신 여부 */
+		            , MKT_AGREE_DT 		/* 마케팅 수신 여부 최종 변경일시 */
+		            </if>
+		            , MBER_BIZRNO 		/* 사업자등록번호 */
+		            , MBER_CERT_EMAIL 	/* 본인확인수신이메일 */
+		            , CONCERN_AREA 		/* 관심분야 */
+		            , ZIP 				/* 우편번호 */
+		            , ADRES 			/* 주소 */
+		            , DETAIL_ADRES 		/* 상세주소 */
+		            , MBTLNUM 			/* 이동전화번호 */
+		            , GROUP_ID 			/* 그룹ID_ */
+		            , ESNTL_ID 			/* 고유ID_ */
+		            , SBSCRB_DE 		/* 가입일자 */
+		            , BIZ_TYPE_CD		/* 사업자구분 */
+					, BIZ_GUBN_CD	/* 기업구분 */
+					, BIZ_FIELD_CD	/* 기업분야 */
+					, CMPNY_NM		/* 회사명 */
+					, RPRSNTV_NM	/* 대표자명 */
+					, REPRSNT_TEL	/* 대표전화번호 */
+					, BIZ_ZIP				/* 기업우편번호 */
+					, BIZ_ADRES		/* 기업주소 */
+					, BIZ_DETAIL_ADRES	/* 기업상세주소 */
+					, USER_BELONG	/* 사용자 소속 */
+		       )
+		       VALUES
+		       (
+		              #{mberId} /* 회원ID */
+		            , #{mberNm} /* 회원명 */
+		            , #{password} /* 비밀번호 */
+		            , #{loginEmail} /* 로그인 이메일 */
+		            , #{mberSttus} /* 회원 상태 코드 */
+		            , #{mberTypeCd} /* 회원 유형 코드 */
+		            <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(socialTypeCd)">
+		            , #{socialTypeCd} /* 소셜 구분 코드 */
+		            </if>
+		            <if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(mktAgreeYn)">
+		            , #{mktAgreeYn} /* 마케팅 수신 여부 */
+		            , now() /* 마케팅 수신 여부 최종 변경일시 */
+		            </if>
+		            , #{mberBizrno} /* 사업자등록번호 */
+		            , #{mberCertEmail} /* 본인확인수신이메일 */
+		            , #{concernArea} /* 관심분야 */
+		            , #{zip} /* 우편번호 */
+		            , #{adres} /* 주소 */
+		            , #{detailAdres} /* 상세주소 */
+		            , #{mbtlnum} /* 이동전화번호 */
+		            , #{groupId} /* 그룹ID_ */
+		            , #{esntlId} /* 고유ID_ */
+		            , now() /* 가입일자 */
+		            , #{bizTypeCd}		/* 사업자구분 */
+					, #{bizGubnCd}	/* 기업구분 */
+					, #{bizFieldCd}	/* 기업분야 */
+					, #{cmpnyNm}		/* 회사명 */
+					, #{rprsntvNm}	/* 대표자명 */
+					, #{reprsntTel}  /* 대표전화번호 */
+					, #{bizZip}				/* 기업우편번호 */
+					, #{bizAdres}		/* 기업주소 */
+					, #{bizDetailAdres}	/* 기업상세주소 */
+					, #{userBelong}	/* 사용자 소속 */
+		       )
+
+    </insert>
+
+    <delete id="deleteMber_S">
+
+            DELETE FROM COMTNGNRLMBER
+            WHERE ESNTL_ID=#{delId}
+
+    </delete>
+
+    <select id="selectMber_S" resultType="egovframework.com.uss.umt.service.MberManageVO">
+
+            SELECT
+                ESNTL_ID          uniqId,
+                'USR01'          userTy,
+                MBER_ID          mberId,
+                MBER_NM          mberNm,
+                PASSWORD         password,
+                PASSWORD_HINT    passwordHint,
+                PASSWORD_CNSR    passwordCnsr,
+                SEXDSTN_CODE     sexdstnCode,
+                ZIP              zip,
+                ADRES            adres,
+                AREA_NO          areaNo,
+                MBER_STTUS       mberSttus,
+                DETAIL_ADRES     detailAdres,
+                END_TELNO        endTelno,
+                MBTLNUM      	 moblphonNo,
+                GROUP_ID         groupId,
+                MBER_FXNUM       mberFxnum,
+                MBER_EMAIL_ADRES mberEmailAdres,
+                MIDDLE_TELNO     middleTelno,
+                SBSCRB_DE        sbscrbDe,
+                LOCK_AT          lockAt
+            FROM COMTNGNRLMBER
+            WHERE ESNTL_ID=#{uniqId}
+
+    </select>
+
+    <update id="updateMber_S">
+
+            UPDATE COMTNGNRLMBER
+            SET MBER_ID          = #{mberId},
+                MBER_NM          = #{mberNm},
+                PASSWORD_HINT    = #{passwordHint},
+                PASSWORD_CNSR    = #{passwordCnsr},
+                SEXDSTN_CODE     = #{sexdstnCode},
+                ZIP              = #{zip},
+                ADRES            = #{adres},
+                AREA_NO          = #{areaNo},
+                MBER_STTUS       = #{mberSttus},
+                DETAIL_ADRES     = #{detailAdres},
+                END_TELNO        = #{endTelno},
+                MBTLNUM      = #{moblphonNo},
+                GROUP_ID         = #{groupId},
+                MBER_FXNUM       = #{mberFxnum},
+                MBER_EMAIL_ADRES = #{mberEmailAdres},
+                MIDDLE_TELNO     = #{middleTelno}
+            WHERE ESNTL_ID=#{uniqId}
+
+    </update>
+
+    <select id="selectStplat_S" resultMap="stplatMap">
+
+            SELECT
+                USE_STPLAT_ID           ,
+                USE_STPLAT_CN           ,
+                INFO_PROVD_AGRE_CN
+            FROM COMTNSTPLATINFO
+            WHERE USE_STPLAT_ID=#{stplatId}
+
+    </select>
+
+    <update id="updatePassword_S">
+
+            UPDATE COMTNGNRLMBER
+            SET
+                   PASSWORD   =  #{password}
+            WHERE  ESNTL_ID  = #{uniqId}
+
+    </update>
+
+    <select id="selectPassword_S" resultType="egovframework.com.uss.umt.service.MberManageVO">
+
+            SELECT
+                    PASSWORD          password
+            FROM    COMTNGNRLMBER
+            WHERE   ESNTL_ID=#{uniqId}
+
+    </select>
+
+    <update id="updateLockIncorrect">
+            UPDATE COMTNGNRLMBER
+ 			   SET  LOCK_AT = NULL
+			     ,  LOCK_CNT  = NULL
+			     ,  LOCK_LAST_PNTTM = NULL
+            WHERE  ESNTL_ID  = #{uniqId}
+    </update>
+
+</mapper>

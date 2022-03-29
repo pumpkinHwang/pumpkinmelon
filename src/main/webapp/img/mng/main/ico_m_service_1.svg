@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="그룹 7620">
+        <g transform="translate(27 23.001)">
+            <g data-name="사각형 5720" transform="translate(0 8.87)" style="stroke-width:2px;stroke:#000;fill:#fff">
+                <rect width="52" height="59" rx="3" style="stroke:none"/>
+                <rect x="1" y="1" width="50" height="57" rx="2" style="fill:none"/>
+            </g>
+            <g data-name="사각형 5846" transform="translate(9 5)" style="fill:#d4d4d4;stroke-width:2px;stroke:#000">
+                <rect width="34" height="11" rx="3" style="stroke:none"/>
+                <rect x="1" y="1" width="32" height="9" rx="2" style="fill:none"/>
+            </g>
+            <rect data-name="사각형 5847" width="24" height="2" rx="1" transform="translate(14.203 28.87)"/>
+            <rect data-name="사각형 5848" width="24" height="2" rx="1" transform="translate(14 39.795)"/>
+            <rect data-name="사각형 5849" width="24" height="2" rx="1" transform="translate(14 50.682)"/>
+        </g>
+        <path d="M-374.483 452.461h-1.761a2.073 2.073 0 0 1-1.918-2.05V443a8.558 8.558 0 0 0-5.283 7.884 8.642 8.642 0 0 0 3.561 7.569l-.039 27.319s.313 5.007 5.439 5.046" transform="translate(469.089 -400.719)" style="stroke:#dc000c;stroke-miterlimit:10;stroke-width:2px;fill:#fff"/>
+        <path d="M-360.5 452.461h1.761a2.073 2.073 0 0 0 1.917-2.05V443a8.558 8.558 0 0 1 5.283 7.884 8.642 8.642 0 0 1-3.561 7.569l.039 27.319s-.313 5.007-5.439 5.046" transform="translate(454.865 -400.719)" style="stroke:#dc000c;stroke-miterlimit:10;stroke-width:2px;fill:#fff"/>
+    </g>
+</svg>

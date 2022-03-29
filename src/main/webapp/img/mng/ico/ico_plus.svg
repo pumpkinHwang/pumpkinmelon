@@ -1,0 +1,13 @@
+<svg id="ico_plus" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <style>
+            .cls-2{fill:#dc000c}
+        </style>
+    </defs>
+    <g id="사각형_5972" data-name="사각형 5972" style="stroke:#dc000c;fill:none">
+        <rect width="26" height="26" rx="13" style="stroke:none"/>
+        <rect x=".5" y=".5" width="25" height="25" rx="12.5" style="fill:none"/>
+    </g>
+    <rect id="사각형_5970" data-name="사각형 5970" class="cls-2" width="2" height="10" rx="1" transform="translate(12 8)"/>
+    <rect id="사각형_5971" data-name="사각형 5971" class="cls-2" width="2" height="10" rx="1" transform="rotate(90 3 15)"/>
+</svg>

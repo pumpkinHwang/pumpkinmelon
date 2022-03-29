@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : MemberUserMng_SQL.xml
+ * @Description : MemberUserMng_SQL
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @
+ * @ 2022.01.26  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 26
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="mngMemberUserMngMapper">
+
+
+
+	<!--
+	 * 회원정보 관리.목록
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserList" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserList */
+         SELECT * FROM (
+        		SELECT Row_number() OVER(ORDER BY updateDatetime DESC) AS rownum,* FROM(
+        			SELECT
+						 Seq AS seq
+						,Id AS id
+						,(case
+						    when Type='d' then '직조직'
+						    when Type='p' then '파트너'					    end) AS type
+						,Password AS password
+						,Name AS name
+						,Email AS email
+						,TelNo AS telNo
+						,RegistNo AS registNo
+						,Department AS department
+	        		     ,(SELECt name from CIS_UserAgencyDepartment UD where (UseYn IN (N'y')) AND UD.code = A.department) department_name
+						,RepresentativeName AS representativeName
+						,GroupCode AS groupCode
+						,(SELECT name FROM CIS_UserGroup UG WHERE UG.CODE =A.GroupCode) AS groupName
+						,EnableYn AS enableYn
+						,UseYn AS useYn
+						,RegistUser AS registUser
+						,RegistDatetime AS registDatetime
+						,UpdateUser AS updateUser
+						,UpdateDatetime AS updateDatetime
+						FROM CIS_User A
+	        			WHERE (groupCode != '00000001' AND groupCode != '00000002')
+	        			<if test="type != null and type != ''">
+				        and type = #{type}
+				        </if>
+	        			<if test="useYn != null and useYn != ''">
+				        and useYn = #{useYn}
+				        </if>
+				        <if test="groupCode != null and groupCode != ''">
+				        and groupCode = #{groupCode}
+				        </if>
+				) AS T1
+		WHERE 1=1
+		<if test="searchList != null">
+			<foreach collection="searchList" item="item">
+				<trim prefix="AND">
+					<choose>
+						<when test="item.srchGubn == 'id'.toString()">
+							/* 특수문자 조회를 위해 ESCAPE 추가*/
+							t1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+						</when>
+						<when test="item.srchGubn == 'name'.toString()">
+							t1.name like '%'+#{item.srchKeyword}+'%'
+						</when>
+						<when test="item.srchGubn == 'departmentName'.toString()">
+							t1.department_name like '%'+#{item.srchKeyword}+'%'
+						</when>
+						<otherwise>
+							<if test="item.srchKeyword != null and item.srchKeyword != '' ">
+								(t1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+								OR t1.name like '%'+#{item.srchKeyword}+'%'
+								OR t1.department_name like '%'+#{item.srchKeyword}+'%')
+							</if>
+						</otherwise>
+					</choose>
+				</trim>
+			</foreach>
+		</if>
+		) AS T2  
+		WHERE rownum BETWEEN ((#{pageIndex}-1)*#{recordCountPerPage})+1 AND (#{pageIndex}*#{recordCountPerPage})
+	</select>
+
+	<!--
+	 * 회원정보 관리.목록
+	 * @param vo - memberUserMngVO
+	 * @return int
+	 * @exception Exception
+	 -->
+	<select id="UserListTotCnt" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="int">
+        /* mngMemberUserMngMapper.UserListTotCnt */
+        SELECT COUNT(*) AS totcnt FROM (
+        		SELECT
+        			Row_number() OVER(ORDER BY SEQ DESC) AS rownum
+					,Seq AS seq
+					,Id AS id
+					,(case
+					    when Type='d' then '직조직'
+					    when Type='p' then '파트너'					    end) AS type
+					,Password AS password
+					,Name AS name
+					,Email AS email
+					,TelNo AS telNo
+					,RegistNo AS registNo
+					,Department AS department
+        		     ,(SELECt name from CIS_UserAgencyDepartment UD where (UseYn IN (N'y')) AND UD.code = A.department) department_name
+					,RepresentativeName AS representativeName
+					,GroupCode AS groupCode
+					,(SELECT name FROM CIS_UserGroup UG WHERE UG.CODE =A.GroupCode) AS groupName
+					,EnableYn AS enableYn
+					,UseYn AS useYn
+					,RegistUser AS registUser
+					,RegistDatetime AS registDatetime
+					,UpdateUser AS updateUser
+					,UpdateDatetime AS updateDatetime
+					FROM CIS_User A
+        			WHERE (groupCode != '00000001' AND groupCode != '00000002')
+        			<if test="type != null and type != ''">
+			        and type = #{type}
+			        </if>
+        			<if test="useYn != null and useYn != ''">
+			        and useYn = #{useYn}
+			        </if>
+			        <if test="groupCode != null and groupCode != ''">
+			        and groupCode = #{groupCode}
+			        </if>
+			) AS T1
+			where 1=1
+		<if test="searchList != null">
+	        <foreach collection="searchList" item="item">
+	            <trim prefix="and">
+	                <choose>
+	                    <when test="item.srchGubn == 'id'.toString()">
+	                        /* 특수문자 조회를 위해 ESCAPE 추가*/
+	                        T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+	                    </when>
+	                    <when test="item.srchGubn == 'name'.toString()">
+	                        T1.name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <when test="item.srchGubn == 'departmentName'.toString()">
+	                        T1.department_name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <otherwise>
+	                    	<if test="item.srchKeyword != null and item.srchKeyword != '' ">
+		                       (T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+		                        OR T1.name like '%'+#{item.srchKeyword}+'%'
+		                        OR T1.department_name like '%'+#{item.srchKeyword}+'%')
+	                        </if>
+	                    </otherwise>
+	                </choose>
+	            </trim>
+	        </foreach>
+	    </if>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.상세
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserDetail" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserDetail */
+        <![CDATA[
+		SELECT
+		A.Seq AS seq
+		,A.Id AS id
+		,A.Type AS type
+		,A.Password AS password
+		,A.Name AS name
+		,A.Email AS email
+		,A.TelNo AS telNo
+		,A.RegistNo AS registNo
+		,A.Department AS department
+		,B.Name AS departmentName
+		,A.RepresentativeName AS representativeName
+		,A.GroupCode AS groupCode
+		,A.EnableYn AS enableYn
+		,A.UseYn AS useYn
+		,A.RegistUser AS registUser
+		,A.RegistDatetime AS registDatetime
+		,A.UpdateUser AS updateUser
+		,A.UpdateDatetime AS updateDatetime
+		FROM CIS_User A LEFT OUTER JOIN CIS_UserAgencyDepartment B
+		ON A.Department = B.Code
+		WHERE A.Seq=#{seq}
+
+        ]]>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.신규등록화면
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserRegistForm" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserRegistForm */
+        <![CDATA[
+
+
+        ]]>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.수정화면
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserEditForm" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserEditForm */
+        <![CDATA[
+
+
+        ]]>
+	</select>
+
+
+
+	<!--
+	 * 회원정보 관리.목록
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserMngList" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserMngList */
+        SELECT * FROM (
+        		SELECT Row_number() OVER(ORDER BY updateDatetime DESC) AS rownum,* FROM(
+					 SELECT
+						 Seq AS seq
+						,Id AS id
+						,(case
+						    when Type='d' then '직조직'
+						    when Type='p' then '파트너' end) AS type
+						,Password AS password
+						,Name AS name
+						,Email AS email
+						,TelNo AS telNo
+						,RegistNo AS registNo
+						,Department AS department
+	        		     ,(SELECt name from CIS_UserAgencyDepartment UD where ([Type] IN (N'd')) AND (UseYn IN (N'y')) AND UD.code = A.department) department_name
+						,RepresentativeName AS representativeName
+						,GroupCode AS groupCode
+						,(SELECT name FROM CIS_UserGroup UG WHERE UG.CODE =A.GroupCode) AS groupName
+						,EnableYn AS enableYn
+						,UseYn AS useYn
+						,RegistUser AS registUser
+						,RegistDatetime AS registDatetime
+						,UpdateUser AS updateUser
+						,UpdateDatetime AS updateDatetime
+					FROM CIS_User A
+        			WHERE Type='d'
+        			AND (groupCode = '00000001' or groupCode = '00000002')
+        			<if test="useYn != null and useYn != ''">
+			        and useYn = #{useYn}
+			        </if>
+			        <if test="groupCode != null and groupCode != ''">
+			        and groupCode = #{groupCode}
+			        </if>
+			) AS T1
+			WHERE 1=1
+			<if test="searchList != null">
+	        <foreach collection="searchList" item="item">
+	            <trim prefix="AND">
+	                <choose>
+	                    <when test="item.srchGubn == 'id'.toString()">
+	                        /* 특수문자 조회를 위해 ESCAPE 추가*/
+	                        T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+	                    </when>
+	                    <when test="item.srchGubn == 'name'.toString()">
+	                        T1.name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <when test="item.srchGubn == 'departmentName'.toString()">
+	                        T1.department_name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <otherwise>
+	                    	<if test="item.srchKeyword != null and item.srchKeyword != '' ">
+		                       (T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+		                        OR T1.name like '%'+#{item.srchKeyword}+'%'
+		                        OR T1.department_name like '%'+#{item.srchKeyword}+'%')
+	                        </if>
+	                    </otherwise>
+	                </choose>
+	            </trim>
+	        </foreach>
+	    </if>
+			) AS T2  
+		WHERE rownum BETWEEN ((#{pageIndex}-1)*#{recordCountPerPage})+1 AND (#{pageIndex}*#{recordCountPerPage})
+		
+        
+	</select>
+
+	<!--
+	 * 회원정보 관리.목록
+	 * @param vo - memberUserMngVO
+	 * @return int
+	 * @exception Exception
+	 -->
+	<select id="UserMngListTotCnt" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="int">
+        /* mngMemberUserMngMapper.UserMngListTotCnt */
+        SELECT COUNT(*) AS totcnt FROM (
+        		SELECT
+        			Row_number() OVER(ORDER BY SEQ DESC) AS rownum
+					,Seq AS seq
+					,Id AS id
+					,(case
+					    when Type='d' then '직조직'
+					    when Type='p' then '파트너'					    end) AS type
+					,Password AS password
+					,Name AS name
+					,Email AS email
+					,TelNo AS telNo
+					,RegistNo AS registNo
+					,Department AS department
+        		     ,(SELECt name from CIS_UserAgencyDepartment UD where ([Type] IN (N'd')) AND (UseYn IN (N'y')) AND UD.code = A.department) department_name
+					,RepresentativeName AS representativeName
+					,GroupCode AS groupCode
+					,(SELECT name FROM CIS_UserGroup UG WHERE UG.CODE =A.GroupCode) AS groupName
+					,EnableYn AS enableYn
+					,UseYn AS useYn
+					,RegistUser AS registUser
+					,RegistDatetime AS registDatetime
+					,UpdateUser AS updateUser
+					,UpdateDatetime AS updateDatetime
+					FROM CIS_User A
+        			WHERE Type='d'
+        			AND (groupCode = '00000001' or groupCode = '00000002')
+        			<if test="useYn != null and useYn != ''">
+			        and useYn = #{useYn}
+			        </if>
+			        <if test="groupCode != null and groupCode != ''">
+			        and groupCode = #{groupCode}
+			        </if>
+			) AS T1
+			WHERE 1=1
+		<if test="searchList != null">
+	        <foreach collection="searchList" item="item">
+	                <choose>
+	                    <when test="item.srchGubn == 'id'.toString()">
+	                        /* 특수문자 조회를 위해 ESCAPE 추가*/
+	                       AND T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+	                    </when>
+	                    <when test="item.srchGubn == 'name'.toString()">
+							AND T1.name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <when test="item.srchGubn == 'departmentName'.toString()">
+							AND T1.department_name like '%'+#{item.srchKeyword}+'%'
+	                    </when>
+	                    <otherwise>
+	                    	<if test="item.srchKeyword != null and item.srchKeyword != '' ">
+								AND  (T1.id like '%'+#{item.srchKeyword}+'%' ESCAPE '['
+		                        OR T1.name like '%'+#{item.srchKeyword}+'%'
+		                        OR T1.department_name like '%'+#{item.srchKeyword}+'%')
+	                        </if>
+	                    </otherwise>
+	                </choose>
+	        </foreach>
+	    </if>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.상세
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserMngDetail" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserMngDetail */
+        <![CDATA[
+		SELECT
+		A.Seq AS seq
+		,A.Id AS id
+		,A.Type AS type
+		,A.Password AS password
+		,A.Name AS name
+		,A.Email AS email
+		,A.TelNo AS telNo
+		,A.RegistNo AS registNo
+		,A.Department AS department
+		,B.Name AS departmentName
+		,A.RepresentativeName AS representativeName
+		,A.GroupCode AS groupCode
+		,A.EnableYn AS enableYn
+		,A.UseYn AS useYn
+		,A.RegistUser AS registUser
+		,A.RegistDatetime AS registDatetime
+		,A.UpdateUser AS updateUser
+		,A.UpdateDatetime AS updateDatetime
+		FROM CIS_User A LEFT OUTER JOIN CIS_UserAgencyDepartment B
+		ON A.Department = B.Code
+		WHERE A.Seq=#{seq}
+
+        ]]>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.신규등록화면
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserMngRegistForm" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserMngRegistForm */
+        <![CDATA[
+
+
+        ]]>
+	</select>
+
+
+	<!--
+	 * 회원정보 관리.수정화면
+	 * @param vo - memberUserMngVO
+	 * @return data[memberUserMngVO]
+	 * @exception Exception
+	 -->
+	<select id="UserMngEditForm" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserMngEditForm */
+        <![CDATA[
+
+
+        ]]>
+	</select>
+	
+	<select id="UserAccessList" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserAccessList */
+        <![CDATA[
+		SELECT 
+			a.id AS id
+	       ,a.groupcode AS groupCode
+	       ,Isnull(a.NAME, '')                          AS name
+	       ,Iif(a.type = 'd', '직조직', '파트너') AS typeName
+	       ,B.NAME                                      AS departmentName
+	       ,Isnull(a.email, '')                         AS email
+		FROM   cis_user a
+		LEFT OUTER JOIN cis_useragencydepartment b
+		ON a.department = b.code
+		WHERE  a.useyn = 'Y'
+		ORDER BY b.code, a.name
+        ]]>
+	</select>
+	
+	<select id="UserGroupList" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserGroupList */
+        <![CDATA[
+        SELECT 
+        		A.AccessCategoryCode AS Code, 
+				C.AccessCategoryName AS Name, 
+				A.UseYn,
+				A.RegistUser,
+				A.RegistDatetime,
+				A.UpdateUser,
+				A.UpdateDatetime 
+		FROM CIS_AccessMaster A INNER JOIN CIS_USER B 
+		ON A.RegistUser = B.ID
+		INNER JOIN CIS_AccessCategory C 
+		ON A.AccessCategoryCode = C.AccessCategoryCode
+		LEFT OUTER JOIN CIS_UserAgencyDepartment D 
+		ON B.Department = D.Code
+		WHERE A.AccessCategoryCode != '00000001' and A.AccessCategoryCode !='00000002'
+		AND A.USEYN = 'y'
+        ]]>
+	</select>
+	<select id="UserAgencyDepartmentList" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserAgencyDepartmentList */
+        <![CDATA[
+		SELECT Code, [Type], Name, UseYn, RegistUser, RegistDatetime, UpdateUser, UpdateDatetime
+		FROM CIS_UserAgencyDepartment
+		WHERE USEYN = 'y'
+		AND TYPE='d'
+        ]]>
+	</select>
+	<select id="UserPAgencyDepartmentList" resultType="egovMap">
+        /* mngMemberUserMngMapper.UserAgencyDepartmentList */
+        <![CDATA[
+		SELECT Code, [Type], Name, UseYn, RegistUser, RegistDatetime, UpdateUser, UpdateDatetime
+		FROM CIS_UserAgencyDepartment
+		WHERE USEYN = 'y'
+		AND TYPE='p'
+		ORDER BY Name
+        ]]>
+	</select>
+	<select id="UserIdCnt" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="int">
+        /* mngMemberUserMngMapper.UserAgencyDepartmentList */
+        <![CDATA[
+		SELECT COUNT(*) AS totcnt
+		FROM CIS_User
+		WHERE Id = #{id}
+        ]]>
+	</select>
+	<select id="UserEmailCnt" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO" resultType="int">
+        /* mngMemberUserMngMapper.UserAgencyDepartmentList */
+        <![CDATA[
+		SELECT COUNT(*) AS totcnt
+		FROM CIS_User
+		WHERE Email = #{email}
+        ]]>
+	</select>
+	<insert id="insertUserMng" keyProperty="seq" useGeneratedKeys="true" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO">
+	INSERT INTO CIS_User
+	(
+		Id, 
+		[Type], 
+		Password, 
+		Name, 
+		Email, 
+		TelNo, 
+		RegistNo, 
+		Department, 
+		RepresentativeName, 
+		GroupCode, 
+		EnableYn, 
+		UseYn, 
+		PasswordChangeYn,
+		RegistUser, 
+		RegistDatetime, 
+		UpdateUser, 
+		UpdateDatetime
+	)
+	VALUES
+	(
+		#{id}, 
+		#{type}, 
+		#{password}, 
+		#{name}, 
+		#{email}, 
+		#{telNo}, 
+		'', 
+		#{department}, 
+		'', 
+		#{groupCode}, 
+		'y', 
+		#{useYn},
+		'n', 
+		#{sessionUserId}, 
+		getdate(), 
+		#{sessionUserId}, 
+		getdate()
+	)
+	</insert>
+	<update id="updateUserMng" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO">
+		/* techShareMapper.updateBoardTechShare */
+		UPDATE CIS_User
+		SET 
+		<!-- <choose>
+    		<when test="useYn == 'y'">
+    		UseYn = 'n',
+    		</when>
+    		<when test="useYn == 'n'">
+       		UseYn = 'y',	
+       		</when>
+    	</choose> -->
+    	UseYn = #{useYn},
+		UpdateUser = #{sessionUserId},
+        UpdateDatetime = getdate()
+		WHERE Seq = #{seq}
+	</update>
+    <delete id="deleteUserMng" parameterType="com.pumpkin.melon.mng.member.service.MemberUserMngVO">
+		DELETE CIS_User
+		WHERE Seq = #{seq}
+	</delete>
+	
+</mapper>

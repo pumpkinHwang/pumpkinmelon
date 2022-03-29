@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : Member_SQL.xml
+ * @Description : Member_SQL 
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @ 
+ * @ 2022.01.26  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 26
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="memberMapper">
+	
+    <!--
+	 * 로그인.로그인 페이지
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberLogin" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
+        /* memberDAO.memberLogin */
+        <![CDATA[
+        SELECT CUSTOMER_NUM,
+		       CUSTCODE,
+		       CUSTCODE2,
+		       ID,
+		       PASSWD,
+		       TEL_NUM,
+		       CEL_NUM,
+		       EMAIL,
+		       NAME,
+		       CEO_NAME,
+		       R_DATE,
+		       GRADE,
+		       ZIPCODE,
+		       ADDRESS1,
+		       ADDRESS2,
+		       JISACODE,
+		       JIJUMCODE,
+		       JIJUMCODE2,
+		       GUBUN,
+		       SERVICE_Y,
+		       SERVICE_Y_TEST,
+		       TRUST_Y,
+		       FORECAST_Y,
+		       REGULA_Y,
+		       CENTER_Y,
+		       CENTERTEST_Y,
+		       PS_Y,
+		       REGI_USER,
+		       REGIDATE,
+		       CANCLEDATE,
+		       CANCLE_USER,
+		       RESPON_USER,
+		       SERVICE_USER,
+		       LOGINFO,
+		       CEOID_Y,
+		       RENTAL_Y,
+		       OV_Y,
+		       ONAME,
+		       OTEL1,
+		       OTEL2,
+		       OTEL3,
+		       OCEL1,
+		       OCEL2,
+		       OCEL3,
+		       OZIP1,
+		       OZIP2,
+		       OADR1,
+		       OADR2,
+		       TRANSFER_SERVICE,
+		       SMS_NUM1_NO1,
+		       SMS_NUM2_NO1,
+		       SMS_NUM3_NO1,
+		       SMS_NUM1_NO2,
+		       SMS_NUM2_NO2,
+		       SMS_NUM3_NO2,
+		       SMS_NUM1_NO3,
+		       SMS_NUM2_NO3,
+		       SMS_NUM3_NO3,
+		       SVC_AGREE_STATUS,
+		       PASS_REG_DATE,
+		       MNGRAPRVYN,
+		       ANSAN_Y,
+		       TS_CODE,
+		       PARTNER_IDX,
+		       AGENCY_DEPART,
+		       DEALER,
+		       ECLUB_YN,
+		       BIZ_STATE,
+		       UDATE,
+		       WORK_YN,
+		       AGENCY_TYPE,
+		       DEPCODE,
+		       JOBNAME,
+		       INTERFACE_DATE,
+		       ROLE_CODE,
+		       SERVICE_TYPE,
+		       SERVICE_TYPE2
+		FROM   AGENT 
+		WHERE  ID = #{id} 
+        ]]>
+	</select>
+	
+	<!--
+	 * 회원아이디 기준 회원 비밀번호 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberSpCisLoginInfoSelect" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" statementType="CALLABLE" resultType="egovMap">
+        /* memberDAO.memberSpCisLoginInfoSelect */
+        <![CDATA[
+        EXEC SP_CIS_LOGIN_INFO_SELECT #{id}
+        ]]>
+	</select>
+	
+	<!--
+	 * 사용자가 입력한 비밀번호를 DB에서 SHA256으로 암호화
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberSpGetSha256Password" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" statementType="CALLABLE" resultType="string">
+        /* memberDAO.memberSpGetSha256Password */
+        <![CDATA[
+        EXEC SP_GET_SHA256_PASSWORD #{id},#{passWd},#{encodePassWd}
+        ]]>
+	</select>
+	
+	<!--
+	 * 로그인한 사용자의 권한목록을 스트링으로 반환
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberAccessProgram" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="string">
+        /* memberDAO.memberAccessProgram */
+		SELECT REPLACE(REPLACE(REPLACE(STUFF(
+			(SELECT * FROM (
+				SELECT ',' + SUBSTRING(D.menuurl, 0, LEN(D.menuurl) - CHARINDEX('/', reverse(D.menuurl))+1)  AS accessMenuUrl FROM CIS_AccessMaster A 
+					INNER JOIN CIS_AccessCategory B 
+						ON A.AccessCategoryCode = B.AccessCategoryCode 
+					INNER JOIN CIS_AccessProgram C 
+						ON A.AccessMasterSeq = C.AccessMasterSeq 
+					INNER JOIN CIS_Menu D 
+						ON C.MenuCode = D.MenuCode 
+				WHERE A.AccessCategoryCode = #{groupcode} AND C.UseYn = 'y'
+				<if test="menuUrl != null and menuUrl != '' ">
+				AND D.MenuUrl = #{menuUrl}
+				</if>
+			UNION 
+				SELECT ',' + SUBSTRING(B.menuurl, 0, LEN(B.menuurl) - CHARINDEX('/', reverse(B.menuurl))+1)  AS accessMenuUrl FROM CIS_AccessInAccountArticle A 
+					INNER JOIN CIS_Menu B
+						ON A.MenuCode  = B.MenuCode 
+				WHERE ID = #{id}
+				<if test="menuUrl != null and menuUrl != '' ">
+				AND B.MenuUrl = #{menuUrl}
+				</if>
+				<if test="seq != null and seq != '' ">
+				AND A.BoardSeq = #{seq}
+				</if>
+			) A
+		<![CDATA[
+			FOR XML PATH ('')), 1, 1, ''),'<accessMenuUrl>',''),'</accessMenuUrl>',''),'accessMenuUrl>','') + ',/main' AS AccessList 
+        ]]>
+	</select>
+
+  
+	<!--
+	 * 로그인.아이디 찾기
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberfindId" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
+        /* memberDAO.memberfindId */
+        <![CDATA[
+        	SELECT ID AS id,
+        		   EMAIL AS mberCertEmail
+			FROM   CIS_USER
+			WHERE  NAME = #{name}
+	        AND    EMAIL = #{email}
+        ]]>
+	</select>
+	
+	<!--
+	 * 로그인.아이디 찾기 이메일 내용 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberfindIdEmailForm" parameterType="egovMap" resultType="egovMap">
+        /* memberDAO.memberfindIdEmailForm */
+        <![CDATA[
+        	SELECT SEQ AS seq,
+			       CODE AS code,
+			       EMAILSENDER AS emailSender,
+			       EMAILTITLE AS emailTitle,
+			       EMAILCONTENTS AS emailContents,
+			       USEYN AS useYn,
+			       REGISTUSER AS registUser,
+			       REGISTDATETIME AS registDatetime,
+			       UPDATEUSER AS updateUser,
+			       UPDATEDATETIME AS updateDatetime
+			FROM   CIS_NOTICEEMAILSETTINGS 
+			WHERE  CODE = '0002'
+			AND USEYN = 'Y' 
+        ]]>
+	</select>
+
+  
+	<!--
+	 * 로그인.비밀번호 찾기 입력한 회원정보 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberfindPw" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
+        /* memberDAO.memberfindPw */
+        <![CDATA[
+        	SELECT ID AS id,
+        		   EMAIL AS mberCertEmail,
+        		   NAME AS name
+			FROM   CIS_USER
+			WHERE  ID = #{id}
+	        AND    NAME = #{name}
+	        AND    EMAIL = #{email}
+	        AND    USEYN = 'y'
+        ]]>
+	</select>
+	
+	<!--
+	 * 10자리 임시 비밀번호 생성
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberckbsPasswordCreateFunc" parameterType="egovMap" statementType="CALLABLE" resultType="string">
+        /* memberDAO.memberckbsPasswordCreateFunc */
+        <![CDATA[
+        EXEC CKBS_PASSWORD_CREATE_FUNC 10
+        ]]>
+	</select>
+	
+	<!--
+	 * 암호화된 임시 비밀번호 저장
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="memberUpdatePassword" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.memberUpdatePassword */
+		UPDATE CIS_USER 
+		SET PASSWORD = #{passWd}
+		, PasswordChangeYn = 'y'
+		WHERE ID = #{id}
+	</update>
+	
+	<!--
+	 * 비밀번호 변경 히스토리 등록
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<insert id="memberInsertPasswordHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.memberInsertPasswordHistory */
+		INSERT INTO CIS_USERPASSWORDHISTORY
+		            (USERID,
+		             TYPE,
+		             REGISTUSER,
+		             REGISTDATETIME)
+		VALUES      (#{id},
+		             '4',
+		             #{id},
+		             Getdate()) 
+	</insert>
+	
+	<!--
+	 * 로그인.비밀번호 찾기 이메일 내용 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberfindPasswordEmailForm" parameterType="egovMap" resultType="egovMap">
+        /* memberDAO.memberfindPasswordEmailForm */
+        <![CDATA[
+        	SELECT *
+			FROM   CIS_NOTICEEMAILSETTINGS
+			WHERE  CODE = '0003'
+			AND USEYN = 'Y' 
+        ]]>
+	</select>
+
+  
+	<!--
+	 * 자유게시판.비밀번호변경.비밀번호변경 화면
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberChangePasswordForm" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
+        /* memberDAO.memberChangePasswordForm */
+        <![CDATA[
+        
+        
+        ]]>
+	</select>
+	
+	<!--
+	 * 로그인 히스토리 등록
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<insert id="memberInsertLoginHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO"  keyProperty="seq" useGeneratedKeys="true">
+		/* memberDAO.memberInsertLoginHistory */
+		INSERT INTO CIS_LoginHistory
+		(USERID, REMOTEADDRESS, STATUS, REGISTDATETIME)
+		VALUES(#{id}, #{remoteAddress}, #{status}, getdate())
+	</insert>
+	
+	<!--
+	 * 로그인 실패 히스토리 카운트 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberLoginFailHistoryCnt" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="int">
+        /* memberDAO.memberLoginFailHistoryCnt */
+        <![CDATA[
+        SELECT COUNT(*) CNT
+		FROM CIS_LOGINFAILHISTORY
+		WHERE USERID = #{id}
+        ]]>
+	</select>	
+	
+	<!--
+	 * 로그인 5회이상 실패 시 계졍 사용중지
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="memberUpdateEnableYn" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.memberLoginFailHistoryCnt */
+		UPDATE CIS_USER 
+		SET ENABLEYN = #{enableyn}
+		WHERE ID = #{id}
+	</update>
+	
+	<!--
+	 * 로그인 실패 히스토리 등록
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<insert id="memberInsertLoginFailHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" keyProperty="loginHistorySeq" useGeneratedKeys="true">
+		/* memberDAO.memberInsertLoginFailHistory */
+		INSERT INTO CIS_LOGINFAILHISTORY
+		(USERID, REMOTEADDRESS,  REGISTDATETIME)
+		VALUES(#{id}, #{remoteAddress}, getdate())
+	</insert>         
+	
+	<!--
+	 * 로그인 실패 기록 삭제
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<delete id="memberDeleteLoginFailHistory" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.memberDeleteLoginFailHistory */
+		DELETE CIS_LOGINFAILHISTORY 
+		WHERE USERID = #{id}
+	</delete>  
+	
+	<!--
+	 * 로그인 상태정보 저장
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<insert id="memberInsertLoginStatus" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.memberInsertLoginStatus */
+		INSERT INTO CIS_LOGINSTATUS
+		(USERID, LOGINHISTORYSEQ)
+		VALUES(#{id}, #{loginHistorySeq})
+	</insert>
+
+
+
+	<!--
+	 * 개인정보변경 조회
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberInfo" parameterType="com.pumpkin.melon.usr.member.service.MemberVO" resultType="egovMap">
+		/* memberDAO.memberInfo */
+        <![CDATA[
+			SELECT seq as seq
+			     , id as id
+			     , password as password
+			     , name as name
+			     , email as email
+			     , telno as telNo
+			     , registno as registNo
+			     , department as department
+			     , (SELECT Name FROM CIS_UserAgencyDepartment WHERE USEYN = 'y' AND TYPE='p' and code = ta.department) as departmentName
+			     , representativename as representativeName
+				 , type
+		     FROM CIS_User ta
+		    WHERE ID = #{id}
+		]]>
+	</select>
+
+
+	<!--
+	 * 개인정보변경 수정
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="updateUser" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.updateUser */
+		UPDATE CIS_User
+		SET Name = #{name},
+		    Email = #{email},
+		    TelNo = #{telno},
+		    Department = #{department},
+		  RepresentativeName = #{representativename},
+		UpdateUser = #{id},
+		UpdateDatetime = getdate()
+		WHERE Seq = #{seq}
+	</update>
+
+	<!--
+	 * 개인정보변경 대리점 수기등록
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<insert id="insertDepartment" parameterType="com.pumpkin.melon.usr.member.service.MemberVO">
+		/* memberDAO.insertDepartment */
+		INSERT INTO CIS_UserAgencyDepartment
+		(Code,
+		 TYPE,
+		 Name,
+		 UseYn,
+		 REGISTUSER,
+		 REGISTDATETIME,
+		 UpdateUser,
+		 UpdateDatetime
+		 )
+		VALUES      (#{department},
+					 'p',
+		             #{departmentName},
+					 'y',
+					 #{id},
+					 Getdate(),
+					 #{id},
+					 Getdate())
+	</insert>
+	
+	<!--
+	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 분리보관(휴면) 30일전 하기 정보를 이용자에게 알림
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<select id="memberPasswordChangeNoticeYearList" resultType="egovMap">
+        /* memberDAO.memberPasswordChangeNoticeYearList */
+        <![CDATA[
+        SELECT a.id, a.Email from (
+			SELECT 
+				A.USERID AS id,
+				MAX(b.Email) as email, 
+				CASE 
+					WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -11, GETDATE()) 
+						THEN CASE WHEN MAX(A.RegistDatetime) > DATEADD(MONTH, -12, GETDATE()) then 'Y'
+								  ELSE 'N'
+							 END
+					ELSE 'N'
+			  	END CHANGE_YN   
+			FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+				ON A.UserId  = B.ID
+			WHERE B.UseYn  = 'y'
+			AND B.EnableYn  = 'y'
+			AND (B.PasswordChangeYn != 'e' or B.PasswordChangeYn is null)	
+			GROUP BY USERID
+		) a
+		WHERE a.CHANGE_YN = 'Y'
+        ]]>
+	</select>
+	
+	<!--
+	 * 비밀번호 변경주기 분기 1회(3개월) 회원 상태값 변경
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="updateMemberMonthPasswordChangeYn" parameterType="egovMap">
+		/* memberDAO.updateMemberMonthPasswordChangeYn */
+		<![CDATA[
+		UPDATE CIS_USER 
+		SET PasswordChangeYn = #{passwordChangeYn}
+		WHERE ID IN
+		(
+			SELECT A.id FROM (
+				SELECT a.id, 
+					CASE WHEN B.RegistDatetime < DATEADD(MONTH, -3, GETDATE())  THEN 'Y'
+					   	 ELSE 'N'
+				  	END HISTORY_CHANGE_YN,
+				  	CASE WHEN A.RegistDatetime < DATEADD(MONTH, -3, GETDATE())  
+				  			THEN CASE WHEN B.RegistDatetime IS NULL THEN 'Y'
+									  ELSE 'N'
+								 END
+					   	 	ELSE 'N'
+				  	END CHANGE_YN	
+			FROM CIS_USER a
+				LEFT OUTER JOIN 
+					(SELECT userid, MAX(RegistDatetime) as RegistDatetime from CIS_USERPASSWORDHISTORY group by USERID) b
+					ON a.id = b.UserId 
+			WHERE a.UseYn  = 'y'
+			AND a.EnableYn  = 'y'
+			AND (A.PasswordChangeYn != 'y' or A.PasswordChangeYn is null)	
+			) A
+			WHERE (A.HISTORY_CHANGE_YN = 'Y' OR A.CHANGE_YN = 'Y')
+		)
+		]]>
+	</update>
+	
+	<!--
+	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 분리보관(휴면) 30일전 하기 정보를 이용자에게 알림 회원 상태값 변경
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="updateMemberYearPasswordChangeYn" parameterType="egovMap">
+		/* memberDAO.updateMemberYearPasswordChangeYn */
+		<![CDATA[
+		UPDATE CIS_USER 
+			SET PasswordChangeYn = #{passwordChangeYn}
+		WHERE ID IN
+		(
+			SELECT a.id from (
+				SELECT 
+					A.USERID AS id,
+					CASE 
+						WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -11, GETDATE()) 
+							THEN CASE WHEN MAX(A.RegistDatetime) > DATEADD(MONTH, -12, GETDATE()) then 'Y'
+									  ELSE 'N'
+								 END
+						ELSE 'N'
+				  	END CHANGE_YN   
+				FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+					ON A.UserId  = B.ID
+				WHERE B.UseYn  = 'y'
+				AND B.EnableYn  = 'y'
+				AND (B.PasswordChangeYn != 'e' or B.PasswordChangeYn is null)	
+				GROUP BY USERID
+			) a
+			WHERE a.CHANGE_YN = 'Y'
+		)
+		]]>
+	</update>
+
+	<!--
+	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 회원 사용여부 상태값 변경
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
+	<update id="updateMemberYearEnableYn">
+		/* memberDAO.updateMemberYearPasswordChangeYn */
+		<![CDATA[
+		UPDATE CIS_USER 
+			SET PasswordChangeYn = 'd'
+		WHERE ID IN
+		(
+			SELECT a.id from (
+				SELECT 
+					A.USERID AS id,
+					CASE 
+						WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -12, GETDATE()) THEN 'Y'
+						ELSE 'N'
+				  	END CHANGE_YN	   
+				FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+					ON A.UserId  = B.ID
+				WHERE B.UseYn  = 'y'
+				AND B.EnableYn  = 'y'	
+				GROUP BY USERID
+			) a
+			WHERE a.CHANGE_YN = 'Y'
+		)
+		]]>
+	</update>
+	
+
+</mapper>

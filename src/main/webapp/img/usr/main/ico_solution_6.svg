@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+    <g transform="translate(24.953 25.252)">
+        <g data-name="사각형 6110" transform="translate(9.047 -5.252)" style="stroke-width:1.5px;stroke:#000;fill:#e5e5e5">
+            <rect width="38" height="46" rx="2" style="stroke:none"/>
+            <rect x=".75" y=".75" width="36.5" height="44.5" rx="1.25" style="fill:none"/>
+        </g>
+        <g data-name="사각형 6109" transform="translate(1.047 1.748)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
+            <rect width="38" height="46" rx="2" style="stroke:none"/>
+            <rect x=".75" y=".75" width="36.5" height="44.5" rx="1.25" style="fill:none"/>
+        </g>
+        <rect data-name="사각형 6095" width="20.39" height="1.5" rx=".75" transform="translate(9.851 24.747)"/>
+        <rect data-name="사각형 6097" width="20.39" height="1.5" rx=".75" transform="translate(9.851 30.747)"/>
+        <rect data-name="사각형 6099" width="14" height="1.5" rx=".75" transform="translate(9.851 36.747)"/>
+        <g data-name="사각형 6111" transform="translate(9.047 9.748)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
+            <rect width="22" height="11" rx="2" style="stroke:none"/>
+            <rect x=".75" y=".75" width="20.5" height="9.5" rx="1.25" style="fill:none"/>
+        </g>
+    </g>
+    <g data-name="그룹 7578">
+        <g data-name="사각형 5859" transform="translate(56 49)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+            <rect width="36" height="36" rx="18" style="stroke:none"/>
+            <rect x=".75" y=".75" width="34.5" height="34.5" rx="17.25" style="fill:none"/>
+        </g>
+        <g data-name="사각형 5861" transform="translate(69.248 56.146)" style="fill:none;stroke:#dc000c;stroke-width:1.5px">
+            <rect width="9.45" height="9.45" rx="4.725" style="stroke:none"/>
+            <rect x=".75" y=".75" width="7.95" height="7.95" rx="3.975" style="fill:none"/>
+        </g>
+        <path data-name="패스 4004" d="M134.473 1299.167s.009-6.084 6.185-6.057 5.959 6.057 5.959 6.057" transform="translate(-66.862 -1225.512)" style="stroke-linecap:round;fill:none;stroke:#dc000c;stroke-width:1.5px"/>
+    </g>
+</svg>

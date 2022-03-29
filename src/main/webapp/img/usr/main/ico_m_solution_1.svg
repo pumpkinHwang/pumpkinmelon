@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="사각형 5697" style="stroke-width:2px;stroke:#000;fill:#e5e5e5" transform="translate(32 69.999)">
+        <rect width="55" height="16" rx="3" style="stroke:none"/>
+        <rect x="1" y="1" width="53" height="14" rx="2" style="fill:none"/>
+    </g>
+    <g data-name="타원 533" transform="translate(38 75.999)" style="stroke:#111;stroke-width:2px;fill:#fff">
+        <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+        <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+    </g>
+    <g data-name="타원 532" transform="translate(46 75.999)" style="stroke:#111;stroke-width:2px;fill:#fff">
+        <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+        <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+    </g>
+    <g data-name="server">
+        <g data-name="사각형 5697" style="stroke-width:2px;stroke:#000;fill:#fff" transform="translate(32 32.001)">
+            <rect width="55" height="17" rx="3" style="stroke:none"/>
+            <rect x="1" y="1" width="53" height="15" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="타원 533" transform="translate(38 38.001)" style="stroke:#111;stroke-width:2px;fill:#fff">
+            <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+            <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 532" transform="translate(46 38.001)" style="stroke:#111;stroke-width:2px;fill:#fff">
+            <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+            <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+        </g>
+    </g>
+    <g data-name="server">
+        <g data-name="사각형 5697" style="stroke-width:2px;stroke:#000;fill:#fff" transform="translate(32 51)">
+            <rect width="55" height="17" rx="3" style="stroke:none"/>
+            <rect x="1" y="1" width="53" height="15" rx="2" style="fill:none"/>
+        </g>
+        <g data-name="타원 533" transform="translate(38 57)" style="stroke:#111;stroke-width:2px;fill:#fff">
+            <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+            <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+        </g>
+        <g data-name="타원 532" transform="translate(46 57)" style="stroke:#111;stroke-width:2px;fill:#fff">
+            <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+            <circle cx="2.5" cy="2.5" r="1.5" style="fill:none"/>
+        </g>
+    </g>
+    <g>
+        <g data-name="타원 536" style="stroke:#dc000c;stroke-width:2px;fill:#fff" transform="translate(65 51.001)">
+            <circle cx="20" cy="20" r="20" style="stroke:none"/>
+            <circle cx="20" cy="20" r="19" style="fill:none"/>
+        </g>
+        <g data-name="그룹 7736">
+            <g data-name="그룹 7735">
+                <path data-name="패스 3992" d="M134 1280.262v8.263" transform="translate(-48.868 -1215.521)" style="stroke-linecap:round;fill:none;stroke:#dc000c;stroke-width:2px"/>
+                <path data-name="패스 3993" d="m129.5 1288 3.359 3.359 3.359-3.359" transform="translate(-47.723 -1218.339)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke:#dc000c;stroke-width:2px"/>
+            </g>
+            <path data-name="패스 3994" d="M128.283 1291.709v3.1H140.7v-3.1" transform="translate(-49.236 -1217.654)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke:#dc000c;stroke-width:2px"/>
+        </g>
+    </g>
+</svg>

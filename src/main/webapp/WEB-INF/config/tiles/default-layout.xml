@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<!-- 사용자 일반화면  -->
+	<definition name="usr-layouts-tiles" template="/WEB-INF/jsp/usr/cmm/tiles-layout.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/usr/include/header.jsp" />
+	  	<put-attribute name="menu"    		value="/WEB-INF/jsp/usr/include/menu.jsp" />
+	  	<put-attribute name="sidebar"    		value="/WEB-INF/jsp/usr/include/sidebar.jsp" />
+	  	<put-attribute name="sub-title"    		value="/WEB-INF/jsp/usr/include/sub-title.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/usr/include/footer.jsp" />
+	</definition>
+
+	<!-- 사용자 로그인화면  -->
+	<definition name="usrLogin-layouts-tiles" template="/WEB-INF/jsp/usr/cmm/loginLayout.jsp">
+		<put-attribute name="header"    	value="/WEB-INF/jsp/usr/include/header.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/usr/include/footer.jsp" />
+    </definition>
+
+	<!-- 관리자 일반화면  -->
+	<definition name="mng-layouts-tiles" template="/WEB-INF/jsp/mng/cmm/tiles-layout.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/mng/include/header.jsp" />
+	  	<put-attribute name="menu"    		value="/WEB-INF/jsp/mng/include/menu.jsp" />
+	  	<put-attribute name="sidebar"    		value="/WEB-INF/jsp/mng/include/sidebar.jsp" />
+	  	<put-attribute name="sub-title"    		value="/WEB-INF/jsp/mng/include/sub-title.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/mng/include/footer.jsp" />
+	</definition>
+
+	<!-- 관리자 로그인화면  -->
+	<definition name="mngLogin-layouts-tiles" template="/WEB-INF/jsp/mng/cmm/loginLayout.jsp">
+		<put-attribute name="header"    	value="/WEB-INF/jsp/mng/include/header.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/mng/include/footer.jsp" />
+    </definition>
+    
+    <!-- 관리자 이용약관, 개인정보취급방침 -->
+    <definition name="mng-terms-layouts-tiles" template="/WEB-INF/jsp/mng/cmm/terms-layout.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/mng/include/header.jsp" />
+		<put-attribute name="menu"    		value="/WEB-INF/jsp/mng/include/menu.jsp" />
+		<put-attribute name="sidebar"    		value="/WEB-INF/jsp/mng/include/sidebar.jsp" />
+		<put-attribute name="sub-title"    		value="/WEB-INF/jsp/mng/include/terms-sub-title.jsp" />
+		<put-attribute name="content"   	value="" />
+		<put-attribute name="footer"    	value="/WEB-INF/jsp/mng/include/footer.jsp" />
+	</definition>
+	
+
+	<!-- 사용자 메인 화면  -->
+	<definition name="usr-main-layouts-tiles" template="/WEB-INF/jsp/usr/cmm/mainLayout.jsp">
+		<put-attribute name="header"    	value="/WEB-INF/jsp/usr/include/header.jsp" />
+		<put-attribute name="menu"    		value="/WEB-INF/jsp/usr/include/menu.jsp" />
+		<put-attribute name="sidebar"    		value="/WEB-INF/jsp/usr/include/sidebar.jsp" />
+		<put-attribute name="content"   	value="" />
+		<put-attribute name="footer"    	value="/WEB-INF/jsp/usr/include/footer.jsp" />
+	</definition>
+	
+	<!-- 사용자 이용약관, 개인정보취급방침 -->
+	<definition name="usr-terms-layouts-tiles" template="/WEB-INF/jsp/usr/cmm/terms-layout.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/usr/include/header.jsp" />
+		<put-attribute name="menu"    		value="/WEB-INF/jsp/usr/include/menu.jsp" />
+		<put-attribute name="sidebar"    		value="/WEB-INF/jsp/usr/include/sidebar.jsp" />
+		<put-attribute name="sub-title"    		value="/WEB-INF/jsp/usr/include/terms-sub-title.jsp" />
+		<put-attribute name="content"   	value="" />
+		<put-attribute name="footer"    	value="/WEB-INF/jsp/usr/include/footer.jsp" />
+	</definition>
+	
+	<!-- 사용자 메인화면  -->
+	<definition name="/usr/main/main" extends="usr-main-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/usr/main/main.jsp" />
+	</definition>
+
+	<!-- 사용자 로그인화면  -->
+	<definition name="/usr/member/memberLoginForm" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/usr/member/memberLoginForm.jsp" />
+	</definition>
+
+	<definition name="/usr/member/memberfindId" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/usr/member/memberfindId.jsp" />
+	</definition>
+
+	<definition name="/usr/member/memberfindPw" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/usr/member/memberfindPw.jsp" />
+	</definition>
+	
+	<definition name="/usr/member/memberChangePasswordForm" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/usr/member/memberChangePasswordForm.jsp" />
+	</definition>
+
+	<definition name="/usr/member/memberAccessFail" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/memberAccessFail.jsp" />
+	</definition>
+	
+	<definition name="/usr/cmm/termsUse" extends="usr-terms-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/cmm/termsUse.jsp" />
+	</definition>
+	
+	<definition name="/usr/cmm/termsPrivacy" extends="usr-terms-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/cmm/termsPrivacy.jsp" />
+	</definition>
+	
+	<definition name="/usr/*/*/*" extends="usr-layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/usr/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="/usr/*/*" extends="usr-layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/usr/{1}/{2}.jsp" />
+	</definition>
+
+	
+	<!-- 관리자 로그인화면  -->
+	<definition name="/mng/member/memberLoginForm" extends="mngLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/mng/member/memberLoginForm.jsp" />
+	</definition>
+	
+	<definition name="/mng/member/memberfindId" extends="mngLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/mng/member/memberfindId.jsp" />
+	</definition>
+
+	<definition name="/mng/member/memberfindPw" extends="mngLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/mng/member/memberfindPw.jsp" />
+	</definition>
+	
+	<definition name="/mng/member/memberAccessFail" extends="mngLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/memberAccessFail.jsp" />
+	</definition>
+	
+	<definition name="/mng/member/memberChangePasswordForm" extends="usrLogin-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/mng/member/memberChangePasswordForm.jsp" />
+	</definition>
+
+	<definition name="/mng/cmm/termsUse" extends="mng-terms-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/cmm/termsUse.jsp" />
+	</definition>
+	
+	<definition name="/mng/cmm/termsPrivacy" extends="mng-terms-layouts-tiles">
+		<put-attribute name="content"   value="/WEB-INF/jsp/cmm/termsPrivacy.jsp" />
+	</definition>
+	
+	<definition name="/mng/*/*/*" extends="mng-layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/mng/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="/mng/*/*" extends="mng-layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/mng/{1}/{2}.jsp" />
+	</definition>
+
+
+</tiles-definitions>

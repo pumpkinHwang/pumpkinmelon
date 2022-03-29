@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="그룹 7577">
+        <g data-name="그룹 7563" transform="translate(26 34.487)">
+            <g data-name="사각형 5701" transform="translate(2 1.513)" style="stroke-width:1.5px;stroke:#000;fill:#e5e5e5">
+                <rect width="60" height="45" rx="4" style="stroke:none"/>
+                <rect x=".75" y=".75" width="58.5" height="43.5" rx="3.25" style="fill:none"/>
+            </g>
+            <g data-name="사각형 5856" transform="translate(7 6.513)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
+                <rect width="50" height="42" rx="3" style="stroke:none"/>
+                <rect x=".75" y=".75" width="48.5" height="40.5" rx="2.25" style="fill:none"/>
+            </g>
+            <g data-name="사각형 5702" transform="translate(0 38.513)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
+                <rect width="66" height="10" rx="3" style="stroke:none"/>
+                <rect x=".75" y=".75" width="64.5" height="8.5" rx="2.25" style="fill:none"/>
+            </g>
+            <rect data-name="사각형 5707" width="2" height="2" rx="1" transform="translate(12.528 42.513)"/>
+            <rect data-name="사각형 5708" width="2" height="2" rx="1" transform="translate(19.291 42.513)"/>
+        </g>
+        <g data-name="타원 516" transform="translate(63 20)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+            <circle cx="21" cy="21" r="21" style="stroke:none"/>
+            <circle cx="21" cy="21" r="20.25" style="fill:none"/>
+        </g>
+        <g data-name="그룹 7621">
+            <path data-name="패스 3927" d="m618.457 1935.664-11.5 7.295" transform="translate(-530.749 -1901.906)" style="fill:none;stroke:#dc000c;stroke-width:1.5px"/>
+            <path data-name="패스 3943" d="m617.833 1943.15-10.907-6.264" transform="translate(-530.199 -1895.392)" style="fill:none;stroke:#dc000c;stroke-width:1.5px"/>
+            <g data-name="사각형 5703" transform="translate(72.617 37)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+                <rect width="7.547" height="7.547" rx="3.774" style="stroke:none"/>
+                <rect x=".75" y=".75" width="6.047" height="6.047" rx="3.024" style="fill:none"/>
+            </g>
+            <g data-name="사각형 5706" transform="translate(83.84 44.001)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+                <rect width="7.663" height="7.663" rx="3.831" style="stroke:none"/>
+                <rect x=".75" y=".75" width="6.163" height="6.163" rx="3.081" style="fill:none"/>
+            </g>
+            <g data-name="사각형 5705" transform="translate(83.84 30)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+                <rect width="7.547" height="7.547" rx="3.774" style="stroke:none"/>
+                <rect x=".75" y=".75" width="6.047" height="6.047" rx="3.024" style="fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

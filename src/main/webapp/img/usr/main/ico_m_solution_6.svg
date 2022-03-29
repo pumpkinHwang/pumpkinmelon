@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <g data-name="사각형 6110" transform="translate(37 25)" style="stroke-width:2px;stroke:#000;fill:#e5e5e5">
+        <rect width="42" height="50" rx="2" style="stroke:none"/>
+        <rect x="1" y="1" width="40" height="48" rx="1" style="fill:none"/>
+    </g>
+    <g data-name="사각형 6109" transform="translate(28 33)" style="stroke-width:2px;stroke:#000;fill:#fff">
+        <rect width="42" height="50" rx="2" style="stroke:none"/>
+        <rect x="1" y="1" width="40" height="48" rx="1" style="fill:none"/>
+    </g>
+    <g data-name="사각형 6095" transform="translate(37.997 58)" style="stroke-width:2px;stroke:#000">
+        <rect width="22" height="2" rx="1" style="stroke:none"/>
+        <rect x="1" y="1" width="20" style="fill:none"/>
+    </g>
+    <g data-name="사각형 6097" transform="translate(37.997 63.999)" style="stroke-width:2px;stroke:#000">
+        <rect width="22" height="2" rx="1" style="stroke:none"/>
+        <rect x="1" y="1" width="20" style="fill:none"/>
+    </g>
+    <g data-name="사각형 6099" transform="translate(37.997 69.999)" style="stroke-width:2px;stroke:#000">
+        <rect width="15" height="2" rx="1" style="stroke:none"/>
+        <rect x="1" y="1" width="13" style="fill:none"/>
+    </g>
+    <g data-name="사각형 6111" transform="translate(37 41)" style="stroke-width:2px;stroke:#000;fill:#fff">
+        <rect width="24" height="12" rx="2" style="stroke:none"/>
+        <rect x="1" y="1" width="22" height="10" rx="1" style="fill:none"/>
+    </g>
+    <g data-name="그룹 7578">
+        <g data-name="사각형 5859" style="stroke:#dc000c;stroke-width:2px;fill:#fff" transform="translate(60 57.999)">
+            <rect width="38" height="38" rx="19" style="stroke:none"/>
+            <rect x="1" y="1" width="36" height="36" rx="18" style="fill:none"/>
+        </g>
+        <g data-name="사각형 5861" transform="translate(74.084 66.219)" style="fill:none;stroke:#dc000c;stroke-width:2px">
+            <rect width="9.805" height="9.805" rx="4.903" style="stroke:none"/>
+            <rect x="1" y="1" width="7.805" height="7.805" rx="3.903" style="fill:none"/>
+        </g>
+        <path data-name="패스 4004" d="M134.473 1299.394s.009-6.313 6.418-6.285 6.183 6.285 6.183 6.285" transform="translate(-62.082 -1215.145)" style="stroke-linecap:round;fill:none;stroke:#dc000c;stroke-width:2px"/>
+    </g>
+</svg>

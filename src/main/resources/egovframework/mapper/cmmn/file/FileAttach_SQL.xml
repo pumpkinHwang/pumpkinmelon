@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ * @Class Name : FileAttach_SQL.xml
+ * @Description : FileAttach_SQL 
+ * @Modification Information
+ * @
+ * @  수정일      수정자              수정내용
+ * @ 
+ * @ 2022.01.15  hsk3807          최초생성
+ *
+ * @author 개발팀
+ * @since 2022 . 01. 15
+ * @version 1.0
+ * @see
+ * @see
+ *
+ *  Copyright (C) by FRO All right reserved.
+ -->
+<mapper namespace="fileAttachMapper">
+	
+	<!--
+	 * 공통 첨부파일 목록 조회
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	<select id="fileAttachList" parameterType="com.pumpkin.melon.cmmn.file.service.FileAttachVO" resultType="egovMap">
+        /* fileAttachDAO.fileAttachList */
+        <![CDATA[
+        SELECT seq as atchFileId,
+		       boardnoticeseq as boardNoticeSeq,
+		       boardnoticegubun as boardNoticeGubun,
+		       downloadcount as downloadCount,
+		       originalfilename as orignlFileNm,
+		       originalfilenameonly as originalFileNameOnly,
+		       originalfilenameext as fileExtsn,
+		       savedfilename as streFileNm,
+		       savedfilepath as fileStreCours,
+		       displayorder as displayOrder,
+		       registuser as registUser,
+		       registdatetime as registDateTime,
+		       updateuser as updateUser,
+		       updatedatetime as updateDateTime
+		FROM   CIS_FILEATTACH 
+        WHERE  boardnoticegubun = #{boardNoticeGubun} 
+		AND	   boardnoticeseq = #{boardNoticeSeq}
+        ]]>
+	</select>
+	
+	<!--
+	 * 공통 첨부파일 상세 조회
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	<select id="fileAttachDetail" parameterType="com.pumpkin.melon.cmmn.file.service.FileAttachVO" resultType="com.pumpkin.melon.cmmn.file.service.FileAttachVO">
+        /* fileAttachDAO.fileAttachDetail */
+        <![CDATA[
+        SELECT seq as atchFileId,
+		       boardnoticeseq as boardNoticeSeq,
+		       boardnoticegubun as boardNoticeGubun,
+		       downloadcount as downloadCount,
+		       originalfilename as orignlFileNm,
+		       originalfilenameonly as originalFileNameOnly,
+		       originalfilenameext as fileExtsn,
+		       savedfilename as streFileNm,
+		       savedfilepath as fileStreCours,
+		       displayorder as displayOrder,
+		       registuser as registUser,
+		       registdatetime as registDateTime,
+		       updateuser as updateUser,
+		       updatedatetime as updateDateTime
+		FROM   CIS_FILEATTACH 
+		WHERE  seq = #{fileSeq}
+        ]]>
+	</select>
+	
+	<!--
+	 * 공통 첨부파일 상세 조회 구분코드 
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	<select id="fileAttachGubnDetail" parameterType="com.pumpkin.melon.cmmn.file.service.FileAttachVO" resultType="com.pumpkin.melon.cmmn.file.service.FileAttachVO">
+        /* fileAttachDAO.fileAttachGubnDetail */
+        <![CDATA[
+        SELECT seq as atchFileId,
+		       boardnoticeseq as boardNoticeSeq,
+		       boardnoticegubun as boardNoticeGubun,
+		       downloadcount as downloadCount,
+		       originalfilename as orignlFileNm,
+		       originalfilenameonly as originalFileNameOnly,
+		       originalfilenameext as fileExtsn,
+		       savedfilename as streFileNm,
+		       savedfilepath as fileStreCours,
+		       displayorder as displayOrder,
+		       registuser as registUser,
+		       registdatetime as registDateTime,
+		       updateuser as updateUser,
+		       updatedatetime as updateDateTime
+		FROM   CIS_FILEATTACH 
+		WHERE  boardnoticegubun = #{boardNoticeGubun} 
+		AND	   boardnoticeseq = #{boardNoticeSeq}
+		AND uploadGubn = #{gubn}
+        ]]>
+	</select>
+	
+	<!--
+	 * 공통 첨부파일 MAX SEQ 조회
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	<select id="fileAttachMaxSeq"  resultType="int">
+        /* fileAttachDAO.fileAttachMaxSeq */
+        <![CDATA[
+        SELECT ISNULL(MAX(SEQ)+1,0) AS maxSeq from CIS_FileAttach
+        ]]>
+	</select>
+
+  	
+  	<!--
+	 * 공통 첨부파일 등록
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	<insert id="insertFileAttach" keyProperty="seq" useGeneratedKeys="true" parameterType="com.pumpkin.melon.cmmn.file.service.FileAttachVO">
+  		/* fileAttachDAO.insertFileAttach */
+        <![CDATA[
+  		INSERT INTO CIS_FILEATTACH
+            (
+             boardnoticeseq,
+             boardnoticegubun,
+             downloadcount,
+             originalfilename,
+             originalfilenameonly,
+             originalfilenameext,
+             savedfilename,
+             savedfilepath,
+             displayorder,
+             registuser,
+             registdatetime,
+             updateuser,
+             updatedatetime,
+             uploadGubn
+        )VALUES(
+            #{boardNoticeSeq},
+            #{boardNoticeGubun},
+            0,
+            #{originalFileName},
+            #{originalFileNameOnly},
+            #{originalFileNameExt},
+            #{savedFileName},
+            #{savedFilePath},
+            (SELECT ISNULL(MAX(DisplayOrder)+1,1) FROM CIS_FileAttach WHERE BoardNoticeGubun = #{boardNoticeGubun} AND BoardNoticeSeq = #{boardNoticeSeq}),
+            #{id},
+            getdate(),
+            #{id},
+            getdate(),
+            #{gubn}
+            )
+        ]]>
+  </insert>
+  
+  	<!--
+	 * 공통 첨부파일 삭제
+	 * @param vo - FileAttachVO
+	 * @return data[FileAttachVO]
+	 * @exception Exception
+	 -->
+	  <delete id="deleteFileAttach" parameterType="com.pumpkin.melon.cmmn.file.service.FileAttachVO">
+		/* fileAttachDAO.deleteFileAttach*/
+		DELETE FROM CIS_FILEATTACH
+		WHERE  boardnoticegubun = #{boardNoticeGubun}
+		AND	   boardnoticeseq = #{boardNoticeSeq}  
+		<if test="@egovframework.com.cmm.util.EgovMybaitsUtil@isNotEmpty(atchFileId)">
+			<if test='atchFileId != 0'>
+		AND	   seq = #{atchFileId}  
+			</if>
+		</if>
+	  </delete>
+
+</mapper>
