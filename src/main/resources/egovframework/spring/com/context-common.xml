@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:task="http://www.springframework.org/schema/task"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
-		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<context:component-scan base-package="egovframework,com">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
-
-	<context:component-scan base-package="com.pumpkin.melon.cmmn.schedule.memberJob" />
-	<task:scheduler id="memberScheduler" pool-size="10" />
-	<task:annotation-driven scheduler="memberScheduler" />
 
 	<context:annotation-config/>
 
@@ -36,11 +30,11 @@
 		</property>
 	</bean>
 
-    <bean id="egovMessageSource" class="egovframework.com.cmm.EgovMessageSource">
-        <property name="reloadableResourceBundleMessageSource">
-            <ref bean="messageSource" />
-        </property>
-    </bean>
+	<bean id="egovMessageSource" class="egovframework.com.cmm.EgovMessageSource">
+		<property name="reloadableResourceBundleMessageSource">
+			<ref bean="messageSource" />
+		</property>
+	</bean>
 
 	<!-- 실행환경에서 빈 이름 참조(AbstractServiceImpl) -->
 	<bean id="leaveaTrace" class="org.egovframe.rte.fdl.cmmn.trace.LeaveaTrace">
@@ -74,21 +68,21 @@
 	<bean id="excelView" class="com.pumpkin.melon.cmmn.util.ExcelView" />
 
 
-    <!-- MULTIPART RESOLVERS -->
-    <!-- regular spring resolver -->
-    <bean id="spring.RegularCommonsMultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="50000000" />
-        <property name="maxInMemorySize" value="100000000" />
-    </bean>
+	<!-- MULTIPART RESOLVERS -->
+	<!-- regular spring resolver -->
+	<bean id="spring.RegularCommonsMultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="50000000" />
+		<property name="maxInMemorySize" value="100000000" />
+	</bean>
 
-    <!-- custom multi file resolver -->
-    <bean id="local.MultiCommonsMultipartResolver" class="egovframework.com.cmm.web.EgovMultipartResolver">
-        <property name="maxUploadSize" value="50000000" />
-        <property name="maxInMemorySize" value="100000000" />
-    </bean>
+	<!-- custom multi file resolver -->
+	<bean id="local.MultiCommonsMultipartResolver" class="egovframework.com.cmm.web.EgovMultipartResolver">
+		<property name="maxUploadSize" value="50000000" />
+		<property name="maxInMemorySize" value="100000000" />
+	</bean>
 
-    <!-- choose one from above and alias it to the name Spring expects -->
-    <alias name="local.MultiCommonsMultipartResolver" alias="multipartResolver" />
-    <!-- <alias name="spring.RegularCommonsMultipartResolver" alias="multipartResolver" /> -->
+	<!-- choose one from above and alias it to the name Spring expects -->
+	<alias name="local.MultiCommonsMultipartResolver" alias="multipartResolver" />
+	<!-- <alias name="spring.RegularCommonsMultipartResolver" alias="multipartResolver" /> -->
 
 </beans>

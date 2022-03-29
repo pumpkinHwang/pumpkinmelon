@@ -18,40 +18,40 @@
  *  Copyright (C) by FRO All right reserved.
  -->
 
-        -- pumpkinmelon.pmkn_member definition
+<!--        &#45;&#45; pumpkinmelon.pmkn_member definition-->
 
-        CREATE TABLE `pmkn_member` (
-        `seq` int NOT NULL AUTO_INCREMENT COMMENT '시퀀스',
-        `pw` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원패스워드',
-        `id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원아이디',
-        `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '이름',
-        `hp` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '핸드폰',
-        `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이메일',
-        `type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '회원타입( A: 관리자, M : 사용자 )',
-        `pol` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '개인정보처리방침',
-        `pri` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이용약관',
-        `etc` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '기타',
-        `status` enum('ST','OK','NO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ST' COMMENT 'ST: 차단,  OK : 승인, NO : 탈퇴',
-        `lock_count` int DEFAULT NULL COMMENT '락카운트',
-        `reg_date` datetime NOT NULL COMMENT '등록일',
-        `sessionkey` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'none' COMMENT '세션키(중복방지용)',
-        `enableyn` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'y',
-        PRIMARY KEY (`seq`),
-        UNIQUE KEY `UNIQUE` (`id`)
-        ) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='유저정보';
+<!--        CREATE TABLE `pmkn_member` (-->
+<!--        `seq` int NOT NULL AUTO_INCREMENT COMMENT '시퀀스',-->
+<!--        `pw` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원패스워드',-->
+<!--        `id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원아이디',-->
+<!--        `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '이름',-->
+<!--        `hp` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '핸드폰',-->
+<!--        `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이메일',-->
+<!--        `type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '회원타입( A: 관리자, M : 사용자 )',-->
+<!--        `pol` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '개인정보처리방침',-->
+<!--        `pri` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이용약관',-->
+<!--        `etc` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '기타',-->
+<!--        `status` enum('ST','OK','NO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ST' COMMENT 'ST: 차단,  OK : 승인, NO : 탈퇴',-->
+<!--        `lock_count` int DEFAULT NULL COMMENT '락카운트',-->
+<!--        `reg_date` datetime NOT NULL COMMENT '등록일',-->
+<!--        `sessionkey` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'none' COMMENT '세션키(중복방지용)',-->
+<!--        `enableyn` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'y',-->
+<!--        PRIMARY KEY (`seq`),-->
+<!--        UNIQUE KEY `UNIQUE` (`id`)-->
+<!--        ) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='유저정보';-->
 
-        CREATE PROCEDURE pumpkinmelon.SP_GET_SHA256_PASSWORD(p_id VARCHAR(255),
-        p_pw VARCHAR(255),
-        p_encodePassWd VARCHAR(255))
-        begin
-        DECLARE pwd VARCHAR(255);
-        SELECT pw INTO pwd FROM `pmkn_member` WHERE id = p_id AND pw = p_encodePassWd;
-        IF pwd != '' THEN
-        SELECT LOWER(pwd);
-        ELSE
-        SELECT LOWER(SHA2(p_pw,256)) AS pwd;
-        END IF;
-        END;
+<!--        CREATE PROCEDURE pumpkinmelon.SP_GET_SHA256_PASSWORD(p_id VARCHAR(255),-->
+<!--        p_pw VARCHAR(255),-->
+<!--        p_encodePassWd VARCHAR(255))-->
+<!--        begin-->
+<!--        DECLARE pwd VARCHAR(255);-->
+<!--        SELECT pw INTO pwd FROM `pmkn_member` WHERE id = p_id AND pw = p_encodePassWd;-->
+<!--        IF pwd != '' THEN-->
+<!--        SELECT LOWER(pwd);-->
+<!--        ELSE-->
+<!--        SELECT LOWER(SHA2(p_pw,256)) AS pwd;-->
+<!--        END IF;-->
+<!--        END;-->
 
 <mapper namespace="memberMapper">
     <!--
