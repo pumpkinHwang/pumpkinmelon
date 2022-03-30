@@ -13,7 +13,7 @@ import com.pumpkin.melon.usr.member.service.MemberVO;
  * @
  * @ 수정일      수정자              수정내용
  * @ ---------   ---------   -------------------------------
- * @ 2022.01.26  hsk3807          최초생성
+ * @ 2022.01.26  황장운          최초생성
  * @see Copyright (C) by FRO All right reserved.
  * @since 2022 . 01. 26
  */

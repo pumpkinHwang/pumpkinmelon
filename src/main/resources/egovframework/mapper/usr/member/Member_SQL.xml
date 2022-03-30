@@ -7,7 +7,7 @@
  * @
  * @  수정일      수정자              수정내용
  * @
- * @ 2022.01.26  hsk3807          최초생성
+ * @ 2022.01.26  황장운          최초생성
  *
  * @author 개발팀
  * @since 2022 . 01. 26
@@ -17,70 +17,34 @@
  *
  *  Copyright (C) by FRO All right reserved.
  -->
-
-<!--        &#45;&#45; pumpkinmelon.pmkn_member definition-->
-
-<!--        CREATE TABLE `pmkn_member` (-->
-<!--        `seq` int NOT NULL AUTO_INCREMENT COMMENT '시퀀스',-->
-<!--        `pw` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원패스워드',-->
-<!--        `id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '회원아이디',-->
-<!--        `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '이름',-->
-<!--        `hp` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '핸드폰',-->
-<!--        `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이메일',-->
-<!--        `type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '회원타입( A: 관리자, M : 사용자 )',-->
-<!--        `pol` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '개인정보처리방침',-->
-<!--        `pri` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '이용약관',-->
-<!--        `etc` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '기타',-->
-<!--        `status` enum('ST','OK','NO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ST' COMMENT 'ST: 차단,  OK : 승인, NO : 탈퇴',-->
-<!--        `lock_count` int DEFAULT NULL COMMENT '락카운트',-->
-<!--        `reg_date` datetime NOT NULL COMMENT '등록일',-->
-<!--        `sessionkey` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'none' COMMENT '세션키(중복방지용)',-->
-<!--        `enableyn` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'y',-->
-<!--        PRIMARY KEY (`seq`),-->
-<!--        UNIQUE KEY `UNIQUE` (`id`)-->
-<!--        ) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='유저정보';-->
-
-<!--        CREATE PROCEDURE pumpkinmelon.SP_GET_SHA256_PASSWORD(p_id VARCHAR(255),-->
-<!--        p_pw VARCHAR(255),-->
-<!--        p_encodePassWd VARCHAR(255))-->
-<!--        begin-->
-<!--        DECLARE pwd VARCHAR(255);-->
-<!--        SELECT pw INTO pwd FROM `pmkn_member` WHERE id = p_id AND pw = p_encodePassWd;-->
-<!--        IF pwd != '' THEN-->
-<!--        SELECT LOWER(pwd);-->
-<!--        ELSE-->
-<!--        SELECT LOWER(SHA2(p_pw,256)) AS pwd;-->
-<!--        END IF;-->
-<!--        END;-->
-
 <mapper namespace="memberMapper">
     <!--
-     * 로그인.로그인 페이지
-     * @param vo - memberVO
-     * @return data[memberVO]
-     * @exception Exception
-     -->
+	 * 로그인.로그인 페이지
+	 * @param vo - memberVO
+	 * @return data[memberVO]
+	 * @exception Exception
+	 -->
     <select id="memberLogin" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO" resultType="egovMap">
         /* memberMapper.memberLogin */
         <![CDATA[
-        SELECT seq        AS seq,
-               pw         AS pw,
-               id         AS id,
-               name       AS name,
-               hp         AS hp,
-               email      AS email,
-               type       AS type,
-               pol        AS pol,
-               pri        AS pri,
-               etc        AS etc,
-               status     AS status,
-               lock_count AS lockCount,
-               reg_date   AS regDate,
-               sessionkey AS sessionkey,
-               enableyn   AS enableyn
-        FROM PMKN_MEMBER
-        WHERE id = #{id}
-          and status = 'OK'
+                SELECT seq        AS seq,
+                       pw         AS pw,
+                       id         AS id,
+                       name       AS name,
+                       hp         AS hp,
+                       email      AS email,
+                       type       AS type,
+                       pol        AS pol,
+                       pri        AS pri,
+                       etc        AS etc,
+                       status     AS status,
+                       lock_count AS lockCount,
+                       reg_date   AS regDate,
+                       sessionkey AS sessionkey,
+                       enableyn   AS enableyn
+                FROM PMKN_MEMBER
+                WHERE id = #{id}
+                  and status = 'OK'
         ]]>
     </select>
 
@@ -94,19 +58,19 @@
             resultType="egovMap">
         /* memberMapper.memberSpCisLoginInfoSelect */
         <![CDATA[
-        select a.seq      AS seq
-             , a.id       AS id
-             , a.pw       AS pw
-             , a.name     AS name
-             , a.email    AS email
-             , a.hp       AS hp
-             , a.type     AS type
-             , a.enableyn AS enableyn
-             , etc        as etc
-        FROM PMKN_MEMBER a
-        WHERE 1 = 1
-          and a.status = 'OK'
-          AND a.id = #{id}
+                select a.seq      AS seq
+                     , a.id       AS id
+                     , a.pw       AS pw
+                     , a.name     AS name
+                     , a.email    AS email
+                     , a.hp       AS hp
+                     , a.type     AS type
+                     , a.enableyn AS enableyn
+                     , etc        as etc
+                FROM PMKN_MEMBER a
+                WHERE 1 = 1
+                  and a.status = 'OK'
+                  AND a.id = #{id}
         ]]>
     </select>
 
@@ -119,10 +83,10 @@
     <select id="memberSpGetSha256Password" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO"
             statementType="CALLABLE" resultType="string">
         /* memberMapper.memberSpGetSha256Password */
-        <![CDATA[
-        CALL SP_GET_SHA256_PASSWORD( #{id},
-            #{pw},
-            #{encodePassWd})
+                    <![CDATA[
+                CALL SP_GET_SHA256_PASSWORD( #{id},
+                        #{pw},
+                        #{encodePassWd})
         ]]>
     </select>
 
@@ -135,9 +99,9 @@
      -->
     <update id="memberUpdatePassword" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.memberUpdatePassword */
-        UPDATE PMKN_MEMBER
-        SET pw = #{passWd}
-        WHERE id = #{id}
+                UPDATE PMKN_MEMBER
+                SET pw = #{pw}
+                WHERE id = #{id}
     </update>
 
     <!--
@@ -148,15 +112,15 @@
      -->
     <insert id="memberInsertPasswordHistory" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.memberInsertPasswordHistory */
-        INSERT INTO CIS_USERPASSWORDHISTORY
-        (id,
-         TYPE,
-         REGISTUSER,
-         REGISTDATETIME)
-        VALUES (#{id},
-                '4',
-                #{id},
-                Getdate())
+                INSERT INTO CIS_USERPASSWORDHISTORY
+                        (id,
+                         TYPE,
+                         REGISTUSER,
+                         REGISTDATETIME)
+                VALUES (#{id},
+                        '4',
+                        #{id},
+                        Getdate())
     </insert>
 
     <!--
@@ -167,11 +131,11 @@
      -->
     <select id="memberfindPasswordEmailForm" parameterType="egovMap" resultType="egovMap">
         /* memberMapper.memberfindPasswordEmailForm */
-        <![CDATA[
-        SELECT *
-        FROM CIS_NOTICEEMAILSETTINGS
-        WHERE CODE = '0003'
-          AND USEYN = 'Y'
+                    <![CDATA[
+                SELECT *
+                FROM CIS_NOTICEEMAILSETTINGS
+                WHERE CODE = '0003'
+                  AND USEYN = 'Y'
         ]]>
     </select>
 
@@ -188,7 +152,7 @@
         <![CDATA[
 
 
-		]]>
+        ]]>
     </select>
 
     <!--
@@ -201,9 +165,9 @@
             keyProperty="seq"
             useGeneratedKeys="true">
         /* memberMapper.memberInsertLoginHistory */
-        INSERT INTO CIS_LoginHistory
-            (id, REMOTEADDRESS, STATUS, REGISTDATETIME)
-        VALUES (#{id}, #{remoteAddress}, #{status}, getdate())
+                INSERT INTO CIS_LoginHistory
+                        (id, REMOTEADDRESS, STATUS, REGISTDATETIME)
+                VALUES (#{id}, #{remoteAddress}, #{status}, getdate())
     </insert>
 
     <!--
@@ -216,9 +180,9 @@
             resultType="int">
         /* memberMapper.memberLoginFailHistoryCnt */
         <![CDATA[
-        SELECT NVL(CAST(lock_count AS INTEGER), 0) AS lockCount
-        FROM PMKN_MEMBER
-        WHERE id = #{id}
+                SELECT NVL(CAST(lock_count AS INTEGER), 0) AS lockCount
+                FROM PMKN_MEMBER
+                WHERE id = #{id}
         ]]>
     </select>
 
@@ -230,9 +194,9 @@
      -->
     <update id="memberUpdateEnableYn" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.memberUpdateEnableYn */
-        UPDATE PMKN_MEMBER
-        SET ENABLEYN = #{enableyn}
-        WHERE UM_ID = #{id}
+                UPDATE PMKN_MEMBER
+                SET ENABLEYN = #{enableyn}
+                WHERE UM_ID = #{id}
     </update>
 
     <!--
@@ -244,10 +208,10 @@
     <insert id="memberInsertLoginFailHistory" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO"
             keyProperty="loginHistorySeq" useGeneratedKeys="true">
         /* memberMapper.memberInsertLoginFailHistory */
-        UPDATE PMKN_MEMBER
-        SET lock_count = NVL(lock_count, 0) + 1
-        WHERE 1 = 1
-          AND id = #{id}
+                UPDATE PMKN_MEMBER
+                SET lock_count = NVL(lock_count, 0) + 1
+                WHERE 1 = 1
+                  AND id = #{id}
     </insert>
 
     <!--
@@ -258,9 +222,9 @@
      -->
     <delete id="memberDeleteLoginFailHistory" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.memberDeleteLoginFailHistory */
-        UPDATE PMKN_MEMBER
-        SET lock_count = 0
-        WHERE id = #{id}
+                UPDATE PMKN_MEMBER
+                SET lock_count = 0
+                WHERE id = #{id}
     </delete>
 
     <!--
@@ -271,9 +235,9 @@
      -->
     <insert id="memberInsertLoginStatus" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.memberInsertLoginStatus */
-        INSERT INTO CIS_LOGINSTATUS
-            (id, LOGINHISTORYSEQ)
-        VALUES (#{id}, #{loginHistorySeq})
+                INSERT INTO CIS_LOGINSTATUS
+                        (id, LOGINHISTORYSEQ)
+                VALUES (#{id}, #{loginHistorySeq})
     </insert>
 
 
@@ -286,23 +250,23 @@
     <select id="memberInfo" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO" resultType="egovMap">
         /* memberMapper.memberInfo */
         <![CDATA[
-        SELECT seq                          as seq
-             , id                           as id
-             , password                     as password
-             , name                         as name
-             , email                        as email
-             , telno                        as telNo
-             , registno                     as registNo
-             , department                   as department
-             , (SELECT Name
-                FROM CIS_UserAgencyDepartment
-                WHERE USEYN = 'y'
-                  AND TYPE = 'p'
-                  and code = ta.department) as departmentName
-             , representativename           as representativeName
-             , type
-        FROM CIS_User ta
-        WHERE ID = #{id}
+                SELECT seq                          as seq
+                     , id                           as id
+                     , password                     as password
+                     , name                         as name
+                     , email                        as email
+                     , telno                        as telNo
+                     , registno                     as registNo
+                     , department                   as department
+                     , (SELECT Name
+                        FROM CIS_UserAgencyDepartment
+                        WHERE USEYN = 'y'
+                          AND TYPE = 'p'
+                          and code = ta.department) as departmentName
+                     , representativename           as representativeName
+                     , type
+                FROM CIS_User ta
+                WHERE ID = #{id}
         ]]>
     </select>
 
@@ -315,15 +279,15 @@
      -->
     <update id="updateUser" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.updateUser */
-        UPDATE CIS_User
-        SET Name               = #{name},
-            Email              = #{email},
-            TelNo              = #{telno},
-            Department         = #{department},
-            RepresentativeName = #{representativename},
-            UpdateUser         = #{id},
-            UpdateDatetime     = getdate()
-        WHERE Seq = #{seq}
+                UPDATE CIS_User
+                SET Name               = #{name},
+                    Email              = #{email},
+                    TelNo              = #{telno},
+                    Department         = #{department},
+                    RepresentativeName = #{representativename},
+                    UpdateUser         = #{id},
+                    UpdateDatetime     = getdate()
+                WHERE Seq = #{seq}
     </update>
 
     <!--
@@ -334,22 +298,156 @@
      -->
     <insert id="insertDepartment" parameterType="com.pumpkin.melon.mng.member.service.MemberMngVO">
         /* memberMapper.insertDepartment */
-        INSERT INTO CIS_UserAgencyDepartment
-        (Code,
-         TYPE,
-         Name,
-         UseYn,
-         REGISTUSER,
-         REGISTDATETIME,
-         UpdateUser,
-         UpdateDatetime)
-        VALUES (#{department},
-                'p',
-                #{departmentName},
-                'y',
-                #{id},
-                Getdate(),
-                #{id},
-                Getdate())
+                INSERT INTO CIS_UserAgencyDepartment
+                        (Code,
+                         TYPE,
+                         Name,
+                         UseYn,
+                         REGISTUSER,
+                         REGISTDATETIME,
+                         UpdateUser,
+                         UpdateDatetime)
+                VALUES (#{department},
+                        'p',
+                        #{departmentName},
+                        'y',
+                        #{id},
+                        Getdate(),
+                        #{id},
+                        Getdate())
     </insert>
+    
+    <!--
+    	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 분리보관(휴면) 30일전 하기 정보를 이용자에게 알림
+    	 * @param vo - memberVO
+    	 * @return data[memberVO]
+    	 * @exception Exception
+    	 -->
+    	<select id="memberPasswordChangeNoticeYearList" resultType="egovMap">
+            /* memberMapper.memberPasswordChangeNoticeYearList */
+            <![CDATA[
+            SELECT a.id, a.Email from (
+    			SELECT 
+    				A.USERID AS id,
+    				MAX(b.Email) as email, 
+    				CASE 
+    					WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -11, GETDATE()) 
+    						THEN CASE WHEN MAX(A.RegistDatetime) > DATEADD(MONTH, -12, GETDATE()) then 'Y'
+    								  ELSE 'N'
+    							 END
+    					ELSE 'N'
+    			  	END CHANGE_YN   
+    			FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+    				ON A.UserId  = B.ID
+    			WHERE B.UseYn  = 'y'
+    			AND B.EnableYn  = 'y'
+    			AND (B.PasswordChangeYn != 'e' or B.PasswordChangeYn is null)	
+    			GROUP BY USERID
+    		) a
+    		WHERE a.CHANGE_YN = 'Y'
+            ]]>
+    	</select>
+    	
+    	<!--
+    	 * 비밀번호 변경주기 분기 1회(3개월) 회원 상태값 변경
+    	 * @param vo - memberVO
+    	 * @return data[memberVO]
+    	 * @exception Exception
+    	 -->
+    	<update id="updateMemberMonthPasswordChangeYn" parameterType="egovMap">
+    		/* memberMapper.updateMemberMonthPasswordChangeYn */
+    		<![CDATA[
+    		UPDATE CIS_USER 
+    		SET PasswordChangeYn = #{passwordChangeYn}
+    		WHERE ID IN
+    		(
+    			SELECT A.id FROM (
+    				SELECT a.id, 
+    					CASE WHEN B.RegistDatetime < DATEADD(MONTH, -3, GETDATE())  THEN 'Y'
+    					   	 ELSE 'N'
+    				  	END HISTORY_CHANGE_YN,
+    				  	CASE WHEN A.RegistDatetime < DATEADD(MONTH, -3, GETDATE())  
+    				  			THEN CASE WHEN B.RegistDatetime IS NULL THEN 'Y'
+    									  ELSE 'N'
+    								 END
+    					   	 	ELSE 'N'
+    				  	END CHANGE_YN	
+    			FROM CIS_USER a
+    				LEFT OUTER JOIN 
+    					(SELECT userid, MAX(RegistDatetime) as RegistDatetime from CIS_USERPASSWORDHISTORY group by USERID) b
+    					ON a.id = b.UserId 
+    			WHERE a.UseYn  = 'y'
+    			AND a.EnableYn  = 'y'
+    			AND (A.PasswordChangeYn != 'y' or A.PasswordChangeYn is null)	
+    			) A
+    			WHERE (A.HISTORY_CHANGE_YN = 'Y' OR A.CHANGE_YN = 'Y')
+    		)
+    		]]>
+    	</update>
+    	
+    	<!--
+    	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 분리보관(휴면) 30일전 하기 정보를 이용자에게 알림 회원 상태값 변경
+    	 * @param vo - memberVO
+    	 * @return data[memberVO]
+    	 * @exception Exception
+    	 -->
+    	<update id="updateMemberYearPasswordChangeYn" parameterType="egovMap">
+    		/* memberMapper.updateMemberYearPasswordChangeYn */
+    		<![CDATA[
+    		UPDATE CIS_USER 
+    			SET PasswordChangeYn = #{passwordChangeYn}
+    		WHERE ID IN
+    		(
+    			SELECT a.id from (
+    				SELECT 
+    					A.USERID AS id,
+    					CASE 
+    						WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -11, GETDATE()) 
+    							THEN CASE WHEN MAX(A.RegistDatetime) > DATEADD(MONTH, -12, GETDATE()) then 'Y'
+    									  ELSE 'N'
+    								 END
+    						ELSE 'N'
+    				  	END CHANGE_YN   
+    				FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+    					ON A.UserId  = B.ID
+    				WHERE B.UseYn  = 'y'
+    				AND B.EnableYn  = 'y'
+    				AND (B.PasswordChangeYn != 'e' or B.PasswordChangeYn is null)	
+    				GROUP BY USERID
+    			) a
+    			WHERE a.CHANGE_YN = 'Y'
+    		)
+    		]]>
+    	</update>
+    
+    	<!--
+    	 * 1년의 기간동안 이용하지 않은 대상에 대해서는 회원 사용여부 상태값 변경
+    	 * @param vo - memberVO
+    	 * @return data[memberVO]
+    	 * @exception Exception
+    	 -->
+    	<update id="updateMemberYearEnableYn">
+    		/* memberMapper.updateMemberYearPasswordChangeYn */
+    		<![CDATA[
+    		UPDATE CIS_USER 
+    			SET PasswordChangeYn = 'd'
+    		WHERE ID IN
+    		(
+    			SELECT a.id from (
+    				SELECT 
+    					A.USERID AS id,
+    					CASE 
+    						WHEN MAX(A.RegistDatetime) < DATEADD(MONTH, -12, GETDATE()) THEN 'Y'
+    						ELSE 'N'
+    				  	END CHANGE_YN	   
+    				FROM CIS_LoginHistory A INNER JOIN CIS_USER B
+    					ON A.UserId  = B.ID
+    				WHERE B.UseYn  = 'y'
+    				AND B.EnableYn  = 'y'	
+    				GROUP BY USERID
+    			) a
+    			WHERE a.CHANGE_YN = 'Y'
+    		)
+    		]]>
+    	</update>
 </mapper>

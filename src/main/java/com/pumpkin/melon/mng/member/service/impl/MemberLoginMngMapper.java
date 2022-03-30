@@ -11,7 +11,7 @@ import egovframework.com.cmm.service.impl.EgovComAbstractDAO;
  * @
  * @  수정일      수정자              수정내용
  * @ ---------   ---------   -------------------------------
- * @ 2022.01.26  hsk3807          최초생성
+ * @ 2022.01.26  황장운          최초생성
  *
  * @author 개발팀
  * @since 2022 . 01. 26
