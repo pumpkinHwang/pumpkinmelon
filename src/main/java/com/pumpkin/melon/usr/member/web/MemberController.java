@@ -95,6 +95,7 @@ public class MemberController {
                     mv.addObject("code", "8888");
                     mv.addObject("message", egovMessageSource.getMessage("fail.common.account.changePasswordMonth", request.getLocale()));
                 } else {
+
                 }
 
                 if (ReqUtils.getEmptyResult((String) loginMap.get("sessionUserId"), "").equals("")) {
